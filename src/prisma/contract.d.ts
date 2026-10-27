@@ -23,9 +23,9 @@ import type {
 } from '@prisma/orm-postgres/contract/types';
 
 export type StorageHash =
-  StorageHashBase<'a51b4833fdaffe730572670ccc27dd89af7e0726ab3de7f428d21702d687cc15'>;
+  StorageHashBase<'d15ec09f3b2c35beafd37bc4ca6b7e867fc1abdb8d50308ad4009bd29404bb07'>;
 export type ExecutionHash =
-  ExecutionHashBase<'3730158042e7c88d23f35529e89ad90532db0cd5c528c13e701f93cb45aa8a9c'>;
+  ExecutionHashBase<'9dc05864e1fe2eeb7c125d702c0a2429ba807e54b7e5100a46caa2c83cb43780'>;
 export type ProfileHash =
   ProfileHashBase<'3916f444a8a17ad749191acf9e08dad97d1a327b88c2f1d45d12f240296aa8b2'>;
 
@@ -238,7 +238,52 @@ type DefaultLiteralValue<CodecId extends string, Encoded> = CodecId extends keyo
   : Encoded;
 type ParameterizedOutputTypeFunctions = PgParameterizedOutputTypes;
 
-type FieldTypeOverrides = {};
+type FieldTypeOverrides = {
+  readonly public: {
+    readonly models: {
+      readonly Bike: {
+        readonly brakeType: {
+          readonly output: 'HYDRAULIC_DISC' | 'MECHANICAL_DISC' | 'RIM';
+          readonly input: 'HYDRAULIC_DISC' | 'MECHANICAL_DISC' | 'RIM';
+        };
+        readonly category: {
+          readonly output:
+            'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+          readonly input:
+            'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+        };
+        readonly frameMaterial: {
+          readonly output: 'ALUMINUM' | 'CARBON' | 'STEEL';
+          readonly input: 'ALUMINUM' | 'CARBON' | 'STEEL';
+        };
+        readonly gender: {
+          readonly output: 'UNISEX' | 'MALE' | 'FEMALE';
+          readonly input: 'UNISEX' | 'MALE' | 'FEMALE';
+        };
+        readonly ridingPosition: {
+          readonly output: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+          readonly input: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+        };
+      };
+      readonly QuizSubmission: {
+        readonly gender: {
+          readonly output: 'UNISEX' | 'MALE' | 'FEMALE';
+          readonly input: 'UNISEX' | 'MALE' | 'FEMALE';
+        };
+        readonly recommendedCategory: {
+          readonly output:
+            'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+          readonly input:
+            'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+        };
+        readonly ridingPosition: {
+          readonly output: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+          readonly input: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+        };
+      };
+    };
+  };
+};
 export type FieldOutputTypes = FieldTypesFromDomain<
   ContractBase['domain']['namespaces'],
   CodecTypes,
@@ -253,7 +298,48 @@ export type FieldInputTypes = FieldTypesFromDomain<
   FieldTypeOverrides,
   'input'
 >;
-type ColumnTypeOverrides = {};
+type ColumnTypeOverrides = {
+  readonly public: {
+    readonly Bike: {
+      readonly brakeType: {
+        readonly output: 'HYDRAULIC_DISC' | 'MECHANICAL_DISC' | 'RIM';
+        readonly input: 'HYDRAULIC_DISC' | 'MECHANICAL_DISC' | 'RIM';
+      };
+      readonly category: {
+        readonly output:
+          'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+        readonly input: 'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+      };
+      readonly frameMaterial: {
+        readonly output: 'ALUMINUM' | 'CARBON' | 'STEEL';
+        readonly input: 'ALUMINUM' | 'CARBON' | 'STEEL';
+      };
+      readonly gender: {
+        readonly output: 'UNISEX' | 'MALE' | 'FEMALE';
+        readonly input: 'UNISEX' | 'MALE' | 'FEMALE';
+      };
+      readonly ridingPosition: {
+        readonly output: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+        readonly input: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+      };
+    };
+    readonly QuizSubmission: {
+      readonly gender: {
+        readonly output: 'UNISEX' | 'MALE' | 'FEMALE';
+        readonly input: 'UNISEX' | 'MALE' | 'FEMALE';
+      };
+      readonly recommendedCategory: {
+        readonly output:
+          'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+        readonly input: 'GRAVEL' | 'ROAD' | 'MTB_HARDTAIL' | 'CITY_COMMUTER' | 'TOURING' | 'HYBRID';
+      };
+      readonly ridingPosition: {
+        readonly output: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+        readonly input: 'SPORT' | 'COMFORTABLE' | 'UPRIGHT';
+      };
+    };
+  };
+};
 export type StorageColumnTypes = ColumnTypesFromStorage<
   ContractBase['storage'],
   CodecTypes,
@@ -270,32 +356,119 @@ export type StorageColumnInputTypes = ColumnTypesFromStorage<
 >;
 
 export namespace Models {
-  export type public_Post = {
-    authorId: FieldOutputTypes['public']['Post']['authorId'];
-    content: FieldOutputTypes['public']['Post']['content'];
-    createdAt: FieldOutputTypes['public']['Post']['createdAt'];
-    id: FieldOutputTypes['public']['Post']['id'];
-    title: FieldOutputTypes['public']['Post']['title'];
-    updatedAt: FieldOutputTypes['public']['Post']['updatedAt'];
-    author: public_User;
-    readonly [RelationKeys]?: 'author';
+  export type public_Bike = {
+    asphaltScore: FieldOutputTypes['public']['Bike']['asphaltScore'];
+    brakeType: FieldOutputTypes['public']['Bike']['brakeType'];
+    brandId: FieldOutputTypes['public']['Bike']['brandId'];
+    category: FieldOutputTypes['public']['Bike']['category'];
+    createdAt: FieldOutputTypes['public']['Bike']['createdAt'];
+    description: FieldOutputTypes['public']['Bike']['description'];
+    drivetrain: FieldOutputTypes['public']['Bike']['drivetrain'];
+    frameMaterial: FieldOutputTypes['public']['Bike']['frameMaterial'];
+    gender: FieldOutputTypes['public']['Bike']['gender'];
+    gravelScore: FieldOutputTypes['public']['Bike']['gravelScore'];
+    hasFenderMounts: FieldOutputTypes['public']['Bike']['hasFenderMounts'];
+    hasRackMounts: FieldOutputTypes['public']['Bike']['hasRackMounts'];
+    id: FieldOutputTypes['public']['Bike']['id'];
+    imageUrl: FieldOutputTypes['public']['Bike']['imageUrl'];
+    keyHighlights: FieldOutputTypes['public']['Bike']['keyHighlights'];
+    modelYear: FieldOutputTypes['public']['Bike']['modelYear'];
+    name: FieldOutputTypes['public']['Bike']['name'];
+    offroadScore: FieldOutputTypes['public']['Bike']['offroadScore'];
+    ridingPosition: FieldOutputTypes['public']['Bike']['ridingPosition'];
+    slug: FieldOutputTypes['public']['Bike']['slug'];
+    suspensionFork: FieldOutputTypes['public']['Bike']['suspensionFork'];
+    updatedAt: FieldOutputTypes['public']['Bike']['updatedAt'];
+    weightKg: FieldOutputTypes['public']['Bike']['weightKg'];
+    wheelSize: FieldOutputTypes['public']['Bike']['wheelSize'];
+    brand: public_Brand;
+    variants: public_BikeVariant[];
+    readonly [RelationKeys]?: 'brand' | 'variants';
   };
-  export type public_User = {
-    createdAt: FieldOutputTypes['public']['User']['createdAt'];
-    email: FieldOutputTypes['public']['User']['email'];
-    id: FieldOutputTypes['public']['User']['id'];
-    name: FieldOutputTypes['public']['User']['name'];
-    updatedAt: FieldOutputTypes['public']['User']['updatedAt'];
-    username: FieldOutputTypes['public']['User']['username'];
-    posts: public_Post[];
-    readonly [RelationKeys]?: 'posts';
+  export type public_BikeVariant = {
+    bikeId: FieldOutputTypes['public']['BikeVariant']['bikeId'];
+    createdAt: FieldOutputTypes['public']['BikeVariant']['createdAt'];
+    id: FieldOutputTypes['public']['BikeVariant']['id'];
+    maxInseamCm: FieldOutputTypes['public']['BikeVariant']['maxInseamCm'];
+    maxRiderHeightCm: FieldOutputTypes['public']['BikeVariant']['maxRiderHeightCm'];
+    minInseamCm: FieldOutputTypes['public']['BikeVariant']['minInseamCm'];
+    minRiderHeightCm: FieldOutputTypes['public']['BikeVariant']['minRiderHeightCm'];
+    numericSizeCm: FieldOutputTypes['public']['BikeVariant']['numericSizeCm'];
+    reachMm: FieldOutputTypes['public']['BikeVariant']['reachMm'];
+    sizeLabel: FieldOutputTypes['public']['BikeVariant']['sizeLabel'];
+    stackMm: FieldOutputTypes['public']['BikeVariant']['stackMm'];
+    updatedAt: FieldOutputTypes['public']['BikeVariant']['updatedAt'];
+    bike: public_Bike;
+    offers: public_Offer[];
+    readonly [RelationKeys]?: 'bike' | 'offers';
+  };
+  export type public_Brand = {
+    country: FieldOutputTypes['public']['Brand']['country'];
+    createdAt: FieldOutputTypes['public']['Brand']['createdAt'];
+    id: FieldOutputTypes['public']['Brand']['id'];
+    logoUrl: FieldOutputTypes['public']['Brand']['logoUrl'];
+    name: FieldOutputTypes['public']['Brand']['name'];
+    slug: FieldOutputTypes['public']['Brand']['slug'];
+    updatedAt: FieldOutputTypes['public']['Brand']['updatedAt'];
+    bikes: public_Bike[];
+    readonly [RelationKeys]?: 'bikes';
+  };
+  export type public_Offer = {
+    affiliateUrl: FieldOutputTypes['public']['Offer']['affiliateUrl'];
+    bikeVariantId: FieldOutputTypes['public']['Offer']['bikeVariantId'];
+    createdAt: FieldOutputTypes['public']['Offer']['createdAt'];
+    id: FieldOutputTypes['public']['Offer']['id'];
+    inStock: FieldOutputTypes['public']['Offer']['inStock'];
+    lastCheckedAt: FieldOutputTypes['public']['Offer']['lastCheckedAt'];
+    oldPriceUah: FieldOutputTypes['public']['Offer']['oldPriceUah'];
+    priceUah: FieldOutputTypes['public']['Offer']['priceUah'];
+    productUrl: FieldOutputTypes['public']['Offer']['productUrl'];
+    shopId: FieldOutputTypes['public']['Offer']['shopId'];
+    updatedAt: FieldOutputTypes['public']['Offer']['updatedAt'];
+    bikeVariant: public_BikeVariant;
+    shop: public_Shop;
+    readonly [RelationKeys]?: 'bikeVariant' | 'shop';
+  };
+  export type public_QuizSubmission = {
+    asphaltPct: FieldOutputTypes['public']['QuizSubmission']['asphaltPct'];
+    createdAt: FieldOutputTypes['public']['QuizSubmission']['createdAt'];
+    gender: FieldOutputTypes['public']['QuizSubmission']['gender'];
+    gravelPct: FieldOutputTypes['public']['QuizSubmission']['gravelPct'];
+    heightCm: FieldOutputTypes['public']['QuizSubmission']['heightCm'];
+    id: FieldOutputTypes['public']['QuizSubmission']['id'];
+    inseamCm: FieldOutputTypes['public']['QuizSubmission']['inseamCm'];
+    maxBudgetUah: FieldOutputTypes['public']['QuizSubmission']['maxBudgetUah'];
+    minBudgetUah: FieldOutputTypes['public']['QuizSubmission']['minBudgetUah'];
+    offroadPct: FieldOutputTypes['public']['QuizSubmission']['offroadPct'];
+    primaryGoal: FieldOutputTypes['public']['QuizSubmission']['primaryGoal'];
+    recommendedCategory: FieldOutputTypes['public']['QuizSubmission']['recommendedCategory'];
+    recommendedSizeLabel: FieldOutputTypes['public']['QuizSubmission']['recommendedSizeLabel'];
+    ridingPosition: FieldOutputTypes['public']['QuizSubmission']['ridingPosition'];
+    topBikeSlug: FieldOutputTypes['public']['QuizSubmission']['topBikeSlug'];
+    readonly [RelationKeys]?: never;
+  };
+  export type public_Shop = {
+    affiliateParamKey: FieldOutputTypes['public']['Shop']['affiliateParamKey'];
+    baseUrl: FieldOutputTypes['public']['Shop']['baseUrl'];
+    createdAt: FieldOutputTypes['public']['Shop']['createdAt'];
+    id: FieldOutputTypes['public']['Shop']['id'];
+    logoUrl: FieldOutputTypes['public']['Shop']['logoUrl'];
+    name: FieldOutputTypes['public']['Shop']['name'];
+    slug: FieldOutputTypes['public']['Shop']['slug'];
+    updatedAt: FieldOutputTypes['public']['Shop']['updatedAt'];
+    offers: public_Offer[];
+    readonly [RelationKeys]?: 'offers';
   };
 }
 
 export declare const models: {
   public: {
-    Post: Models.public_Post;
-    User: Models.public_User;
+    Bike: Models.public_Bike;
+    BikeVariant: Models.public_BikeVariant;
+    Brand: Models.public_Brand;
+    Offer: Models.public_Offer;
+    QuizSubmission: Models.public_QuizSubmission;
+    Shop: Models.public_Shop;
   };
 };
 
@@ -317,15 +490,323 @@ type ContractBase = Omit<
         readonly kind: 'postgres-schema';
         readonly entries: {
           readonly table: {
-            readonly Post: {
+            readonly Bike: {
               columns: {
-                readonly authorId: {
+                readonly asphaltScore: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/int4@1', 50>;
+                  };
+                  readonly many: false;
+                };
+                readonly brakeType: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly brandId: {
                   readonly dataType: 'pg/int4';
                   readonly codecId: 'pg/int4@1';
                   readonly nullable: false;
                   readonly many: false;
                 };
-                readonly content: {
+                readonly category: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly createdAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly default: { readonly kind: 'function'; readonly expression: 'now()' };
+                  readonly many: false;
+                };
+                readonly description: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly drivetrain: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly frameMaterial: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly gender: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/text@1', 'UNISEX'>;
+                  };
+                  readonly many: false;
+                };
+                readonly gravelScore: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/int4@1', 50>;
+                  };
+                  readonly many: false;
+                };
+                readonly hasFenderMounts: {
+                  readonly dataType: 'pg/bool';
+                  readonly codecId: 'pg/bool@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/bool@1', false>;
+                  };
+                  readonly many: false;
+                };
+                readonly hasRackMounts: {
+                  readonly dataType: 'pg/bool';
+                  readonly codecId: 'pg/bool@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/bool@1', false>;
+                  };
+                  readonly many: false;
+                };
+                readonly id: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'function';
+                    readonly expression: 'autoincrement()';
+                  };
+                  readonly many: false;
+                };
+                readonly imageUrl: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly keyHighlights: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: { readonly elementNullable: false };
+                };
+                readonly modelYear: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly name: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly offroadScore: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/int4@1', 50>;
+                  };
+                  readonly many: false;
+                };
+                readonly ridingPosition: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/text@1', 'COMFORTABLE'>;
+                  };
+                  readonly many: false;
+                };
+                readonly slug: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly suspensionFork: {
+                  readonly dataType: 'pg/bool';
+                  readonly codecId: 'pg/bool@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/bool@1', false>;
+                  };
+                  readonly many: false;
+                };
+                readonly updatedAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly weightKg: {
+                  readonly dataType: 'pg/float8';
+                  readonly codecId: 'pg/float8@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly wheelSize: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+              };
+              primaryKey: { readonly columns: readonly ['id'] };
+              uniques: readonly [{ readonly columns: readonly ['slug'] }];
+              indexes: readonly [
+                {
+                  readonly name: 'Bike_brandId_idx_02e95397';
+                  readonly prefix: 'Bike_brandId_idx';
+                  readonly columns: readonly ['brandId'];
+                  readonly unique: false;
+                },
+              ];
+              foreignKeys: readonly [
+                {
+                  readonly source: {
+                    readonly namespaceId: 'public' & NamespaceId;
+                    readonly tableName: 'Bike';
+                    readonly columns: readonly ['brandId'];
+                  };
+                  readonly target: {
+                    readonly namespaceId: 'public' & NamespaceId;
+                    readonly tableName: 'Brand';
+                    readonly columns: readonly ['id'];
+                  };
+                },
+              ];
+            };
+            readonly BikeVariant: {
+              columns: {
+                readonly bikeId: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly createdAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly default: { readonly kind: 'function'; readonly expression: 'now()' };
+                  readonly many: false;
+                };
+                readonly id: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'function';
+                    readonly expression: 'autoincrement()';
+                  };
+                  readonly many: false;
+                };
+                readonly maxInseamCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly maxRiderHeightCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly minInseamCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly minRiderHeightCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly numericSizeCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly reachMm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly sizeLabel: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly stackMm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly updatedAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+              };
+              primaryKey: { readonly columns: readonly ['id'] };
+              uniques: readonly [];
+              indexes: readonly [
+                {
+                  readonly name: 'BikeVariant_bikeId_idx_a4008bfd';
+                  readonly prefix: 'BikeVariant_bikeId_idx';
+                  readonly columns: readonly ['bikeId'];
+                  readonly unique: false;
+                },
+              ];
+              foreignKeys: readonly [
+                {
+                  readonly source: {
+                    readonly namespaceId: 'public' & NamespaceId;
+                    readonly tableName: 'BikeVariant';
+                    readonly columns: readonly ['bikeId'];
+                  };
+                  readonly target: {
+                    readonly namespaceId: 'public' & NamespaceId;
+                    readonly tableName: 'Bike';
+                    readonly columns: readonly ['id'];
+                  };
+                },
+              ];
+            };
+            readonly Brand: {
+              columns: {
+                readonly country: {
                   readonly dataType: 'pg/text';
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
@@ -348,9 +829,108 @@ type ContractBase = Omit<
                   };
                   readonly many: false;
                 };
-                readonly title: {
+                readonly logoUrl: {
                   readonly dataType: 'pg/text';
                   readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly name: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly slug: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly updatedAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+              };
+              primaryKey: { readonly columns: readonly ['id'] };
+              uniques: readonly [
+                { readonly columns: readonly ['slug'] },
+                { readonly columns: readonly ['name'] },
+              ];
+              indexes: readonly [];
+              foreignKeys: readonly [];
+            };
+            readonly Offer: {
+              columns: {
+                readonly affiliateUrl: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly bikeVariantId: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly createdAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly default: { readonly kind: 'function'; readonly expression: 'now()' };
+                  readonly many: false;
+                };
+                readonly id: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'function';
+                    readonly expression: 'autoincrement()';
+                  };
+                  readonly many: false;
+                };
+                readonly inStock: {
+                  readonly dataType: 'pg/bool';
+                  readonly codecId: 'pg/bool@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/bool@1', true>;
+                  };
+                  readonly many: false;
+                };
+                readonly lastCheckedAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly default: { readonly kind: 'function'; readonly expression: 'now()' };
+                  readonly many: false;
+                };
+                readonly oldPriceUah: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly priceUah: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly productUrl: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly shopId: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
                   readonly nullable: false;
                   readonly many: false;
                 };
@@ -365,9 +945,15 @@ type ContractBase = Omit<
               uniques: readonly [];
               indexes: readonly [
                 {
-                  readonly name: 'Post_authorId_idx_e47547ed';
-                  readonly prefix: 'Post_authorId_idx';
-                  readonly columns: readonly ['authorId'];
+                  readonly name: 'Offer_bikeVariantId_idx_6dc8a3ca';
+                  readonly prefix: 'Offer_bikeVariantId_idx';
+                  readonly columns: readonly ['bikeVariantId'];
+                  readonly unique: false;
+                },
+                {
+                  readonly name: 'Offer_shopId_idx_e9207c6b';
+                  readonly prefix: 'Offer_shopId_idx';
+                  readonly columns: readonly ['shopId'];
                   readonly unique: false;
                 },
               ];
@@ -375,19 +961,37 @@ type ContractBase = Omit<
                 {
                   readonly source: {
                     readonly namespaceId: 'public' & NamespaceId;
-                    readonly tableName: 'Post';
-                    readonly columns: readonly ['authorId'];
+                    readonly tableName: 'Offer';
+                    readonly columns: readonly ['bikeVariantId'];
                   };
                   readonly target: {
                     readonly namespaceId: 'public' & NamespaceId;
-                    readonly tableName: 'User';
+                    readonly tableName: 'BikeVariant';
+                    readonly columns: readonly ['id'];
+                  };
+                },
+                {
+                  readonly source: {
+                    readonly namespaceId: 'public' & NamespaceId;
+                    readonly tableName: 'Offer';
+                    readonly columns: readonly ['shopId'];
+                  };
+                  readonly target: {
+                    readonly namespaceId: 'public' & NamespaceId;
+                    readonly tableName: 'Shop';
                     readonly columns: readonly ['id'];
                   };
                 },
               ];
             };
-            readonly User: {
+            readonly QuizSubmission: {
               columns: {
+                readonly asphaltPct: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
                 readonly createdAt: {
                   readonly dataType: 'pg/timestamptz';
                   readonly codecId: 'pg/timestamptz-string@1';
@@ -395,9 +999,25 @@ type ContractBase = Omit<
                   readonly default: { readonly kind: 'function'; readonly expression: 'now()' };
                   readonly many: false;
                 };
-                readonly email: {
+                readonly gender: {
                   readonly dataType: 'pg/text';
                   readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'literal';
+                    readonly value: DefaultLiteralValue<'pg/text@1', 'UNISEX'>;
+                  };
+                  readonly many: false;
+                };
+                readonly gravelPct: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly heightCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
                   readonly nullable: false;
                   readonly many: false;
                 };
@@ -411,10 +1031,113 @@ type ContractBase = Omit<
                   };
                   readonly many: false;
                 };
-                readonly name: {
+                readonly inseamCm: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly maxBudgetUah: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly minBudgetUah: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly offroadPct: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly primaryGoal: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly recommendedCategory: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly recommendedSizeLabel: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly ridingPosition: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly topBikeSlug: {
                   readonly dataType: 'pg/text';
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
+                  readonly many: false;
+                };
+              };
+              primaryKey: { readonly columns: readonly ['id'] };
+              uniques: readonly [];
+              indexes: readonly [];
+              foreignKeys: readonly [];
+            };
+            readonly Shop: {
+              columns: {
+                readonly affiliateParamKey: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly baseUrl: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly createdAt: {
+                  readonly dataType: 'pg/timestamptz';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                  readonly nullable: false;
+                  readonly default: { readonly kind: 'function'; readonly expression: 'now()' };
+                  readonly many: false;
+                };
+                readonly id: {
+                  readonly dataType: 'pg/int4';
+                  readonly codecId: 'pg/int4@1';
+                  readonly nullable: false;
+                  readonly default: {
+                    readonly kind: 'function';
+                    readonly expression: 'autoincrement()';
+                  };
+                  readonly many: false;
+                };
+                readonly logoUrl: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                  readonly many: false;
+                };
+                readonly name: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
+                  readonly many: false;
+                };
+                readonly slug: {
+                  readonly dataType: 'pg/text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: false;
                   readonly many: false;
                 };
                 readonly updatedAt: {
@@ -423,17 +1146,43 @@ type ContractBase = Omit<
                   readonly nullable: false;
                   readonly many: false;
                 };
-                readonly username: {
-                  readonly dataType: 'pg/text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                  readonly many: false;
-                };
               };
               primaryKey: { readonly columns: readonly ['id'] };
-              uniques: readonly [{ readonly columns: readonly ['email'] }];
+              uniques: readonly [
+                { readonly columns: readonly ['slug'] },
+                { readonly columns: readonly ['name'] },
+              ];
               indexes: readonly [];
               foreignKeys: readonly [];
+            };
+          };
+          readonly valueSet: {
+            readonly BikeCategory: {
+              readonly kind: 'valueSet';
+              readonly values: readonly [
+                'GRAVEL',
+                'ROAD',
+                'MTB_HARDTAIL',
+                'CITY_COMMUTER',
+                'TOURING',
+                'HYBRID',
+              ];
+            };
+            readonly BrakeType: {
+              readonly kind: 'valueSet';
+              readonly values: readonly ['HYDRAULIC_DISC', 'MECHANICAL_DISC', 'RIM'];
+            };
+            readonly FrameMaterial: {
+              readonly kind: 'valueSet';
+              readonly values: readonly ['ALUMINUM', 'CARBON', 'STEEL'];
+            };
+            readonly RiderGender: {
+              readonly kind: 'valueSet';
+              readonly values: readonly ['UNISEX', 'MALE', 'FEMALE'];
+            };
+            readonly RidingPosition: {
+              readonly kind: 'valueSet';
+              readonly values: readonly ['SPORT', 'COMFORTABLE', 'UPRIGHT'];
             };
           };
         };
@@ -446,20 +1195,286 @@ type ContractBase = Omit<
   readonly target: 'postgres';
   readonly targetFamily: 'sql';
   readonly roots: {
-    readonly Post: { readonly namespace: 'public' & NamespaceId; readonly model: 'Post' };
-    readonly User: { readonly namespace: 'public' & NamespaceId; readonly model: 'User' };
+    readonly Bike: { readonly namespace: 'public' & NamespaceId; readonly model: 'Bike' };
+    readonly BikeVariant: {
+      readonly namespace: 'public' & NamespaceId;
+      readonly model: 'BikeVariant';
+    };
+    readonly Brand: { readonly namespace: 'public' & NamespaceId; readonly model: 'Brand' };
+    readonly Offer: { readonly namespace: 'public' & NamespaceId; readonly model: 'Offer' };
+    readonly QuizSubmission: {
+      readonly namespace: 'public' & NamespaceId;
+      readonly model: 'QuizSubmission';
+    };
+    readonly Shop: { readonly namespace: 'public' & NamespaceId; readonly model: 'Shop' };
   };
   readonly domain: {
     readonly namespaces: {
       readonly public: {
         readonly models: {
-          readonly Post: {
+          readonly Bike: {
             readonly fields: {
-              readonly authorId: {
+              readonly asphaltScore: {
                 readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
               };
-              readonly content: {
+              readonly brakeType: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly brandId: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly category: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly createdAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+              readonly description: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly drivetrain: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly frameMaterial: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly gender: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly gravelScore: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly hasFenderMounts: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/bool@1' };
+              };
+              readonly hasRackMounts: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/bool@1' };
+              };
+              readonly id: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly imageUrl: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly keyHighlights: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+                readonly many: { readonly elementNullable: false };
+              };
+              readonly modelYear: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly name: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly offroadScore: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly ridingPosition: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly slug: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly suspensionFork: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/bool@1' };
+              };
+              readonly updatedAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+              readonly weightKg: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/float8@1' };
+              };
+              readonly wheelSize: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+            };
+            readonly relations: {
+              readonly brand: {
+                readonly to: {
+                  readonly namespace: 'public' & NamespaceId;
+                  readonly model: 'Brand';
+                };
+                readonly cardinality: 'N:1';
+                readonly nullable: false;
+                readonly on: {
+                  readonly localFields: readonly ['brandId'];
+                  readonly targetFields: readonly ['id'];
+                };
+              };
+              readonly variants: {
+                readonly to: {
+                  readonly namespace: 'public' & NamespaceId;
+                  readonly model: 'BikeVariant';
+                };
+                readonly cardinality: '1:N';
+                readonly on: {
+                  readonly localFields: readonly ['id'];
+                  readonly targetFields: readonly ['bikeId'];
+                };
+              };
+            };
+            readonly storage: {
+              readonly table: 'Bike';
+              readonly namespaceId: 'public';
+              readonly fields: {
+                readonly asphaltScore: { readonly column: 'asphaltScore' };
+                readonly brakeType: { readonly column: 'brakeType' };
+                readonly brandId: { readonly column: 'brandId' };
+                readonly category: { readonly column: 'category' };
+                readonly createdAt: { readonly column: 'createdAt' };
+                readonly description: { readonly column: 'description' };
+                readonly drivetrain: { readonly column: 'drivetrain' };
+                readonly frameMaterial: { readonly column: 'frameMaterial' };
+                readonly gender: { readonly column: 'gender' };
+                readonly gravelScore: { readonly column: 'gravelScore' };
+                readonly hasFenderMounts: { readonly column: 'hasFenderMounts' };
+                readonly hasRackMounts: { readonly column: 'hasRackMounts' };
+                readonly id: { readonly column: 'id' };
+                readonly imageUrl: { readonly column: 'imageUrl' };
+                readonly keyHighlights: { readonly column: 'keyHighlights' };
+                readonly modelYear: { readonly column: 'modelYear' };
+                readonly name: { readonly column: 'name' };
+                readonly offroadScore: { readonly column: 'offroadScore' };
+                readonly ridingPosition: { readonly column: 'ridingPosition' };
+                readonly slug: { readonly column: 'slug' };
+                readonly suspensionFork: { readonly column: 'suspensionFork' };
+                readonly updatedAt: { readonly column: 'updatedAt' };
+                readonly weightKg: { readonly column: 'weightKg' };
+                readonly wheelSize: { readonly column: 'wheelSize' };
+              };
+            };
+          };
+          readonly BikeVariant: {
+            readonly fields: {
+              readonly bikeId: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly createdAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+              readonly id: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly maxInseamCm: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly maxRiderHeightCm: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly minInseamCm: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly minRiderHeightCm: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly numericSizeCm: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly reachMm: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly sizeLabel: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly stackMm: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly updatedAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+            };
+            readonly relations: {
+              readonly bike: {
+                readonly to: { readonly namespace: 'public' & NamespaceId; readonly model: 'Bike' };
+                readonly cardinality: 'N:1';
+                readonly nullable: false;
+                readonly on: {
+                  readonly localFields: readonly ['bikeId'];
+                  readonly targetFields: readonly ['id'];
+                };
+              };
+              readonly offers: {
+                readonly to: {
+                  readonly namespace: 'public' & NamespaceId;
+                  readonly model: 'Offer';
+                };
+                readonly cardinality: '1:N';
+                readonly on: {
+                  readonly localFields: readonly ['id'];
+                  readonly targetFields: readonly ['bikeVariantId'];
+                };
+              };
+            };
+            readonly storage: {
+              readonly table: 'BikeVariant';
+              readonly namespaceId: 'public';
+              readonly fields: {
+                readonly bikeId: { readonly column: 'bikeId' };
+                readonly createdAt: { readonly column: 'createdAt' };
+                readonly id: { readonly column: 'id' };
+                readonly maxInseamCm: { readonly column: 'maxInseamCm' };
+                readonly maxRiderHeightCm: { readonly column: 'maxRiderHeightCm' };
+                readonly minInseamCm: { readonly column: 'minInseamCm' };
+                readonly minRiderHeightCm: { readonly column: 'minRiderHeightCm' };
+                readonly numericSizeCm: { readonly column: 'numericSizeCm' };
+                readonly reachMm: { readonly column: 'reachMm' };
+                readonly sizeLabel: { readonly column: 'sizeLabel' };
+                readonly stackMm: { readonly column: 'stackMm' };
+                readonly updatedAt: { readonly column: 'updatedAt' };
+              };
+            };
+          };
+          readonly Brand: {
+            readonly fields: {
+              readonly country: {
                 readonly nullable: true;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
@@ -474,7 +1489,15 @@ type ContractBase = Omit<
                 readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
               };
-              readonly title: {
+              readonly logoUrl: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly name: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly slug: {
                 readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
@@ -487,31 +1510,132 @@ type ContractBase = Omit<
               };
             };
             readonly relations: {
-              readonly author: {
-                readonly to: { readonly namespace: 'public' & NamespaceId; readonly model: 'User' };
+              readonly bikes: {
+                readonly to: { readonly namespace: 'public' & NamespaceId; readonly model: 'Bike' };
+                readonly cardinality: '1:N';
+                readonly on: {
+                  readonly localFields: readonly ['id'];
+                  readonly targetFields: readonly ['brandId'];
+                };
+              };
+            };
+            readonly storage: {
+              readonly table: 'Brand';
+              readonly namespaceId: 'public';
+              readonly fields: {
+                readonly country: { readonly column: 'country' };
+                readonly createdAt: { readonly column: 'createdAt' };
+                readonly id: { readonly column: 'id' };
+                readonly logoUrl: { readonly column: 'logoUrl' };
+                readonly name: { readonly column: 'name' };
+                readonly slug: { readonly column: 'slug' };
+                readonly updatedAt: { readonly column: 'updatedAt' };
+              };
+            };
+          };
+          readonly Offer: {
+            readonly fields: {
+              readonly affiliateUrl: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly bikeVariantId: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly createdAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+              readonly id: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly inStock: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/bool@1' };
+              };
+              readonly lastCheckedAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+              readonly oldPriceUah: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly priceUah: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly productUrl: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly shopId: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly updatedAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+            };
+            readonly relations: {
+              readonly bikeVariant: {
+                readonly to: {
+                  readonly namespace: 'public' & NamespaceId;
+                  readonly model: 'BikeVariant';
+                };
                 readonly cardinality: 'N:1';
                 readonly nullable: false;
                 readonly on: {
-                  readonly localFields: readonly ['authorId'];
+                  readonly localFields: readonly ['bikeVariantId'];
+                  readonly targetFields: readonly ['id'];
+                };
+              };
+              readonly shop: {
+                readonly to: { readonly namespace: 'public' & NamespaceId; readonly model: 'Shop' };
+                readonly cardinality: 'N:1';
+                readonly nullable: false;
+                readonly on: {
+                  readonly localFields: readonly ['shopId'];
                   readonly targetFields: readonly ['id'];
                 };
               };
             };
             readonly storage: {
-              readonly table: 'Post';
+              readonly table: 'Offer';
               readonly namespaceId: 'public';
               readonly fields: {
-                readonly authorId: { readonly column: 'authorId' };
-                readonly content: { readonly column: 'content' };
+                readonly affiliateUrl: { readonly column: 'affiliateUrl' };
+                readonly bikeVariantId: { readonly column: 'bikeVariantId' };
                 readonly createdAt: { readonly column: 'createdAt' };
                 readonly id: { readonly column: 'id' };
-                readonly title: { readonly column: 'title' };
+                readonly inStock: { readonly column: 'inStock' };
+                readonly lastCheckedAt: { readonly column: 'lastCheckedAt' };
+                readonly oldPriceUah: { readonly column: 'oldPriceUah' };
+                readonly priceUah: { readonly column: 'priceUah' };
+                readonly productUrl: { readonly column: 'productUrl' };
+                readonly shopId: { readonly column: 'shopId' };
                 readonly updatedAt: { readonly column: 'updatedAt' };
               };
             };
           };
-          readonly User: {
+          readonly QuizSubmission: {
             readonly fields: {
+              readonly asphaltPct: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
               readonly createdAt: {
                 readonly nullable: false;
                 readonly type: {
@@ -519,16 +1643,113 @@ type ContractBase = Omit<
                   readonly codecId: 'pg/timestamptz-string@1';
                 };
               };
-              readonly email: {
+              readonly gender: {
                 readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly gravelPct: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly heightCm: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
               };
               readonly id: {
                 readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
               };
-              readonly name: {
+              readonly inseamCm: {
                 readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly maxBudgetUah: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly minBudgetUah: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly offroadPct: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly primaryGoal: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly recommendedCategory: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly recommendedSizeLabel: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly ridingPosition: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly topBikeSlug: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+            };
+            readonly relations: Record<string, never>;
+            readonly storage: {
+              readonly table: 'QuizSubmission';
+              readonly namespaceId: 'public';
+              readonly fields: {
+                readonly asphaltPct: { readonly column: 'asphaltPct' };
+                readonly createdAt: { readonly column: 'createdAt' };
+                readonly gender: { readonly column: 'gender' };
+                readonly gravelPct: { readonly column: 'gravelPct' };
+                readonly heightCm: { readonly column: 'heightCm' };
+                readonly id: { readonly column: 'id' };
+                readonly inseamCm: { readonly column: 'inseamCm' };
+                readonly maxBudgetUah: { readonly column: 'maxBudgetUah' };
+                readonly minBudgetUah: { readonly column: 'minBudgetUah' };
+                readonly offroadPct: { readonly column: 'offroadPct' };
+                readonly primaryGoal: { readonly column: 'primaryGoal' };
+                readonly recommendedCategory: { readonly column: 'recommendedCategory' };
+                readonly recommendedSizeLabel: { readonly column: 'recommendedSizeLabel' };
+                readonly ridingPosition: { readonly column: 'ridingPosition' };
+                readonly topBikeSlug: { readonly column: 'topBikeSlug' };
+              };
+            };
+          };
+          readonly Shop: {
+            readonly fields: {
+              readonly affiliateParamKey: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly baseUrl: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly createdAt: {
+                readonly nullable: false;
+                readonly type: {
+                  readonly kind: 'scalar';
+                  readonly codecId: 'pg/timestamptz-string@1';
+                };
+              };
+              readonly id: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/int4@1' };
+              };
+              readonly logoUrl: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly name: {
+                readonly nullable: false;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly slug: {
+                readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
               readonly updatedAt: {
@@ -538,34 +1759,110 @@ type ContractBase = Omit<
                   readonly codecId: 'pg/timestamptz-string@1';
                 };
               };
-              readonly username: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
             };
             readonly relations: {
-              readonly posts: {
-                readonly to: { readonly namespace: 'public' & NamespaceId; readonly model: 'Post' };
+              readonly offers: {
+                readonly to: {
+                  readonly namespace: 'public' & NamespaceId;
+                  readonly model: 'Offer';
+                };
                 readonly cardinality: '1:N';
                 readonly on: {
                   readonly localFields: readonly ['id'];
-                  readonly targetFields: readonly ['authorId'];
+                  readonly targetFields: readonly ['shopId'];
                 };
               };
             };
             readonly storage: {
-              readonly table: 'User';
+              readonly table: 'Shop';
               readonly namespaceId: 'public';
               readonly fields: {
+                readonly affiliateParamKey: { readonly column: 'affiliateParamKey' };
+                readonly baseUrl: { readonly column: 'baseUrl' };
                 readonly createdAt: { readonly column: 'createdAt' };
-                readonly email: { readonly column: 'email' };
                 readonly id: { readonly column: 'id' };
+                readonly logoUrl: { readonly column: 'logoUrl' };
                 readonly name: { readonly column: 'name' };
+                readonly slug: { readonly column: 'slug' };
                 readonly updatedAt: { readonly column: 'updatedAt' };
-                readonly username: { readonly column: 'username' };
               };
             };
           };
+        };
+        readonly enum: {
+          readonly BikeCategory: {
+            readonly codecId: 'pg/text@1';
+            readonly members: readonly [
+              { readonly name: 'GRAVEL'; readonly value: 'GRAVEL' },
+              { readonly name: 'ROAD'; readonly value: 'ROAD' },
+              { readonly name: 'MTB_HARDTAIL'; readonly value: 'MTB_HARDTAIL' },
+              { readonly name: 'CITY_COMMUTER'; readonly value: 'CITY_COMMUTER' },
+              { readonly name: 'TOURING'; readonly value: 'TOURING' },
+              { readonly name: 'HYBRID'; readonly value: 'HYBRID' },
+            ];
+          };
+          readonly BrakeType: {
+            readonly codecId: 'pg/text@1';
+            readonly members: readonly [
+              { readonly name: 'HYDRAULIC_DISC'; readonly value: 'HYDRAULIC_DISC' },
+              { readonly name: 'MECHANICAL_DISC'; readonly value: 'MECHANICAL_DISC' },
+              { readonly name: 'RIM'; readonly value: 'RIM' },
+            ];
+          };
+          readonly FrameMaterial: {
+            readonly codecId: 'pg/text@1';
+            readonly members: readonly [
+              { readonly name: 'ALUMINUM'; readonly value: 'ALUMINUM' },
+              { readonly name: 'CARBON'; readonly value: 'CARBON' },
+              { readonly name: 'STEEL'; readonly value: 'STEEL' },
+            ];
+          };
+          readonly RiderGender: {
+            readonly codecId: 'pg/text@1';
+            readonly members: readonly [
+              { readonly name: 'UNISEX'; readonly value: 'UNISEX' },
+              { readonly name: 'MALE'; readonly value: 'MALE' },
+              { readonly name: 'FEMALE'; readonly value: 'FEMALE' },
+            ];
+          };
+          readonly RidingPosition: {
+            readonly codecId: 'pg/text@1';
+            readonly members: readonly [
+              { readonly name: 'SPORT'; readonly value: 'SPORT' },
+              { readonly name: 'COMFORTABLE'; readonly value: 'COMFORTABLE' },
+              { readonly name: 'UPRIGHT'; readonly value: 'UPRIGHT' },
+            ];
+          };
+        };
+        readonly enumMemberTypes?: {
+          readonly BikeCategory: readonly [
+            { readonly name: 'GRAVEL'; readonly value: 'GRAVEL' },
+            { readonly name: 'ROAD'; readonly value: 'ROAD' },
+            { readonly name: 'MTB_HARDTAIL'; readonly value: 'MTB_HARDTAIL' },
+            { readonly name: 'CITY_COMMUTER'; readonly value: 'CITY_COMMUTER' },
+            { readonly name: 'TOURING'; readonly value: 'TOURING' },
+            { readonly name: 'HYBRID'; readonly value: 'HYBRID' },
+          ];
+          readonly BrakeType: readonly [
+            { readonly name: 'HYDRAULIC_DISC'; readonly value: 'HYDRAULIC_DISC' },
+            { readonly name: 'MECHANICAL_DISC'; readonly value: 'MECHANICAL_DISC' },
+            { readonly name: 'RIM'; readonly value: 'RIM' },
+          ];
+          readonly FrameMaterial: readonly [
+            { readonly name: 'ALUMINUM'; readonly value: 'ALUMINUM' },
+            { readonly name: 'CARBON'; readonly value: 'CARBON' },
+            { readonly name: 'STEEL'; readonly value: 'STEEL' },
+          ];
+          readonly RiderGender: readonly [
+            { readonly name: 'UNISEX'; readonly value: 'UNISEX' },
+            { readonly name: 'MALE'; readonly value: 'MALE' },
+            { readonly name: 'FEMALE'; readonly value: 'FEMALE' },
+          ];
+          readonly RidingPosition: readonly [
+            { readonly name: 'SPORT'; readonly value: 'SPORT' },
+            { readonly name: 'COMFORTABLE'; readonly value: 'COMFORTABLE' },
+            { readonly name: 'UPRIGHT'; readonly value: 'UPRIGHT' },
+          ];
         };
       };
     };
@@ -606,7 +1903,7 @@ type ContractBase = Omit<
           readonly onCreate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
           readonly onUpdate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
           readonly ref: {
-            readonly entry: 'Post';
+            readonly entry: 'Bike';
             readonly field: 'updatedAt';
             readonly namespace: 'public';
           };
@@ -615,7 +1912,34 @@ type ContractBase = Omit<
           readonly onCreate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
           readonly onUpdate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
           readonly ref: {
-            readonly entry: 'User';
+            readonly entry: 'BikeVariant';
+            readonly field: 'updatedAt';
+            readonly namespace: 'public';
+          };
+        },
+        {
+          readonly onCreate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
+          readonly onUpdate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
+          readonly ref: {
+            readonly entry: 'Brand';
+            readonly field: 'updatedAt';
+            readonly namespace: 'public';
+          };
+        },
+        {
+          readonly onCreate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
+          readonly onUpdate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
+          readonly ref: {
+            readonly entry: 'Offer';
+            readonly field: 'updatedAt';
+            readonly namespace: 'public';
+          };
+        },
+        {
+          readonly onCreate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
+          readonly onUpdate: { readonly id: 'timestamptzStringNow'; readonly kind: 'generator' };
+          readonly ref: {
+            readonly entry: 'Shop';
             readonly field: 'updatedAt';
             readonly namespace: 'public';
           };
