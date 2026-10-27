@@ -4,39 +4,241 @@
   "target": "postgres",
   "profileHash": "3916f444a8a17ad749191acf9e08dad97d1a327b88c2f1d45d12f240296aa8b2",
   "roots": {
-    "Post": {
-      "model": "Post",
+    "Bike": {
+      "model": "Bike",
       "namespace": "public"
     },
-    "User": {
-      "model": "User",
+    "BikeVariant": {
+      "model": "BikeVariant",
+      "namespace": "public"
+    },
+    "Brand": {
+      "model": "Brand",
+      "namespace": "public"
+    },
+    "Offer": {
+      "model": "Offer",
+      "namespace": "public"
+    },
+    "QuizSubmission": {
+      "model": "QuizSubmission",
+      "namespace": "public"
+    },
+    "Shop": {
+      "model": "Shop",
       "namespace": "public"
     }
   },
   "domain": {
     "namespaces": {
       "public": {
+        "enum": {
+          "BikeCategory": {
+            "codecId": "pg/text@1",
+            "members": [
+              {
+                "name": "GRAVEL",
+                "value": "GRAVEL"
+              },
+              {
+                "name": "ROAD",
+                "value": "ROAD"
+              },
+              {
+                "name": "MTB_HARDTAIL",
+                "value": "MTB_HARDTAIL"
+              },
+              {
+                "name": "CITY_COMMUTER",
+                "value": "CITY_COMMUTER"
+              },
+              {
+                "name": "TOURING",
+                "value": "TOURING"
+              },
+              {
+                "name": "HYBRID",
+                "value": "HYBRID"
+              }
+            ]
+          },
+          "BrakeType": {
+            "codecId": "pg/text@1",
+            "members": [
+              {
+                "name": "HYDRAULIC_DISC",
+                "value": "HYDRAULIC_DISC"
+              },
+              {
+                "name": "MECHANICAL_DISC",
+                "value": "MECHANICAL_DISC"
+              },
+              {
+                "name": "RIM",
+                "value": "RIM"
+              }
+            ]
+          },
+          "FrameMaterial": {
+            "codecId": "pg/text@1",
+            "members": [
+              {
+                "name": "ALUMINUM",
+                "value": "ALUMINUM"
+              },
+              {
+                "name": "CARBON",
+                "value": "CARBON"
+              },
+              {
+                "name": "STEEL",
+                "value": "STEEL"
+              }
+            ]
+          },
+          "RiderGender": {
+            "codecId": "pg/text@1",
+            "members": [
+              {
+                "name": "UNISEX",
+                "value": "UNISEX"
+              },
+              {
+                "name": "MALE",
+                "value": "MALE"
+              },
+              {
+                "name": "FEMALE",
+                "value": "FEMALE"
+              }
+            ]
+          },
+          "RidingPosition": {
+            "codecId": "pg/text@1",
+            "members": [
+              {
+                "name": "SPORT",
+                "value": "SPORT"
+              },
+              {
+                "name": "COMFORTABLE",
+                "value": "COMFORTABLE"
+              },
+              {
+                "name": "UPRIGHT",
+                "value": "UPRIGHT"
+              }
+            ]
+          }
+        },
         "models": {
-          "Post": {
+          "Bike": {
             "fields": {
-              "authorId": {
+              "asphaltScore": {
                 "nullable": false,
                 "type": {
                   "codecId": "pg/int4@1",
                   "kind": "scalar"
                 }
               },
-              "content": {
+              "brakeType": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "BrakeType",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "brandId": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "category": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "BikeCategory",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "createdAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "description": {
                 "nullable": true,
                 "type": {
                   "codecId": "pg/text@1",
                   "kind": "scalar"
                 }
               },
-              "createdAt": {
+              "drivetrain": {
                 "nullable": false,
                 "type": {
-                  "codecId": "pg/timestamptz-string@1",
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "frameMaterial": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "FrameMaterial",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "gender": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "RiderGender",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "gravelScore": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "hasFenderMounts": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/bool@1",
+                  "kind": "scalar"
+                }
+              },
+              "hasRackMounts": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/bool@1",
                   "kind": "scalar"
                 }
               },
@@ -47,81 +249,24 @@
                   "kind": "scalar"
                 }
               },
-              "title": {
+              "imageUrl": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "keyHighlights": {
+                "many": {
+                  "elementNullable": false
+                },
                 "nullable": false,
                 "type": {
                   "codecId": "pg/text@1",
                   "kind": "scalar"
                 }
               },
-              "updatedAt": {
-                "nullable": false,
-                "type": {
-                  "codecId": "pg/timestamptz-string@1",
-                  "kind": "scalar"
-                }
-              }
-            },
-            "relations": {
-              "author": {
-                "cardinality": "N:1",
-                "nullable": false,
-                "on": {
-                  "localFields": [
-                    "authorId"
-                  ],
-                  "targetFields": [
-                    "id"
-                  ]
-                },
-                "to": {
-                  "model": "User",
-                  "namespace": "public"
-                }
-              }
-            },
-            "storage": {
-              "fields": {
-                "authorId": {
-                  "column": "authorId"
-                },
-                "content": {
-                  "column": "content"
-                },
-                "createdAt": {
-                  "column": "createdAt"
-                },
-                "id": {
-                  "column": "id"
-                },
-                "title": {
-                  "column": "title"
-                },
-                "updatedAt": {
-                  "column": "updatedAt"
-                }
-              },
-              "namespaceId": "public",
-              "table": "Post"
-            }
-          },
-          "User": {
-            "fields": {
-              "createdAt": {
-                "nullable": false,
-                "type": {
-                  "codecId": "pg/timestamptz-string@1",
-                  "kind": "scalar"
-                }
-              },
-              "email": {
-                "nullable": false,
-                "type": {
-                  "codecId": "pg/text@1",
-                  "kind": "scalar"
-                }
-              },
-              "id": {
+              "modelYear": {
                 "nullable": false,
                 "type": {
                   "codecId": "pg/int4@1",
@@ -129,7 +274,382 @@
                 }
               },
               "name": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "offroadScore": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "ridingPosition": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "RidingPosition",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "slug": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "suspensionFork": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/bool@1",
+                  "kind": "scalar"
+                }
+              },
+              "updatedAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "weightKg": {
                 "nullable": true,
+                "type": {
+                  "codecId": "pg/float8@1",
+                  "kind": "scalar"
+                }
+              },
+              "wheelSize": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              }
+            },
+            "relations": {
+              "brand": {
+                "cardinality": "N:1",
+                "nullable": false,
+                "on": {
+                  "localFields": [
+                    "brandId"
+                  ],
+                  "targetFields": [
+                    "id"
+                  ]
+                },
+                "to": {
+                  "model": "Brand",
+                  "namespace": "public"
+                }
+              },
+              "variants": {
+                "cardinality": "1:N",
+                "on": {
+                  "localFields": [
+                    "id"
+                  ],
+                  "targetFields": [
+                    "bikeId"
+                  ]
+                },
+                "to": {
+                  "model": "BikeVariant",
+                  "namespace": "public"
+                }
+              }
+            },
+            "storage": {
+              "fields": {
+                "asphaltScore": {
+                  "column": "asphaltScore"
+                },
+                "brakeType": {
+                  "column": "brakeType"
+                },
+                "brandId": {
+                  "column": "brandId"
+                },
+                "category": {
+                  "column": "category"
+                },
+                "createdAt": {
+                  "column": "createdAt"
+                },
+                "description": {
+                  "column": "description"
+                },
+                "drivetrain": {
+                  "column": "drivetrain"
+                },
+                "frameMaterial": {
+                  "column": "frameMaterial"
+                },
+                "gender": {
+                  "column": "gender"
+                },
+                "gravelScore": {
+                  "column": "gravelScore"
+                },
+                "hasFenderMounts": {
+                  "column": "hasFenderMounts"
+                },
+                "hasRackMounts": {
+                  "column": "hasRackMounts"
+                },
+                "id": {
+                  "column": "id"
+                },
+                "imageUrl": {
+                  "column": "imageUrl"
+                },
+                "keyHighlights": {
+                  "column": "keyHighlights"
+                },
+                "modelYear": {
+                  "column": "modelYear"
+                },
+                "name": {
+                  "column": "name"
+                },
+                "offroadScore": {
+                  "column": "offroadScore"
+                },
+                "ridingPosition": {
+                  "column": "ridingPosition"
+                },
+                "slug": {
+                  "column": "slug"
+                },
+                "suspensionFork": {
+                  "column": "suspensionFork"
+                },
+                "updatedAt": {
+                  "column": "updatedAt"
+                },
+                "weightKg": {
+                  "column": "weightKg"
+                },
+                "wheelSize": {
+                  "column": "wheelSize"
+                }
+              },
+              "namespaceId": "public",
+              "table": "Bike"
+            }
+          },
+          "BikeVariant": {
+            "fields": {
+              "bikeId": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "createdAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "id": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "maxInseamCm": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "maxRiderHeightCm": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "minInseamCm": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "minRiderHeightCm": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "numericSizeCm": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "reachMm": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "sizeLabel": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "stackMm": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "updatedAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              }
+            },
+            "relations": {
+              "bike": {
+                "cardinality": "N:1",
+                "nullable": false,
+                "on": {
+                  "localFields": [
+                    "bikeId"
+                  ],
+                  "targetFields": [
+                    "id"
+                  ]
+                },
+                "to": {
+                  "model": "Bike",
+                  "namespace": "public"
+                }
+              },
+              "offers": {
+                "cardinality": "1:N",
+                "on": {
+                  "localFields": [
+                    "id"
+                  ],
+                  "targetFields": [
+                    "bikeVariantId"
+                  ]
+                },
+                "to": {
+                  "model": "Offer",
+                  "namespace": "public"
+                }
+              }
+            },
+            "storage": {
+              "fields": {
+                "bikeId": {
+                  "column": "bikeId"
+                },
+                "createdAt": {
+                  "column": "createdAt"
+                },
+                "id": {
+                  "column": "id"
+                },
+                "maxInseamCm": {
+                  "column": "maxInseamCm"
+                },
+                "maxRiderHeightCm": {
+                  "column": "maxRiderHeightCm"
+                },
+                "minInseamCm": {
+                  "column": "minInseamCm"
+                },
+                "minRiderHeightCm": {
+                  "column": "minRiderHeightCm"
+                },
+                "numericSizeCm": {
+                  "column": "numericSizeCm"
+                },
+                "reachMm": {
+                  "column": "reachMm"
+                },
+                "sizeLabel": {
+                  "column": "sizeLabel"
+                },
+                "stackMm": {
+                  "column": "stackMm"
+                },
+                "updatedAt": {
+                  "column": "updatedAt"
+                }
+              },
+              "namespaceId": "public",
+              "table": "BikeVariant"
+            }
+          },
+          "Brand": {
+            "fields": {
+              "country": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "createdAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "id": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "logoUrl": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "name": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "slug": {
+                "nullable": false,
                 "type": {
                   "codecId": "pg/text@1",
                   "kind": "scalar"
@@ -141,8 +661,326 @@
                   "codecId": "pg/timestamptz-string@1",
                   "kind": "scalar"
                 }
+              }
+            },
+            "relations": {
+              "bikes": {
+                "cardinality": "1:N",
+                "on": {
+                  "localFields": [
+                    "id"
+                  ],
+                  "targetFields": [
+                    "brandId"
+                  ]
+                },
+                "to": {
+                  "model": "Bike",
+                  "namespace": "public"
+                }
+              }
+            },
+            "storage": {
+              "fields": {
+                "country": {
+                  "column": "country"
+                },
+                "createdAt": {
+                  "column": "createdAt"
+                },
+                "id": {
+                  "column": "id"
+                },
+                "logoUrl": {
+                  "column": "logoUrl"
+                },
+                "name": {
+                  "column": "name"
+                },
+                "slug": {
+                  "column": "slug"
+                },
+                "updatedAt": {
+                  "column": "updatedAt"
+                }
               },
-              "username": {
+              "namespaceId": "public",
+              "table": "Brand"
+            }
+          },
+          "Offer": {
+            "fields": {
+              "affiliateUrl": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "bikeVariantId": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "createdAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "id": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "inStock": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/bool@1",
+                  "kind": "scalar"
+                }
+              },
+              "lastCheckedAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "oldPriceUah": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "priceUah": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "productUrl": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "shopId": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "updatedAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              }
+            },
+            "relations": {
+              "bikeVariant": {
+                "cardinality": "N:1",
+                "nullable": false,
+                "on": {
+                  "localFields": [
+                    "bikeVariantId"
+                  ],
+                  "targetFields": [
+                    "id"
+                  ]
+                },
+                "to": {
+                  "model": "BikeVariant",
+                  "namespace": "public"
+                }
+              },
+              "shop": {
+                "cardinality": "N:1",
+                "nullable": false,
+                "on": {
+                  "localFields": [
+                    "shopId"
+                  ],
+                  "targetFields": [
+                    "id"
+                  ]
+                },
+                "to": {
+                  "model": "Shop",
+                  "namespace": "public"
+                }
+              }
+            },
+            "storage": {
+              "fields": {
+                "affiliateUrl": {
+                  "column": "affiliateUrl"
+                },
+                "bikeVariantId": {
+                  "column": "bikeVariantId"
+                },
+                "createdAt": {
+                  "column": "createdAt"
+                },
+                "id": {
+                  "column": "id"
+                },
+                "inStock": {
+                  "column": "inStock"
+                },
+                "lastCheckedAt": {
+                  "column": "lastCheckedAt"
+                },
+                "oldPriceUah": {
+                  "column": "oldPriceUah"
+                },
+                "priceUah": {
+                  "column": "priceUah"
+                },
+                "productUrl": {
+                  "column": "productUrl"
+                },
+                "shopId": {
+                  "column": "shopId"
+                },
+                "updatedAt": {
+                  "column": "updatedAt"
+                }
+              },
+              "namespaceId": "public",
+              "table": "Offer"
+            }
+          },
+          "QuizSubmission": {
+            "fields": {
+              "asphaltPct": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "createdAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "gender": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "RiderGender",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "gravelPct": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "heightCm": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "id": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "inseamCm": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "maxBudgetUah": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "minBudgetUah": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "offroadPct": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "primaryGoal": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "recommendedCategory": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "BikeCategory",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "recommendedSizeLabel": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "ridingPosition": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                },
+                "valueSet": {
+                  "entityKind": "enum",
+                  "entityName": "RidingPosition",
+                  "namespaceId": "public",
+                  "plane": "domain"
+                }
+              },
+              "topBikeSlug": {
                 "nullable": true,
                 "type": {
                   "codecId": "pg/text@1",
@@ -150,46 +988,164 @@
                 }
               }
             },
+            "relations": {},
+            "storage": {
+              "fields": {
+                "asphaltPct": {
+                  "column": "asphaltPct"
+                },
+                "createdAt": {
+                  "column": "createdAt"
+                },
+                "gender": {
+                  "column": "gender"
+                },
+                "gravelPct": {
+                  "column": "gravelPct"
+                },
+                "heightCm": {
+                  "column": "heightCm"
+                },
+                "id": {
+                  "column": "id"
+                },
+                "inseamCm": {
+                  "column": "inseamCm"
+                },
+                "maxBudgetUah": {
+                  "column": "maxBudgetUah"
+                },
+                "minBudgetUah": {
+                  "column": "minBudgetUah"
+                },
+                "offroadPct": {
+                  "column": "offroadPct"
+                },
+                "primaryGoal": {
+                  "column": "primaryGoal"
+                },
+                "recommendedCategory": {
+                  "column": "recommendedCategory"
+                },
+                "recommendedSizeLabel": {
+                  "column": "recommendedSizeLabel"
+                },
+                "ridingPosition": {
+                  "column": "ridingPosition"
+                },
+                "topBikeSlug": {
+                  "column": "topBikeSlug"
+                }
+              },
+              "namespaceId": "public",
+              "table": "QuizSubmission"
+            }
+          },
+          "Shop": {
+            "fields": {
+              "affiliateParamKey": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "baseUrl": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "createdAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              },
+              "id": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/int4@1",
+                  "kind": "scalar"
+                }
+              },
+              "logoUrl": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "name": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "slug": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "updatedAt": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "kind": "scalar"
+                }
+              }
+            },
             "relations": {
-              "posts": {
+              "offers": {
                 "cardinality": "1:N",
                 "on": {
                   "localFields": [
                     "id"
                   ],
                   "targetFields": [
-                    "authorId"
+                    "shopId"
                   ]
                 },
                 "to": {
-                  "model": "Post",
+                  "model": "Offer",
                   "namespace": "public"
                 }
               }
             },
             "storage": {
               "fields": {
+                "affiliateParamKey": {
+                  "column": "affiliateParamKey"
+                },
+                "baseUrl": {
+                  "column": "baseUrl"
+                },
                 "createdAt": {
                   "column": "createdAt"
-                },
-                "email": {
-                  "column": "email"
                 },
                 "id": {
                   "column": "id"
                 },
+                "logoUrl": {
+                  "column": "logoUrl"
+                },
                 "name": {
                   "column": "name"
                 },
+                "slug": {
+                  "column": "slug"
+                },
                 "updatedAt": {
                   "column": "updatedAt"
-                },
-                "username": {
-                  "column": "username"
                 }
               },
               "namespaceId": "public",
-              "table": "User"
+              "table": "Shop"
             }
           }
         }
@@ -201,17 +1157,284 @@
       "public": {
         "entries": {
           "table": {
-            "Post": {
+            "Bike": {
+              "checks": [
+                {
+                  "expression": "\"brakeType\" IN ('HYDRAULIC_DISC', 'MECHANICAL_DISC', 'RIM')",
+                  "name": "Bike_brakeType_check_537ea4cc",
+                  "prefix": "Bike_brakeType_check"
+                },
+                {
+                  "expression": "\"category\" IN ('GRAVEL', 'ROAD', 'MTB_HARDTAIL', 'CITY_COMMUTER', 'TOURING', 'HYBRID')",
+                  "name": "Bike_category_check_723d2a76",
+                  "prefix": "Bike_category_check"
+                },
+                {
+                  "expression": "\"frameMaterial\" IN ('ALUMINUM', 'CARBON', 'STEEL')",
+                  "name": "Bike_frameMaterial_check_2e5198b1",
+                  "prefix": "Bike_frameMaterial_check"
+                },
+                {
+                  "expression": "\"gender\" IN ('UNISEX', 'MALE', 'FEMALE')",
+                  "name": "Bike_gender_check_908ff56f",
+                  "prefix": "Bike_gender_check"
+                },
+                {
+                  "expression": "array_position(\"keyHighlights\", NULL) IS NULL",
+                  "name": "Bike_keyHighlights_elem_not_null_d66b71cd",
+                  "prefix": "Bike_keyHighlights_elem_not_null"
+                },
+                {
+                  "expression": "\"ridingPosition\" IN ('SPORT', 'COMFORTABLE', 'UPRIGHT')",
+                  "name": "Bike_ridingPosition_check_5063a009",
+                  "prefix": "Bike_ridingPosition_check"
+                }
+              ],
               "columns": {
-                "authorId": {
+                "asphaltScore": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "kind": "literal",
+                    "value": 50
+                  },
+                  "nullable": false
+                },
+                "brakeType": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "BrakeType",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "brandId": {
                   "codecId": "pg/int4@1",
                   "dataType": "pg/int4",
                   "nullable": false
                 },
-                "content": {
+                "category": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "BikeCategory",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "createdAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "default": {
+                    "expression": "now()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "description": {
                   "codecId": "pg/text@1",
                   "dataType": "pg/text",
                   "nullable": true
+                },
+                "drivetrain": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "frameMaterial": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "FrameMaterial",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "gender": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "default": {
+                    "kind": "literal",
+                    "value": "UNISEX"
+                  },
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "RiderGender",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "gravelScore": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "kind": "literal",
+                    "value": 50
+                  },
+                  "nullable": false
+                },
+                "hasFenderMounts": {
+                  "codecId": "pg/bool@1",
+                  "dataType": "pg/bool",
+                  "default": {
+                    "kind": "literal",
+                    "value": false
+                  },
+                  "nullable": false
+                },
+                "hasRackMounts": {
+                  "codecId": "pg/bool@1",
+                  "dataType": "pg/bool",
+                  "default": {
+                    "kind": "literal",
+                    "value": false
+                  },
+                  "nullable": false
+                },
+                "id": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "expression": "autoincrement()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "imageUrl": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": true
+                },
+                "keyHighlights": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "many": {
+                    "elementNullable": false
+                  },
+                  "nullable": false
+                },
+                "modelYear": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "name": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "offroadScore": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "kind": "literal",
+                    "value": 50
+                  },
+                  "nullable": false
+                },
+                "ridingPosition": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "default": {
+                    "kind": "literal",
+                    "value": "COMFORTABLE"
+                  },
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "RidingPosition",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "slug": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "suspensionFork": {
+                  "codecId": "pg/bool@1",
+                  "dataType": "pg/bool",
+                  "default": {
+                    "kind": "literal",
+                    "value": false
+                  },
+                  "nullable": false
+                },
+                "updatedAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "nullable": false
+                },
+                "weightKg": {
+                  "codecId": "pg/float8@1",
+                  "dataType": "pg/float8",
+                  "nullable": true
+                },
+                "wheelSize": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                }
+              },
+              "foreignKeys": [
+                {
+                  "index": {
+                    "name": "Bike_brandId_idx_02e95397"
+                  },
+                  "source": {
+                    "columns": [
+                      "brandId"
+                    ],
+                    "namespaceId": "public",
+                    "tableName": "Bike"
+                  },
+                  "target": {
+                    "columns": [
+                      "id"
+                    ],
+                    "namespaceId": "public",
+                    "tableName": "Brand"
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "columns": [
+                    "brandId"
+                  ],
+                  "name": "Bike_brandId_idx_02e95397",
+                  "prefix": "Bike_brandId_idx",
+                  "unique": false
+                }
+              ],
+              "primaryKey": {
+                "columns": [
+                  "id"
+                ]
+              },
+              "uniques": [
+                {
+                  "columns": [
+                    "slug"
+                  ]
+                }
+              ]
+            },
+            "BikeVariant": {
+              "columns": {
+                "bikeId": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
                 },
                 "createdAt": {
                   "codecId": "pg/timestamptz-string@1",
@@ -231,10 +1454,45 @@
                   },
                   "nullable": false
                 },
-                "title": {
+                "maxInseamCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
+                },
+                "maxRiderHeightCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "minInseamCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
+                },
+                "minRiderHeightCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "numericSizeCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
+                },
+                "reachMm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
+                },
+                "sizeLabel": {
                   "codecId": "pg/text@1",
                   "dataType": "pg/text",
                   "nullable": false
+                },
+                "stackMm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
                 },
                 "updatedAt": {
                   "codecId": "pg/timestamptz-string@1",
@@ -245,31 +1503,31 @@
               "foreignKeys": [
                 {
                   "index": {
-                    "name": "Post_authorId_idx_e47547ed"
+                    "name": "BikeVariant_bikeId_idx_a4008bfd"
                   },
                   "source": {
                     "columns": [
-                      "authorId"
+                      "bikeId"
                     ],
                     "namespaceId": "public",
-                    "tableName": "Post"
+                    "tableName": "BikeVariant"
                   },
                   "target": {
                     "columns": [
                       "id"
                     ],
                     "namespaceId": "public",
-                    "tableName": "User"
+                    "tableName": "Bike"
                   }
                 }
               ],
               "indexes": [
                 {
                   "columns": [
-                    "authorId"
+                    "bikeId"
                   ],
-                  "name": "Post_authorId_idx_e47547ed",
-                  "prefix": "Post_authorId_idx",
+                  "name": "BikeVariant_bikeId_idx_a4008bfd",
+                  "prefix": "BikeVariant_bikeId_idx",
                   "unique": false
                 }
               ],
@@ -280,8 +1538,13 @@
               },
               "uniques": []
             },
-            "User": {
+            "Brand": {
               "columns": {
+                "country": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": true
+                },
                 "createdAt": {
                   "codecId": "pg/timestamptz-string@1",
                   "dataType": "pg/timestamptz",
@@ -289,11 +1552,6 @@
                     "expression": "now()",
                     "kind": "function"
                   },
-                  "nullable": false
-                },
-                "email": {
-                  "codecId": "pg/text@1",
-                  "dataType": "pg/text",
                   "nullable": false
                 },
                 "id": {
@@ -305,20 +1563,25 @@
                   },
                   "nullable": false
                 },
-                "name": {
+                "logoUrl": {
                   "codecId": "pg/text@1",
                   "dataType": "pg/text",
                   "nullable": true
+                },
+                "name": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "slug": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
                 },
                 "updatedAt": {
                   "codecId": "pg/timestamptz-string@1",
                   "dataType": "pg/timestamptz",
                   "nullable": false
-                },
-                "username": {
-                  "codecId": "pg/text@1",
-                  "dataType": "pg/text",
-                  "nullable": true
                 }
               },
               "foreignKeys": [],
@@ -331,9 +1594,403 @@
               "uniques": [
                 {
                   "columns": [
-                    "email"
+                    "slug"
+                  ]
+                },
+                {
+                  "columns": [
+                    "name"
                   ]
                 }
+              ]
+            },
+            "Offer": {
+              "columns": {
+                "affiliateUrl": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "bikeVariantId": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "createdAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "default": {
+                    "expression": "now()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "id": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "expression": "autoincrement()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "inStock": {
+                  "codecId": "pg/bool@1",
+                  "dataType": "pg/bool",
+                  "default": {
+                    "kind": "literal",
+                    "value": true
+                  },
+                  "nullable": false
+                },
+                "lastCheckedAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "default": {
+                    "expression": "now()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "oldPriceUah": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
+                },
+                "priceUah": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "productUrl": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "shopId": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "updatedAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "nullable": false
+                }
+              },
+              "foreignKeys": [
+                {
+                  "index": {
+                    "name": "Offer_bikeVariantId_idx_6dc8a3ca"
+                  },
+                  "source": {
+                    "columns": [
+                      "bikeVariantId"
+                    ],
+                    "namespaceId": "public",
+                    "tableName": "Offer"
+                  },
+                  "target": {
+                    "columns": [
+                      "id"
+                    ],
+                    "namespaceId": "public",
+                    "tableName": "BikeVariant"
+                  }
+                },
+                {
+                  "index": {
+                    "name": "Offer_shopId_idx_e9207c6b"
+                  },
+                  "source": {
+                    "columns": [
+                      "shopId"
+                    ],
+                    "namespaceId": "public",
+                    "tableName": "Offer"
+                  },
+                  "target": {
+                    "columns": [
+                      "id"
+                    ],
+                    "namespaceId": "public",
+                    "tableName": "Shop"
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "columns": [
+                    "bikeVariantId"
+                  ],
+                  "name": "Offer_bikeVariantId_idx_6dc8a3ca",
+                  "prefix": "Offer_bikeVariantId_idx",
+                  "unique": false
+                },
+                {
+                  "columns": [
+                    "shopId"
+                  ],
+                  "name": "Offer_shopId_idx_e9207c6b",
+                  "prefix": "Offer_shopId_idx",
+                  "unique": false
+                }
+              ],
+              "primaryKey": {
+                "columns": [
+                  "id"
+                ]
+              },
+              "uniques": []
+            },
+            "QuizSubmission": {
+              "checks": [
+                {
+                  "expression": "\"gender\" IN ('UNISEX', 'MALE', 'FEMALE')",
+                  "name": "QuizSubmission_gender_check_908ff56f",
+                  "prefix": "QuizSubmission_gender_check"
+                },
+                {
+                  "expression": "\"recommendedCategory\" IN ('GRAVEL', 'ROAD', 'MTB_HARDTAIL', 'CITY_COMMUTER', 'TOURING', 'HYBRID')",
+                  "name": "QuizSubmission_recommendedCategory_check_058a7286",
+                  "prefix": "QuizSubmission_recommendedCategory_check"
+                },
+                {
+                  "expression": "\"ridingPosition\" IN ('SPORT', 'COMFORTABLE', 'UPRIGHT')",
+                  "name": "QuizSubmission_ridingPosition_check_5063a009",
+                  "prefix": "QuizSubmission_ridingPosition_check"
+                }
+              ],
+              "columns": {
+                "asphaltPct": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "createdAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "default": {
+                    "expression": "now()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "gender": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "default": {
+                    "kind": "literal",
+                    "value": "UNISEX"
+                  },
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "RiderGender",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "gravelPct": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "heightCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "id": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "expression": "autoincrement()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "inseamCm": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": true
+                },
+                "maxBudgetUah": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "minBudgetUah": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "offroadPct": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "nullable": false
+                },
+                "primaryGoal": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "recommendedCategory": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "BikeCategory",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "recommendedSizeLabel": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "ridingPosition": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false,
+                  "valueSet": {
+                    "entityKind": "valueSet",
+                    "entityName": "RidingPosition",
+                    "namespaceId": "public",
+                    "plane": "storage"
+                  }
+                },
+                "topBikeSlug": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": true
+                }
+              },
+              "foreignKeys": [],
+              "indexes": [],
+              "primaryKey": {
+                "columns": [
+                  "id"
+                ]
+              },
+              "uniques": []
+            },
+            "Shop": {
+              "columns": {
+                "affiliateParamKey": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": true
+                },
+                "baseUrl": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "createdAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "default": {
+                    "expression": "now()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "id": {
+                  "codecId": "pg/int4@1",
+                  "dataType": "pg/int4",
+                  "default": {
+                    "expression": "autoincrement()",
+                    "kind": "function"
+                  },
+                  "nullable": false
+                },
+                "logoUrl": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": true
+                },
+                "name": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "slug": {
+                  "codecId": "pg/text@1",
+                  "dataType": "pg/text",
+                  "nullable": false
+                },
+                "updatedAt": {
+                  "codecId": "pg/timestamptz-string@1",
+                  "dataType": "pg/timestamptz",
+                  "nullable": false
+                }
+              },
+              "foreignKeys": [],
+              "indexes": [],
+              "primaryKey": {
+                "columns": [
+                  "id"
+                ]
+              },
+              "uniques": [
+                {
+                  "columns": [
+                    "slug"
+                  ]
+                },
+                {
+                  "columns": [
+                    "name"
+                  ]
+                }
+              ]
+            }
+          },
+          "valueSet": {
+            "BikeCategory": {
+              "kind": "valueSet",
+              "values": [
+                "GRAVEL",
+                "ROAD",
+                "MTB_HARDTAIL",
+                "CITY_COMMUTER",
+                "TOURING",
+                "HYBRID"
+              ]
+            },
+            "BrakeType": {
+              "kind": "valueSet",
+              "values": [
+                "HYDRAULIC_DISC",
+                "MECHANICAL_DISC",
+                "RIM"
+              ]
+            },
+            "FrameMaterial": {
+              "kind": "valueSet",
+              "values": [
+                "ALUMINUM",
+                "CARBON",
+                "STEEL"
+              ]
+            },
+            "RiderGender": {
+              "kind": "valueSet",
+              "values": [
+                "UNISEX",
+                "MALE",
+                "FEMALE"
+              ]
+            },
+            "RidingPosition": {
+              "kind": "valueSet",
+              "values": [
+                "SPORT",
+                "COMFORTABLE",
+                "UPRIGHT"
               ]
             }
           }
@@ -342,10 +1999,10 @@
         "kind": "postgres-schema"
       }
     },
-    "storageHash": "a51b4833fdaffe730572670ccc27dd89af7e0726ab3de7f428d21702d687cc15"
+    "storageHash": "d15ec09f3b2c35beafd37bc4ca6b7e867fc1abdb8d50308ad4009bd29404bb07"
   },
   "execution": {
-    "executionHash": "3730158042e7c88d23f35529e89ad90532db0cd5c528c13e701f93cb45aa8a9c",
+    "executionHash": "9dc05864e1fe2eeb7c125d702c0a2429ba807e54b7e5100a46caa2c83cb43780",
     "mutations": {
       "defaults": [
         {
@@ -358,7 +2015,7 @@
             "kind": "generator"
           },
           "ref": {
-            "entry": "Post",
+            "entry": "Bike",
             "field": "updatedAt",
             "namespace": "public"
           }
@@ -373,7 +2030,52 @@
             "kind": "generator"
           },
           "ref": {
-            "entry": "User",
+            "entry": "BikeVariant",
+            "field": "updatedAt",
+            "namespace": "public"
+          }
+        },
+        {
+          "onCreate": {
+            "id": "timestamptzStringNow",
+            "kind": "generator"
+          },
+          "onUpdate": {
+            "id": "timestamptzStringNow",
+            "kind": "generator"
+          },
+          "ref": {
+            "entry": "Brand",
+            "field": "updatedAt",
+            "namespace": "public"
+          }
+        },
+        {
+          "onCreate": {
+            "id": "timestamptzStringNow",
+            "kind": "generator"
+          },
+          "onUpdate": {
+            "id": "timestamptzStringNow",
+            "kind": "generator"
+          },
+          "ref": {
+            "entry": "Offer",
+            "field": "updatedAt",
+            "namespace": "public"
+          }
+        },
+        {
+          "onCreate": {
+            "id": "timestamptzStringNow",
+            "kind": "generator"
+          },
+          "onUpdate": {
+            "id": "timestamptzStringNow",
+            "kind": "generator"
+          },
+          "ref": {
+            "entry": "Shop",
             "field": "updatedAt",
             "namespace": "public"
           }

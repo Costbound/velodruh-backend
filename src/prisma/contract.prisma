@@ -1,21 +1,137 @@
 // use prisma-8
 
-model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  username  String?
-  name      String?
-  posts     Post[]
+enum BikeCategory {
+  GRAVEL
+  ROAD
+  MTB_HARDTAIL
+  CITY_COMMUTER
+  TOURING
+  HYBRID
+}
+
+enum RiderGender {
+  UNISEX
+  MALE
+  FEMALE
+}
+
+enum BrakeType {
+  HYDRAULIC_DISC
+  MECHANICAL_DISC
+  RIM
+}
+
+enum FrameMaterial {
+  ALUMINUM
+  CARBON
+  STEEL
+}
+
+enum RidingPosition {
+  SPORT
+  COMFORTABLE
+  UPRIGHT
+}
+
+model Brand {
+  id        Int               @id @default(autoincrement())
+  slug      String            @unique
+  name      String            @unique
+  logoUrl   String?
+  country   String?
+  bikes     Bike[]
   createdAt TimestamptzString @default(now())
   updatedAt temporal.updatedAtString()
 }
 
-model Post {
-  id        Int      @id @default(autoincrement())
-  title     String
-  content   String?
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
-  createdAt TimestamptzString @default(now())
-  updatedAt temporal.updatedAtString()
+model Bike {
+  id              Int               @id @default(autoincrement())
+  slug            String            @unique
+  name            String
+  brandId         Int
+  brand           Brand             @relation(fields: [brandId], references: [id])
+  category        BikeCategory
+  modelYear       Int
+  description     String?
+  gender          RiderGender       @default(UNISEX)
+  brakeType       BrakeType
+  drivetrain      String
+  wheelSize       String
+  weightKg        Float?
+  frameMaterial   FrameMaterial
+  ridingPosition  RidingPosition    @default(COMFORTABLE)
+  hasRackMounts   Boolean           @default(false)
+  hasFenderMounts Boolean           @default(false)
+  suspensionFork  Boolean           @default(false)
+  asphaltScore    Int               @default(50)
+  gravelScore     Int               @default(50)
+  offroadScore    Int               @default(50)
+  imageUrl        String?
+  keyHighlights   String[]
+  variants        BikeVariant[]
+  createdAt       TimestamptzString @default(now())
+  updatedAt       temporal.updatedAtString()
+}
+
+model BikeVariant {
+  id               Int               @id @default(autoincrement())
+  bikeId           Int
+  bike             Bike              @relation(fields: [bikeId], references: [id])
+  sizeLabel        String
+  numericSizeCm    Int?
+  minRiderHeightCm Int
+  maxRiderHeightCm Int
+  minInseamCm      Int?
+  maxInseamCm      Int?
+  stackMm          Int?
+  reachMm          Int?
+  offers           Offer[]
+  createdAt        TimestamptzString @default(now())
+  updatedAt        temporal.updatedAtString()
+}
+
+model Shop {
+  id                Int               @id @default(autoincrement())
+  slug              String            @unique
+  name              String            @unique
+  baseUrl           String
+  logoUrl           String?
+  affiliateParamKey String?
+  offers            Offer[]
+  createdAt         TimestamptzString @default(now())
+  updatedAt         temporal.updatedAtString()
+}
+
+model Offer {
+  id            Int               @id @default(autoincrement())
+  bikeVariantId Int
+  bikeVariant   BikeVariant       @relation(fields: [bikeVariantId], references: [id])
+  shopId        Int
+  shop          Shop              @relation(fields: [shopId], references: [id])
+  priceUah      Int
+  oldPriceUah   Int?
+  inStock       Boolean           @default(true)
+  productUrl    String
+  affiliateUrl  String
+  lastCheckedAt TimestamptzString @default(now())
+  createdAt     TimestamptzString @default(now())
+  updatedAt     temporal.updatedAtString()
+}
+
+model QuizSubmission {
+  id                   Int               @id @default(autoincrement())
+  heightCm             Int
+  inseamCm             Int?
+  gender               RiderGender       @default(UNISEX)
+  minBudgetUah         Int
+  maxBudgetUah         Int
+  asphaltPct           Int
+  gravelPct            Int
+  offroadPct           Int
+  ridingPosition       RidingPosition
+  primaryGoal          String
+  recommendedCategory  BikeCategory
+  recommendedSizeLabel String
+  topBikeSlug          String?
+  createdAt            TimestamptzString @default(now())
 }
