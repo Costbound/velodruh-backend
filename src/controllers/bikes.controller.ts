@@ -5,7 +5,11 @@ import { bikeListQuerySchema, bikeSlugParamsSchema } from '../schemas/bike.schem
 export function handleListBikes(req: Request, res: Response): void {
   const query = bikeListQuerySchema.parse(req.query);
   const bikes = listBikes(query);
-  res.status(200).json({ items: bikes, total: bikes.length });
+  res.status(200).json({
+    items: bikes,
+    total: bikes.length,
+    appliedFilters: query,
+  });
 }
 
 export function handleGetBikeBySlug(req: Request, res: Response): void {
@@ -13,4 +17,3 @@ export function handleGetBikeBySlug(req: Request, res: Response): void {
   const bike = getBikeBySlug(slug);
   res.status(200).json(bike);
 }
-

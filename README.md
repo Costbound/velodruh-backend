@@ -21,13 +21,13 @@ Built with **Node.js 24+**, **Express 5**, **TypeScript (ESM)**, **Prisma ORM v8
      - Enums: `BikeCategory`, `RiderGender`, `BrakeType`, `FrameMaterial`, `RidingPosition`
      - Models: `Brand`, `Bike`, `BikeVariant`, `Shop`, `Offer`, `QuizSubmission`
    - Compiled contract (`contract.json`) and generated TypeScript definitions (`contract.d.ts`) consumed by `src/prisma/db.ts`.
-4. **Smart Matching Wizard & Catalog Services (`src/services/`)**
+4. **Smart Matching Wizard & Flexible Bike Search (`src/services/`)**
    - `wizard.service.ts`:
      - Determines recommended bike category (`GRAVEL`, `ROAD`, `MTB_HARDTAIL`, `CITY_COMMUTER`, `TOURING`, `HYBRID`) with human-readable reasoning.
      - Calculates frame size (`XS`–`XL` and numeric size in `cm`) from rider height and optional inseam length.
-     - Ranks bikes using a multi-factor scoring algorithm (surface affinity, category fit, budget fit, riding position, and required features) and attaches the best in-stock partner shop offer.
+     - Outputs calculated `recommendedFilters` (`category`, `sizeLabel`, `riderHeightCm`, `minPriceUah`, `maxPriceUah`, `ridingPosition`, `brakeTypes`, `hasRackMounts`, `hasFenderMounts`, `suspensionFork`, `inStockOnly`) ready to be passed to `GET /api/v1/bikes` or adjusted by the user in the catalog UI.
    - `bikes.service.ts` & `catalog.data.ts`:
-     - Provides catalog filtering by category and UAH price range, as well as deep-dive model specifications, geometry (`stackMm`, `reachMm`), and shop offers (`Velogo`, `Велопланета`, `ВелоОнлайн`).
+     - Provides flexible catalog search (`GET /api/v1/bikes`) across all bike and variant parameters (`category`, `brand`, `sizeLabel`, `riderHeightCm`, `gender`, `minPriceUah`, `maxPriceUah`, `brakeType`, `frameMaterial`, `ridingPosition`, `wheelSize`, `hasRackMounts`, `hasFenderMounts`, `suspensionFork`, `maxWeightKg`, `inStockOnly`, `sortBy`), plus deep-dive model details (`GET /api/v1/bikes/:slug`).
 5. **OpenAPI 3.1 & Swagger UI (`src/routes/docs.route.ts`)**
    - Interactive Swagger UI served at `GET /api-docs`.
    - Raw OpenAPI 3.1.0 JSON specification served at `GET /api-docs.json`.
@@ -44,7 +44,7 @@ velodruh-backend/
 │   ├── config/
 │   │   └── env.ts                  # Zod-validated environment configuration
 │   ├── controllers/
-│   │   ├── bikes.controller.ts     # HTTP handlers for bike catalog endpoints
+│   │   ├── bikes.controller.ts     # HTTP handlers for bike catalog search & details
 │   │   └── wizard.controller.ts    # HTTP handlers for Wizard meta & evaluation
 │   ├── middlewares/
 │   │   ├── app-error.ts            # Typed AppError class
@@ -62,18 +62,18 @@ velodruh-backend/
 │   │   ├── health.route.ts         # /health liveness route
 │   │   └── wizard.route.ts         # /api/v1/wizard routes
 │   ├── schemas/
-│   │   ├── bike.schema.ts          # Bike catalog DTOs & query/param schemas
+│   │   ├── bike.schema.ts          # Bike catalog DTOs & flexible filter query schemas
 │   │   └── wizard.schema.ts        # Wizard request/response DTOs & validation schemas
 │   └── services/
-│       ├── bikes.service.ts        # Catalog querying & filtering logic
+│       ├── bikes.service.ts        # Flexible catalog filtering, sorting & lookup logic
 │       ├── catalog.data.ts         # Curated Ukrainian bike market dataset
-│       └── wizard.service.ts       # Frame sizing, category selection & scoring engine
+│       └── wizard.service.ts       # Frame sizing, category selection & filter calculation
 ├── test/
 │   ├── helpers/
 │   │   └── test-client.ts          # Pure Node in-memory HTTP dispatcher for Jest
-│   ├── bikes.test.ts               # Catalog & deep-dive endpoint tests
+│   ├── bikes.test.ts               # Catalog flexible filters & deep-dive endpoint tests
 │   ├── health.test.ts              # Healthcheck, OpenAPI spec & middleware tests
-│   └── wizard.test.ts              # Wizard unit & integration tests
+│   └── wizard.test.ts              # Wizard unit & Wizard -> Bikes search flow tests
 ├── .env.example                    # Example environment variables
 ├── eslint.config.mjs               # ESLint flat config
 ├── jest.config.cjs                 # Jest ESM + ts-jest configuration
@@ -135,11 +135,12 @@ velodruh-backend/
 
 ## API Endpoints Overview
 
+Full API contracts, query parameter tables, Request–Response JSON examples, and Mermaid sequence/data-flow diagrams are documented in [**api.md**](./api.md).
+
 - `GET /health` — Liveness health check (`{ "status": "ok" }`).
 - `GET /api-docs` — Interactive Swagger UI documentation.
 - `GET /api-docs.json` — Raw OpenAPI 3.1.0 specification in JSON format.
 - `GET /api/v1/wizard/meta` — Metadata, ranges, surfaces, goals, and features for the frontend step-by-step Wizard.
-- `POST /api/v1/wizard/evaluate` — Evaluates rider profile, budget, and surface usage; returns recommended bike category, calculated frame size (`XS`–`XL`), and top-ranked bikes with match scores and shop offers.
-- `GET /api/v1/bikes` — Lists bikes with optional `category`, `minPriceUah`, and `maxPriceUah` filters.
+- `POST /api/v1/wizard/evaluate` — Evaluates rider profile, budget, and surface usage; returns `analysis` (recommended bike category + calculated frame size `XS`–`XL`) and `recommendedFilters` (calculated bike filter parameters for `GET /api/v1/bikes`).
+- `GET /api/v1/bikes` — Searches bikes using flexible query filters (`category`, `brand`, `sizeLabel`, `riderHeightCm`, `gender`, `minPriceUah`, `maxPriceUah`, `brakeType`, `frameMaterial`, `ridingPosition`, `wheelSize`, `hasRackMounts`, `hasFenderMounts`, `suspensionFork`, `maxWeightKg`, `inStockOnly`, `sortBy`).
 - `GET /api/v1/bikes/:slug` — Detailed model specs, frame size geometry (`stackMm`, `reachMm`), and partner shop offers.
-

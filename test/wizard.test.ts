@@ -1,4 +1,5 @@
 import { createApp } from '../src/app.js';
+import type { BikeDetailDto } from '../src/schemas/bike.schema.js';
 import type {
   WizardEvaluateResponse,
   WizardMetaResponse,
@@ -93,9 +94,9 @@ describe('Wizard Service & API Contracts', () => {
     });
   });
 
-  describe('POST /api/v1/wizard/evaluate', () => {
-    it('evaluates rider profile and returns ranked bike recommendations', async () => {
-      const response = await invokeApp<WizardEvaluateResponse>(app, {
+  describe('POST /api/v1/wizard/evaluate -> GET /api/v1/bikes flow', () => {
+    it('calculates bike filter parameters from user answers and feeds them into GET /api/v1/bikes', async () => {
+      const evalResponse = await invokeApp<WizardEvaluateResponse>(app, {
         method: 'POST',
         path: '/api/v1/wizard/evaluate',
         body: {
@@ -121,18 +122,48 @@ describe('Wizard Service & API Contracts', () => {
         },
       });
 
-      expect(response.status).toBe(200);
-      expect(response.body.analysis.recommendedCategory.type).toBe('GRAVEL');
-      expect(response.body.analysis.calculatedFrameSize.standardLabel).toBe('M');
-      expect(response.body.analysis.calculatedFrameSize.numericSize).toBe(54);
-      expect(response.body.recommendations.length).toBeGreaterThan(0);
+      expect(evalResponse.status).toBe(200);
+      expect(evalResponse.body.analysis.recommendedCategory.type).toBe('GRAVEL');
+      expect(evalResponse.body.analysis.calculatedFrameSize.standardLabel).toBe('M');
+      expect(evalResponse.body.analysis.calculatedFrameSize.numericSize).toBe(54);
 
-      const topBike = response.body.recommendations[0]!;
-      expect(topBike.rank).toBe(1);
-      expect(topBike.bikeId).toBe('pride-rocx-8-2-2025');
-      expect(topBike.matchScore).toBeGreaterThanOrEqual(85);
-      expect(topBike.currency).toBe('UAH');
-      expect(topBike.bestOffer.inStock).toBe(true);
+      const filters = evalResponse.body.recommendedFilters;
+      expect(filters).toEqual({
+        category: 'GRAVEL',
+        sizeLabel: 'M',
+        riderHeightCm: 178,
+        gender: 'UNISEX',
+        minPriceUah: 25000,
+        maxPriceUah: 45000,
+        ridingPosition: 'COMFORTABLE',
+        brakeTypes: ['HYDRAULIC_DISC', 'MECHANICAL_DISC'],
+        hasRackMounts: true,
+        suspensionFork: false,
+        inStockOnly: true,
+      });
+
+      // Use the calculated filters in GET /api/v1/bikes
+      const searchParams = new URLSearchParams({
+        category: filters.category,
+        sizeLabel: filters.sizeLabel,
+        riderHeightCm: String(filters.riderHeightCm),
+        minPriceUah: String(filters.minPriceUah),
+        maxPriceUah: String(filters.maxPriceUah),
+        ridingPosition: filters.ridingPosition,
+        brakeType: (filters.brakeTypes ?? []).join(','),
+        hasRackMounts: String(filters.hasRackMounts),
+        suspensionFork: String(filters.suspensionFork),
+        inStockOnly: String(filters.inStockOnly),
+      });
+
+      const bikesResponse = await invokeApp<{ items: BikeDetailDto[]; total: number }>(app, {
+        method: 'GET',
+        path: `/api/v1/bikes?${searchParams.toString()}`,
+      });
+
+      expect(bikesResponse.status).toBe(200);
+      expect(bikesResponse.body.total).toBe(1);
+      expect(bikesResponse.body.items[0]?.slug).toBe('pride-rocx-8-2-2025');
     });
 
     it('returns 400 VALIDATION_ERROR when surface proportions do not sum to 100', async () => {
@@ -182,4 +213,3 @@ describe('Wizard Service & API Contracts', () => {
     });
   });
 });
-
