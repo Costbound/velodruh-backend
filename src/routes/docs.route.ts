@@ -17,8 +17,8 @@ export const openApiDocument = {
   ],
   tags: [
     { name: 'Health', description: 'Перевірка стану сервісу' },
-    { name: 'Wizard', description: 'Покроковий опитувальник та алгоритм підбору велосипеда' },
-    { name: 'Bikes', description: 'Каталог моделей, геометрія рам та пропозиції магазинів' },
+    { name: 'Wizard', description: 'Покроковий опитувальник та розрахунок параметрів велосипеда' },
+    { name: 'Bikes', description: 'Гнучкий пошук по каталогу, геометрія рам та пропозиції магазинів' },
   ],
   paths: {
     '/health': {
@@ -62,7 +62,8 @@ export const openApiDocument = {
     '/api/v1/wizard/evaluate': {
       post: {
         tags: ['Wizard'],
-        summary: 'Розрахувати рекомендований тип велосипеда, розмір рами та топ моделей за анкетою',
+        summary:
+          'Вирахувати рекомендовану категорію, ростовку та параметри пошуку велосипеда з анкети користувача',
         requestBody: {
           required: true,
           content: {
@@ -73,7 +74,8 @@ export const openApiDocument = {
         },
         responses: {
           '200': {
-            description: 'Персоналізований аналіз та ранжований список рекомендованих велосипедів',
+            description:
+              'Персоналізований аналіз (категорія + розмір рами) та набір розрахованих фільтрів для пошуку в GET /api/v1/bikes',
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/WizardEvaluateResponse' },
@@ -94,7 +96,8 @@ export const openApiDocument = {
     '/api/v1/bikes': {
       get: {
         tags: ['Bikes'],
-        summary: 'Отримати список моделей велосипедів із фільтрацією за категорією та бюджетом',
+        summary:
+          'Пошук велосипедів за гнучкими фільтрами (після Wizard або напряму в каталозі)',
         parameters: [
           {
             name: 'category',
@@ -103,21 +106,111 @@ export const openApiDocument = {
             schema: { $ref: '#/components/schemas/BikeCategory' },
           },
           {
+            name: 'brand',
+            in: 'query',
+            required: false,
+            description: 'Slug або назва бренду (напр. pride, merida, trek)',
+            schema: { type: 'string', example: 'pride' },
+          },
+          {
+            name: 'sizeLabel',
+            in: 'query',
+            required: false,
+            schema: { $ref: '#/components/schemas/FrameSizeLabel' },
+          },
+          {
+            name: 'riderHeightCm',
+            in: 'query',
+            required: false,
+            schema: { type: 'integer', minimum: 140, maximum: 215, example: 178 },
+          },
+          {
+            name: 'gender',
+            in: 'query',
+            required: false,
+            schema: { $ref: '#/components/schemas/RiderGender' },
+          },
+          {
             name: 'minPriceUah',
             in: 'query',
             required: false,
-            schema: { type: 'integer', minimum: 0 },
+            schema: { type: 'integer', minimum: 0, example: 25000 },
           },
           {
             name: 'maxPriceUah',
             in: 'query',
             required: false,
-            schema: { type: 'integer', minimum: 1 },
+            schema: { type: 'integer', minimum: 1, example: 45000 },
+          },
+          {
+            name: 'brakeType',
+            in: 'query',
+            required: false,
+            description: 'Один або кілька типів гальм через кому (напр. HYDRAULIC_DISC,MECHANICAL_DISC)',
+            schema: { type: 'string', example: 'HYDRAULIC_DISC,MECHANICAL_DISC' },
+          },
+          {
+            name: 'frameMaterial',
+            in: 'query',
+            required: false,
+            schema: { $ref: '#/components/schemas/FrameMaterial' },
+          },
+          {
+            name: 'ridingPosition',
+            in: 'query',
+            required: false,
+            schema: { $ref: '#/components/schemas/RidingPosition' },
+          },
+          {
+            name: 'wheelSize',
+            in: 'query',
+            required: false,
+            schema: { type: 'string', example: '28"' },
+          },
+          {
+            name: 'hasRackMounts',
+            in: 'query',
+            required: false,
+            schema: { type: 'boolean' },
+          },
+          {
+            name: 'hasFenderMounts',
+            in: 'query',
+            required: false,
+            schema: { type: 'boolean' },
+          },
+          {
+            name: 'suspensionFork',
+            in: 'query',
+            required: false,
+            schema: { type: 'boolean' },
+          },
+          {
+            name: 'maxWeightKg',
+            in: 'query',
+            required: false,
+            schema: { type: 'number', example: 12.5 },
+          },
+          {
+            name: 'inStockOnly',
+            in: 'query',
+            required: false,
+            schema: { type: 'boolean', default: false },
+          },
+          {
+            name: 'sortBy',
+            in: 'query',
+            required: false,
+            schema: {
+              type: 'string',
+              enum: ['price_asc', 'price_desc', 'weight_asc', 'year_desc'],
+              default: 'price_asc',
+            },
           },
         ],
         responses: {
           '200': {
-            description: 'Список моделей каталогу',
+            description: 'Відфільтрований та відсортований список моделей каталогу',
           },
         },
       },
@@ -161,6 +254,10 @@ export const openApiDocument = {
         type: 'string',
         enum: ['GRAVEL', 'ROAD', 'MTB_HARDTAIL', 'CITY_COMMUTER', 'TOURING', 'HYBRID'],
       },
+      FrameSizeLabel: {
+        type: 'string',
+        enum: ['XS', 'S', 'M', 'L', 'XL'],
+      },
       RiderGender: {
         type: 'string',
         enum: ['UNISEX', 'MALE', 'FEMALE'],
@@ -168,6 +265,14 @@ export const openApiDocument = {
       RidingPosition: {
         type: 'string',
         enum: ['SPORT', 'COMFORTABLE', 'UPRIGHT'],
+      },
+      BrakeType: {
+        type: 'string',
+        enum: ['HYDRAULIC_DISC', 'MECHANICAL_DISC', 'RIM'],
+      },
+      FrameMaterial: {
+        type: 'string',
+        enum: ['ALUMINUM', 'CARBON', 'STEEL'],
       },
       WizardMetaResponse: {
         type: 'object',
@@ -288,9 +393,40 @@ export const openApiDocument = {
           },
         },
       },
+      RecommendedBikeFilters: {
+        type: 'object',
+        required: [
+          'category',
+          'sizeLabel',
+          'riderHeightCm',
+          'gender',
+          'minPriceUah',
+          'maxPriceUah',
+          'ridingPosition',
+          'inStockOnly',
+        ],
+        properties: {
+          category: { $ref: '#/components/schemas/BikeCategory' },
+          sizeLabel: { $ref: '#/components/schemas/FrameSizeLabel' },
+          riderHeightCm: { type: 'integer', example: 178 },
+          gender: { $ref: '#/components/schemas/RiderGender' },
+          minPriceUah: { type: 'integer', example: 25000 },
+          maxPriceUah: { type: 'integer', example: 45000 },
+          ridingPosition: { $ref: '#/components/schemas/RidingPosition' },
+          brakeTypes: {
+            type: 'array',
+            items: { $ref: '#/components/schemas/BrakeType' },
+            example: ['HYDRAULIC_DISC', 'MECHANICAL_DISC'],
+          },
+          hasRackMounts: { type: 'boolean', example: true },
+          hasFenderMounts: { type: 'boolean' },
+          suspensionFork: { type: 'boolean', example: false },
+          inStockOnly: { type: 'boolean', example: true },
+        },
+      },
       WizardEvaluateResponse: {
         type: 'object',
-        required: ['analysis', 'recommendations'],
+        required: ['analysis', 'recommendedFilters'],
         properties: {
           analysis: {
             type: 'object',
@@ -306,7 +442,7 @@ export const openApiDocument = {
               calculatedFrameSize: {
                 type: 'object',
                 properties: {
-                  standardLabel: { type: 'string', enum: ['XS', 'S', 'M', 'L', 'XL'] },
+                  standardLabel: { $ref: '#/components/schemas/FrameSizeLabel' },
                   numericSize: { type: 'integer' },
                   unit: { type: 'string', example: 'cm' },
                   confidence: { type: 'string', enum: ['HIGH', 'MEDIUM'] },
@@ -315,23 +451,7 @@ export const openApiDocument = {
               },
             },
           },
-          recommendations: {
-            type: 'array',
-            items: {
-              type: 'object',
-              properties: {
-                bikeId: { type: 'string', example: 'pride-rocx-8-2-2025' },
-                rank: { type: 'integer', example: 1 },
-                matchScore: { type: 'integer', example: 96 },
-                name: { type: 'string', example: 'Pride Rocx 8.2' },
-                category: { $ref: '#/components/schemas/BikeCategory' },
-                frameSize: { type: 'string', example: 'M (54)' },
-                bestPriceUah: { type: 'integer', example: 33900 },
-                currency: { type: 'string', example: 'UAH' },
-                offersCount: { type: 'integer', example: 3 },
-              },
-            },
-          },
+          recommendedFilters: { $ref: '#/components/schemas/RecommendedBikeFilters' },
         },
       },
       BikeDetailDto: {
@@ -367,4 +487,3 @@ docsRouter.get('/api-docs.json', (_req: Request, res: Response) => {
 docsRouter.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openApiDocument));
 
 export default docsRouter;
-

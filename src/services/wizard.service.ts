@@ -1,14 +1,12 @@
 import type {
   BikeCategoryType,
+  BrakeType,
   CalculatedFrameSize,
-  RecommendedBikeItem,
-  RequiredFeatureType,
+  RecommendedBikeFilters,
   WizardEvaluateRequest,
   WizardEvaluateResponse,
   WizardMetaResponse,
 } from '../schemas/wizard.schema.js';
-import type { BikeDetailDto } from '../schemas/bike.schema.js';
-import { CATALOG_BIKES } from './catalog.data.js';
 
 const CATEGORY_METADATA: Record<
   BikeCategoryType,
@@ -187,134 +185,57 @@ export function determineRecommendedCategory(usage: WizardEvaluateRequest['usage
   };
 }
 
-function bikeHasFeature(bike: BikeDetailDto, feature: RequiredFeatureType): boolean {
-  switch (feature) {
-    case 'RACK_MOUNTS':
-      return bike.specs.hasRackMounts;
-    case 'FENDER_MOUNTS':
-      return bike.specs.hasFenderMounts;
-    case 'DISC_BRAKES':
-      return (
-        bike.specs.brakeType === 'HYDRAULIC_DISC' || bike.specs.brakeType === 'MECHANICAL_DISC'
-      );
-    case 'HYDRAULIC_BRAKES':
-      return bike.specs.brakeType === 'HYDRAULIC_DISC';
-    case 'SUSPENSION_FORK':
-      return bike.specs.suspensionFork;
-  }
-}
-
 export function evaluateWizard(input: WizardEvaluateRequest): WizardEvaluateResponse {
   const recommendedCategory = determineRecommendedCategory(input.usage);
   const calculatedFrameSize = calculateFrameSize(input.rider.heightCm, input.rider.inseamCm);
 
-  const scoredBikes = CATALOG_BIKES.map((bike) => {
-    // 1. Surface affinity score (0 - 40 pts)
-    const { asphalt, gravel, offroad } = input.usage.surfaceProportions;
-    const weightedSurfaceAffinity =
-      (asphalt * bike.surfaceProfile.asphaltScore +
-        gravel * bike.surfaceProfile.gravelScore +
-        offroad * bike.surfaceProfile.offroadScore) /
-      100;
-    const surfacePoints = (weightedSurfaceAffinity / 100) * 40;
+  const reqFeatures = input.usage.featuresRequired;
+  let brakeTypes: BrakeType[] | undefined;
+  if (reqFeatures.includes('HYDRAULIC_BRAKES')) {
+    brakeTypes = ['HYDRAULIC_DISC'];
+  } else if (reqFeatures.includes('DISC_BRAKES')) {
+    brakeTypes = ['HYDRAULIC_DISC', 'MECHANICAL_DISC'];
+  }
 
-    // 2. Category match (0 - 25 pts)
-    let categoryPoints = 8;
-    if (bike.category === recommendedCategory.type) {
-      categoryPoints = 25;
-    } else if (
-      (recommendedCategory.type === 'GRAVEL' && bike.category === 'TOURING') ||
-      (recommendedCategory.type === 'TOURING' && bike.category === 'GRAVEL') ||
-      (recommendedCategory.type === 'CITY_COMMUTER' && bike.category === 'HYBRID') ||
-      (recommendedCategory.type === 'HYBRID' && bike.category === 'CITY_COMMUTER')
-    ) {
-      categoryPoints = 18;
-    }
+  const hasRackMounts =
+    reqFeatures.includes('RACK_MOUNTS') || input.usage.primaryGoal === 'touring' ? true : undefined;
+  const hasFenderMounts = reqFeatures.includes('FENDER_MOUNTS') ? true : undefined;
 
-    // 3. Budget fit (0 - 20 pts)
-    const { minUah, maxUah } = input.budget;
-    let budgetPoints: number;
-    if (bike.bestPriceUah >= minUah && bike.bestPriceUah <= maxUah) {
-      budgetPoints = 20;
-    } else if (bike.bestPriceUah < minUah) {
-      const diffRatio = (minUah - bike.bestPriceUah) / minUah;
-      budgetPoints = Math.max(8, Math.round(16 * (1 - diffRatio)));
-    } else {
-      const overRatio = (bike.bestPriceUah - maxUah) / maxUah;
-      budgetPoints = Math.max(0, Math.round(15 * (1 - overRatio * 2.5)));
-    }
+  let suspensionFork: boolean | undefined;
+  if (
+    reqFeatures.includes('SUSPENSION_FORK') ||
+    recommendedCategory.type === 'MTB_HARDTAIL' ||
+    recommendedCategory.type === 'HYBRID'
+  ) {
+    suspensionFork = true;
+  } else if (
+    recommendedCategory.type === 'GRAVEL' ||
+    recommendedCategory.type === 'ROAD' ||
+    recommendedCategory.type === 'TOURING'
+  ) {
+    suspensionFork = false;
+  }
 
-    // 4. Riding position & required features (0 - 15 pts)
-    let featurePoints = bike.specs.ridingPosition === input.usage.ridingPosition ? 5 : 2;
-    const reqFeatures = input.usage.featuresRequired;
-    if (reqFeatures.length === 0) {
-      featurePoints += 10;
-    } else {
-      const matchedCount = reqFeatures.filter((f) => bikeHasFeature(bike, f)).length;
-      featurePoints += Math.round((matchedCount / reqFeatures.length) * 10);
-    }
-
-    // Find matching variant for rider height or closest variant
-    const matchingVariant =
-      bike.variants.find(
-        (v) =>
-          input.rider.heightCm >= v.minRiderHeightCm && input.rider.heightCm <= v.maxRiderHeightCm,
-      ) ??
-      bike.variants.find((v) => v.sizeLabel === calculatedFrameSize.standardLabel) ??
-      bike.variants[0]!;
-
-    const allInStockOffers = matchingVariant.offers
-      .filter((o) => o.inStock)
-      .sort((a, b) => a.priceUah - b.priceUah);
-
-    const bestOffer = allInStockOffers[0] ?? matchingVariant.offers[0]!;
-    const totalOffersCount = bike.variants.reduce((acc, v) => acc + v.offers.length, 0);
-
-    const matchScore = Math.min(
-      99,
-      Math.max(40, Math.round(surfacePoints + categoryPoints + budgetPoints + featurePoints)),
-    );
-
-    return {
-      bike,
-      matchingVariant,
-      bestOffer,
-      totalOffersCount,
-      matchScore,
-    };
-  });
-
-  scoredBikes.sort((a, b) => b.matchScore - a.matchScore || a.bestOffer.priceUah - b.bestOffer.priceUah);
-
-  const recommendations: RecommendedBikeItem[] = scoredBikes.slice(0, 5).map((entry, idx) => ({
-    bikeId: entry.bike.slug,
-    rank: idx + 1,
-    matchScore: entry.matchScore,
-    name: entry.bike.name,
-    brand: {
-      name: entry.bike.brand.name,
-      logoUrl: entry.bike.brand.logoUrl,
-    },
-    category: entry.bike.category,
-    frameSize: `${entry.matchingVariant.sizeLabel} (${entry.matchingVariant.numericSizeCm})`,
-    keyHighlights: entry.bike.keyHighlights,
-    bestPriceUah: entry.bestOffer.priceUah,
-    currency: 'UAH',
-    imageUrl: entry.bike.imageUrl,
-    offersCount: entry.totalOffersCount,
-    bestOffer: {
-      shopName: entry.bestOffer.shopName,
-      priceUah: entry.bestOffer.priceUah,
-      inStock: entry.bestOffer.inStock,
-      affiliateLink: entry.bestOffer.affiliateUrl,
-    },
-  }));
+  const recommendedFilters: RecommendedBikeFilters = {
+    category: recommendedCategory.type,
+    sizeLabel: calculatedFrameSize.standardLabel,
+    riderHeightCm: input.rider.heightCm,
+    gender: input.rider.gender,
+    minPriceUah: input.budget.minUah,
+    maxPriceUah: input.budget.maxUah,
+    ridingPosition: input.usage.ridingPosition,
+    ...(brakeTypes !== undefined ? { brakeTypes } : {}),
+    ...(hasRackMounts !== undefined ? { hasRackMounts } : {}),
+    ...(hasFenderMounts !== undefined ? { hasFenderMounts } : {}),
+    ...(suspensionFork !== undefined ? { suspensionFork } : {}),
+    inStockOnly: true,
+  };
 
   return {
     analysis: {
       recommendedCategory,
       calculatedFrameSize,
     },
-    recommendations,
+    recommendedFilters,
   };
 }
