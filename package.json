@@ -17,7 +17,8 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
     "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
-    "contract:emit": "prisma contract emit"
+    "contract:emit": "prisma contract emit",
+    "docker:build:prod": "docker build --platform linux/amd64 --target production -t velodruh-back:latest ."
   },
   "keywords": [],
   "type": "module",
