@@ -92,6 +92,7 @@ flowchart LR
 | `GET` | `/api-docs.json` | Сира специфікація OpenAPI 3.1.0 у форматі JSON |
 | `GET` | `/api/v1/wizard/meta` | Метадані, ліміти та довідники опцій для кроків опитувальника |
 | `POST` | `/api/v1/wizard/evaluate` | Аналіз анкети користувача та розрахунок параметрів велосипеда (`recommendedFilters`) |
+| `POST` | `/api/v1/wizard/recommendations` | Персоналізований підбір та ранжування шорт-листа із **Топ-3–5 найкращих пропозицій** (`shortlist`) |
 | `GET` | `/api/v1/bikes` | Пошук та сортування велосипедів за гнучкими query-фільтрами |
 | `GET` | `/api/v1/bikes/:slug` | Повна специфікація моделі, геометрія рами та пропозиції партнерських магазинів |
 
@@ -238,6 +239,124 @@ Content-Type: application/json
       "message": "Surface proportions (asphalt + gravel + offroad) must sum to 100"
     }
   ]
+}
+```
+
+---
+
+### 3.2.1. Персоналізований шорт-лист (Топ-3–5 найкращих пропозицій) — `POST /api/v1/wizard/recommendations`
+
+Виконує повний цикл інтелектуального підбору (**Smart Matching**):
+1. Обчислює рекомендовану категорію велосипеда і розмір рами (`analysis`) та базові фільтри (`recommendedFilters`).
+2. Оцінює кожну модель каталогу за 100-бальною шкалою (`matchScore`), враховуючи:
+   - `categoryScore` (до 30 балів) — прямий збіг або суміжна категорія;
+   - `surfaceScore` (до 25 балів) — зважена сумісність `surfaceProfile` велосипеда з пропорціями покриття користувача;
+   - `sizeFitScore` (до 20 балів) — точність підбору ростовки під `heightCm` та `inseamCm`;
+   - `budgetScore` (до 15 балів) — влучання найкращої пропозиції (`bestOffer`) у бюджетний коридор;
+   - `featuresScore` (до 10 балів) — відповідність посадці та обов'язковим фічам.
+3. Повертає відсортований за спаданням `matchScore` масив `shortlist` із **Топ-3–5 найкращих пропозицій** (`limit`: `3..5`, за замовчуванням `5`), включаючи підібраний варіант рами (`recommendedVariant`), найвигідніший офер магазину в наявності (`bestOffer`) та пояснення вибору (`matchReasons`).
+
+#### Request
+```http
+POST /api/v1/wizard/recommendations HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+```
+```json
+{
+  "limit": 5,
+  "rider": {
+    "heightCm": 178,
+    "inseamCm": 83,
+    "gender": "UNISEX"
+  },
+  "budget": {
+    "minUah": 25000,
+    "maxUah": 45000
+  },
+  "usage": {
+    "surfaceProportions": {
+      "asphalt": 60,
+      "gravel": 30,
+      "offroad": 10
+    },
+    "ridingPosition": "COMFORTABLE",
+    "primaryGoal": "commuting",
+    "featuresRequired": ["RACK_MOUNTS", "DISC_BRAKES"]
+  }
+}
+```
+
+#### Response (`200 OK`)
+```json
+{
+  "analysis": {
+    "recommendedCategory": {
+      "type": "GRAVEL",
+      "displayName": "Гравійний велосипед (Gravel)",
+      "reasoning": "Ваш баланс 60% асфальту та 30% гравію ідеально покривається гравійником: жорстка вилка дає накат, а ширші покришки забезпечують комфорт поза містом."
+    },
+    "calculatedFrameSize": {
+      "standardLabel": "M",
+      "numericSize": 54,
+      "unit": "cm",
+      "confidence": "HIGH",
+      "sizeAdvice": "Для зросту 178 см та довжини ноги (inseam) 83 см розмір M (54 см) забезпечить правильний стендовер і баланс керованості."
+    }
+  },
+  "recommendedFilters": {
+    "category": "GRAVEL",
+    "sizeLabel": "M",
+    "riderHeightCm": 178,
+    "gender": "UNISEX",
+    "minPriceUah": 25000,
+    "maxPriceUah": 45000,
+    "ridingPosition": "COMFORTABLE",
+    "brakeTypes": ["HYDRAULIC_DISC", "MECHANICAL_DISC"],
+    "hasRackMounts": true,
+    "suspensionFork": false,
+    "inStockOnly": true
+  },
+  "shortlist": [
+    {
+      "rank": 1,
+      "matchScore": 95,
+      "scoreBreakdown": {
+        "categoryScore": 30,
+        "surfaceScore": 20,
+        "sizeFitScore": 20,
+        "budgetScore": 15,
+        "featuresScore": 10
+      },
+      "matchReasons": [
+        "Пряме влучання в рекомендовану категорію «Гравійний велосипед (Gravel)» (профіль покриття: 80% сумісності)",
+        "Ростовка M (54 см, на зріст 170–182 см) точно підходить під ваші 178 см",
+        "Оптимальна ціна в межах бюджету: 33900 грн у магазині «Velogo»"
+      ],
+      "bike": { "slug": "pride-rocx-8-2-2025", "name": "Pride Rocx 8.2", "...": "..." },
+      "recommendedVariant": {
+        "sizeLabel": "M",
+        "numericSizeCm": 54,
+        "minRiderHeightCm": 170,
+        "maxRiderHeightCm": 182,
+        "minInseamCm": 78,
+        "maxInseamCm": 86,
+        "stackMm": 575,
+        "reachMm": 385
+      },
+      "bestOffer": {
+        "shopName": "Velogo",
+        "shopSlug": "velogo",
+        "priceUah": 33900,
+        "oldPriceUah": 36500,
+        "inStock": true,
+        "productUrl": "https://velogo.com.ua/ua/pride-rocx-8-2",
+        "affiliateUrl": "https://velodruh.ua/go/velogo/pride-rocx-8-2?size=M",
+        "lastCheckedAt": "2026-10-27T08:00:00Z"
+      }
+    }
+  ],
+  "totalCandidatesEvaluated": 8
 }
 ```
 

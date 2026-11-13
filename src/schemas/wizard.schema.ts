@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { BikeDetailDto, BikeOfferDto, BikeVariantDto } from './bike.schema.js';
 
 export const bikeCategoryEnum = z.enum([
   'GRAVEL',
@@ -61,7 +62,12 @@ export const wizardEvaluateRequestSchema = z.object({
   }),
 });
 
+export const wizardRecommendationsRequestSchema = wizardEvaluateRequestSchema.extend({
+  limit: z.number().int().min(3).max(5).default(5),
+});
+
 export type WizardEvaluateRequest = z.infer<typeof wizardEvaluateRequestSchema>;
+export type WizardRecommendationsRequest = z.infer<typeof wizardRecommendationsRequestSchema>;
 export type BikeCategoryType = z.infer<typeof bikeCategoryEnum>;
 export type RiderGenderType = z.infer<typeof riderGenderEnum>;
 export type RidingPositionType = z.infer<typeof ridingPositionEnum>;
@@ -126,3 +132,27 @@ export interface WizardEvaluateResponse {
   };
   recommendedFilters: RecommendedBikeFilters;
 }
+
+export interface ScoreBreakdown {
+  categoryScore: number;
+  surfaceScore: number;
+  sizeFitScore: number;
+  budgetScore: number;
+  featuresScore: number;
+}
+
+export interface RecommendedBikeOfferDto {
+  rank: number;
+  matchScore: number;
+  scoreBreakdown: ScoreBreakdown;
+  matchReasons: string[];
+  bike: BikeDetailDto;
+  recommendedVariant: Omit<BikeVariantDto, 'offers'>;
+  bestOffer: BikeOfferDto;
+}
+
+export interface WizardRecommendationsResponse extends WizardEvaluateResponse {
+  shortlist: RecommendedBikeOfferDto[];
+  totalCandidatesEvaluated: number;
+}
+
