@@ -3,6 +3,7 @@ import type { BikeDetailDto } from '../src/schemas/bike.schema.js';
 import type {
   WizardEvaluateResponse,
   WizardMetaResponse,
+  WizardRecommendationsResponse,
 } from '../src/schemas/wizard.schema.js';
 import {
   calculateFrameSize,
@@ -212,4 +213,117 @@ describe('Wizard Service & API Contracts', () => {
       expect(response.body.details.some((d) => d.path.includes('maxUah'))).toBe(true);
     });
   });
+
+  describe('POST /api/v1/wizard/recommendations (Top 3-5 Personalized Shortlist)', () => {
+    it('returns a personalized shortlist of Top-5 offers ranked by matchScore descending', async () => {
+      const response = await invokeApp<WizardRecommendationsResponse>(app, {
+        method: 'POST',
+        path: '/api/v1/wizard/recommendations',
+        body: {
+          rider: {
+            heightCm: 178,
+            inseamCm: 83,
+            gender: 'UNISEX',
+          },
+          budget: {
+            minUah: 25000,
+            maxUah: 45000,
+          },
+          usage: {
+            surfaceProportions: {
+              asphalt: 60,
+              gravel: 30,
+              offroad: 10,
+            },
+            ridingPosition: 'COMFORTABLE',
+            primaryGoal: 'commuting',
+            featuresRequired: ['RACK_MOUNTS', 'DISC_BRAKES'],
+          },
+        },
+      });
+
+      expect(response.status).toBe(200);
+      expect(response.body.analysis.recommendedCategory.type).toBe('GRAVEL');
+      expect(response.body.analysis.calculatedFrameSize.standardLabel).toBe('M');
+      expect(response.body.totalCandidatesEvaluated).toBeGreaterThanOrEqual(6);
+
+      const { shortlist } = response.body;
+      expect(shortlist.length).toBe(5);
+      expect(shortlist.map((item) => item.rank)).toEqual([1, 2, 3, 4, 5]);
+
+      // Top #1 offer should be Pride Rocx 8.2 in size M (exact category, size, budget, and features fit)
+      const topPick = shortlist[0]!;
+      expect(topPick.bike.slug).toBe('pride-rocx-8-2-2025');
+      expect(topPick.recommendedVariant.sizeLabel).toBe('M');
+      expect(topPick.bestOffer.inStock).toBe(true);
+      expect(topPick.bestOffer.priceUah).toBe(33900);
+      expect(topPick.matchScore).toBeGreaterThanOrEqual(90);
+      expect(topPick.matchReasons.length).toBeGreaterThanOrEqual(3);
+
+      // Verify descending order of matchScore across the shortlist
+      for (let i = 1; i < shortlist.length; i++) {
+        expect(shortlist[i - 1]!.matchScore).toBeGreaterThanOrEqual(shortlist[i]!.matchScore);
+      }
+    });
+
+    it('supports custom limit=3 to return Top-3 best offers', async () => {
+      const response = await invokeApp<WizardRecommendationsResponse>(app, {
+        method: 'POST',
+        path: '/api/v1/wizard/recommendations',
+        body: {
+          limit: 3,
+          rider: {
+            heightCm: 182,
+            inseamCm: 86,
+            gender: 'UNISEX',
+          },
+          budget: {
+            minUah: 35000,
+            maxUah: 50000,
+          },
+          usage: {
+            surfaceProportions: {
+              asphalt: 20,
+              gravel: 30,
+              offroad: 50,
+            },
+            ridingPosition: 'COMFORTABLE',
+            primaryGoal: 'recreation',
+            featuresRequired: ['SUSPENSION_FORK', 'HYDRAULIC_BRAKES'],
+          },
+        },
+      });
+
+      expect(response.status).toBe(200);
+      expect(response.body.analysis.recommendedCategory.type).toBe('MTB_HARDTAIL');
+      expect(response.body.shortlist.length).toBe(3);
+      expect(response.body.shortlist.map((item) => item.rank)).toEqual([1, 2, 3]);
+      expect(response.body.shortlist[0]?.bike.slug).toBe('trek-marlin-7-gen-3');
+    });
+
+    it('returns 400 VALIDATION_ERROR when limit is outside 3..5 range', async () => {
+      const response = await invokeApp<{
+        error: string;
+        code: string;
+        details: Array<{ path: string; message: string }>;
+      }>(app, {
+        method: 'POST',
+        path: '/api/v1/wizard/recommendations',
+        body: {
+          limit: 10,
+          rider: { heightCm: 178 },
+          budget: { minUah: 25000, maxUah: 45000 },
+          usage: {
+            surfaceProportions: { asphalt: 60, gravel: 30, offroad: 10 },
+            primaryGoal: 'commuting',
+          },
+        },
+      });
+
+      expect(response.status).toBe(400);
+      expect(response.body.code).toBe('VALIDATION_ERROR');
+      expect(response.body.details.some((d) => d.path === 'limit')).toBe(true);
+    });
+  });
 });
+

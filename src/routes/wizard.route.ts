@@ -1,7 +1,14 @@
 import { Router } from 'express';
-import { handleEvaluateWizard, handleGetWizardMeta } from '../controllers/wizard.controller.js';
+import {
+  handleEvaluateWizard,
+  handleGetWizardMeta,
+  handleGetWizardRecommendations,
+} from '../controllers/wizard.controller.js';
 import { validateRequest } from '../middlewares/validate.js';
-import { wizardEvaluateRequestSchema } from '../schemas/wizard.schema.js';
+import {
+  wizardEvaluateRequestSchema,
+  wizardRecommendationsRequestSchema,
+} from '../schemas/wizard.schema.js';
 
 const wizardRouter = Router();
 
@@ -11,6 +18,12 @@ wizardRouter.post(
   validateRequest({ body: wizardEvaluateRequestSchema }),
   handleEvaluateWizard,
 );
+wizardRouter.post(
+  '/recommendations',
+  validateRequest({ body: wizardRecommendationsRequestSchema }),
+  handleGetWizardRecommendations,
+);
 
 export default wizardRouter;
+
 

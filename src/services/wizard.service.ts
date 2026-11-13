@@ -1,12 +1,19 @@
+import type { BikeDetailDto, BikeOfferDto, BikeVariantDto } from '../schemas/bike.schema.js';
 import type {
   BikeCategoryType,
   BrakeType,
   CalculatedFrameSize,
   RecommendedBikeFilters,
+  RecommendedBikeOfferDto,
+  RequiredFeatureType,
+  ScoreBreakdown,
   WizardEvaluateRequest,
   WizardEvaluateResponse,
   WizardMetaResponse,
+  WizardRecommendationsRequest,
+  WizardRecommendationsResponse,
 } from '../schemas/wizard.schema.js';
+import { CATALOG_BIKES } from './catalog.data.js';
 
 const CATEGORY_METADATA: Record<
   BikeCategoryType,
@@ -239,3 +246,278 @@ export function evaluateWizard(input: WizardEvaluateRequest): WizardEvaluateResp
     recommendedFilters,
   };
 }
+
+const ADJACENT_CATEGORIES: Record<BikeCategoryType, BikeCategoryType[]> = {
+  GRAVEL: ['TOURING', 'ROAD', 'CITY_COMMUTER', 'HYBRID'],
+  ROAD: ['GRAVEL', 'CITY_COMMUTER'],
+  MTB_HARDTAIL: ['HYBRID', 'GRAVEL'],
+  CITY_COMMUTER: ['HYBRID', 'GRAVEL', 'ROAD'],
+  TOURING: ['GRAVEL', 'HYBRID', 'CITY_COMMUTER'],
+  HYBRID: ['CITY_COMMUTER', 'GRAVEL', 'MTB_HARDTAIL'],
+};
+
+function getRangeDistance(value: number, min: number, max: number): number {
+  if (value < min) return min - value;
+  if (value > max) return value - max;
+  return 0;
+}
+
+function selectBestVariantAndOffer(
+  bike: BikeDetailDto,
+  heightCm: number,
+  targetSizeLabel: CalculatedFrameSize['standardLabel'],
+  inseamCm?: number,
+): { variant: BikeVariantDto; bestOffer: BikeOfferDto; heightDistanceCm: number } | null {
+  const variantsWithStock = bike.variants.filter((v) => v.offers.some((o) => o.inStock));
+  const candidateVariants = variantsWithStock.length > 0 ? variantsWithStock : bike.variants;
+
+  if (candidateVariants.length === 0) {
+    return null;
+  }
+
+  const scoredVariants = candidateVariants.map((variant) => {
+    const heightDistanceCm = getRangeDistance(
+      heightCm,
+      variant.minRiderHeightCm,
+      variant.maxRiderHeightCm,
+    );
+    const inseamMatches =
+      inseamCm !== undefined &&
+      inseamCm >= variant.minInseamCm &&
+      inseamCm <= variant.maxInseamCm;
+
+    let fitPriority = 0;
+    if (heightDistanceCm === 0) fitPriority += 100;
+    if (variant.sizeLabel === targetSizeLabel) fitPriority += 40;
+    if (inseamMatches) fitPriority += 30;
+    fitPriority -= heightDistanceCm * 5;
+
+    const inStockOffers = variant.offers.filter((o) => o.inStock);
+    const offerPool = inStockOffers.length > 0 ? inStockOffers : variant.offers;
+    const sortedOffers = [...offerPool].sort((a, b) => a.priceUah - b.priceUah);
+    const bestOffer = sortedOffers[0]!;
+
+    return {
+      variant,
+      bestOffer,
+      heightDistanceCm,
+      fitPriority,
+    };
+  });
+
+  scoredVariants.sort((a, b) => b.fitPriority - a.fitPriority);
+  const top = scoredVariants[0]!;
+  return {
+    variant: top.variant,
+    bestOffer: top.bestOffer,
+    heightDistanceCm: top.heightDistanceCm,
+  };
+}
+
+function doesBikeMatchFeature(bike: BikeDetailDto, feature: RequiredFeatureType): boolean {
+  switch (feature) {
+    case 'RACK_MOUNTS':
+      return bike.specs.hasRackMounts;
+    case 'FENDER_MOUNTS':
+      return bike.specs.hasFenderMounts;
+    case 'DISC_BRAKES':
+      return (
+        bike.specs.brakeType === 'HYDRAULIC_DISC' || bike.specs.brakeType === 'MECHANICAL_DISC'
+      );
+    case 'HYDRAULIC_BRAKES':
+      return bike.specs.brakeType === 'HYDRAULIC_DISC';
+    case 'SUSPENSION_FORK':
+      return bike.specs.suspensionFork;
+  }
+}
+
+export function getWizardRecommendations(
+  input: WizardRecommendationsRequest,
+): WizardRecommendationsResponse {
+  const evaluation = evaluateWizard(input);
+  const { recommendedCategory, calculatedFrameSize } = evaluation.analysis;
+  const { surfaceProportions, ridingPosition, featuresRequired } = input.usage;
+  const { minUah, maxUah } = input.budget;
+  const { heightCm, inseamCm, gender } = input.rider;
+
+  const genderCompatibleBikes = CATALOG_BIKES.filter(
+    (bike) => bike.gender === gender || bike.gender === 'UNISEX' || gender === 'UNISEX',
+  );
+
+  const scoredCandidates: Array<Omit<RecommendedBikeOfferDto, 'rank'>> = [];
+
+  for (const bike of genderCompatibleBikes) {
+    const selected = selectBestVariantAndOffer(
+      bike,
+      heightCm,
+      calculatedFrameSize.standardLabel,
+      inseamCm,
+    );
+    if (!selected) {
+      continue;
+    }
+
+    const { variant, bestOffer, heightDistanceCm } = selected;
+
+    // 1. Category score (0..30)
+    let categoryScore = 8;
+    if (bike.category === recommendedCategory.type) {
+      categoryScore = 30;
+    } else if (ADJACENT_CATEGORIES[recommendedCategory.type].includes(bike.category)) {
+      categoryScore = 20;
+    }
+
+    // 2. Surface profile alignment score (0..25)
+    const weightedSurface =
+      (surfaceProportions.asphalt * bike.surfaceProfile.asphaltScore +
+        surfaceProportions.gravel * bike.surfaceProfile.gravelScore +
+        surfaceProportions.offroad * bike.surfaceProfile.offroadScore) /
+      100;
+    const surfaceScore = Math.min(25, Math.max(0, Math.round((weightedSurface / 100) * 25)));
+
+    // 3. Size & anthropometry fit score (0..20)
+    let sizeFitScore: number;
+    if (heightDistanceCm === 0) {
+      const inseamFits =
+        inseamCm === undefined ||
+        (inseamCm >= variant.minInseamCm && inseamCm <= variant.maxInseamCm);
+      sizeFitScore = inseamFits ? 20 : 18;
+    } else if (heightDistanceCm <= 3 || variant.sizeLabel === calculatedFrameSize.standardLabel) {
+      sizeFitScore = 15;
+    } else {
+      sizeFitScore = Math.max(5, 12 - heightDistanceCm);
+    }
+
+    // 4. Budget fit score (0..15)
+    let budgetScore = 0;
+    if (bestOffer.priceUah >= minUah && bestOffer.priceUah <= maxUah) {
+      budgetScore = 15;
+    } else if (bestOffer.priceUah < minUah) {
+      budgetScore = 12;
+    } else if (bestOffer.priceUah <= maxUah * 1.15) {
+      budgetScore = 9;
+    } else if (bestOffer.priceUah <= maxUah * 1.3) {
+      budgetScore = 4;
+    }
+
+    // 5. Riding position & required features score (0..10)
+    let positionPoints = 0;
+    if (bike.specs.ridingPosition === ridingPosition) {
+      positionPoints = 4;
+    } else if (
+      bike.specs.ridingPosition === 'COMFORTABLE' ||
+      ridingPosition === 'COMFORTABLE'
+    ) {
+      positionPoints = 2;
+    }
+
+    let featurePoints = 6;
+    if (featuresRequired.length > 0) {
+      const matchedFeaturesCount = featuresRequired.filter((f) =>
+        doesBikeMatchFeature(bike, f),
+      ).length;
+      featurePoints = Math.round((matchedFeaturesCount / featuresRequired.length) * 6);
+    } else if (
+      evaluation.recommendedFilters.suspensionFork !== undefined &&
+      bike.specs.suspensionFork !== evaluation.recommendedFilters.suspensionFork
+    ) {
+      featurePoints = 4;
+    }
+
+    const featuresScore = positionPoints + featurePoints;
+
+    const scoreBreakdown: ScoreBreakdown = {
+      categoryScore,
+      surfaceScore,
+      sizeFitScore,
+      budgetScore,
+      featuresScore,
+    };
+
+    const matchScore = Math.min(
+      100,
+      categoryScore + surfaceScore + sizeFitScore + budgetScore + featuresScore,
+    );
+
+    const matchReasons: string[] = [];
+
+    if (bike.category === recommendedCategory.type) {
+      matchReasons.push(
+        `Пряме влучання в рекомендовану категорію «${CATEGORY_METADATA[bike.category].displayName}» (профіль покриття: ${Math.round(weightedSurface)}% сумісності)`,
+      );
+    } else {
+      matchReasons.push(
+        `Близька альтернатива (${CATEGORY_METADATA[bike.category].displayName}) із сумісністю покриття ${Math.round(weightedSurface)}%`,
+      );
+    }
+
+    if (heightDistanceCm === 0) {
+      matchReasons.push(
+        `Ростовка ${variant.sizeLabel} (${variant.numericSizeCm} см, на зріст ${variant.minRiderHeightCm}–${variant.maxRiderHeightCm} см) точно підходить під ваші ${heightCm} см`,
+      );
+    } else {
+      matchReasons.push(
+        `Найближча доступна ростовка ${variant.sizeLabel} (${variant.numericSizeCm} см, розрахована на ${variant.minRiderHeightCm}–${variant.maxRiderHeightCm} см)`,
+      );
+    }
+
+    if (bestOffer.priceUah >= minUah && bestOffer.priceUah <= maxUah) {
+      matchReasons.push(
+        `Оптимальна ціна в межах бюджету: ${bestOffer.priceUah} грн у магазині «${bestOffer.shopName}»`,
+      );
+    } else if (bestOffer.priceUah < minUah) {
+      matchReasons.push(
+        `Економія бюджету: ${bestOffer.priceUah} грн у магазині «${bestOffer.shopName}» (нижче запланованого порогу ${minUah} грн)`,
+      );
+    } else {
+      matchReasons.push(
+        `Пропозиція за ${bestOffer.priceUah} грн у «${bestOffer.shopName}» — вищий рівень комплектації (${bike.specs.drivetrain})`,
+      );
+    }
+
+    const recommendedVariant: Omit<BikeVariantDto, 'offers'> = {
+      sizeLabel: variant.sizeLabel,
+      numericSizeCm: variant.numericSizeCm,
+      minRiderHeightCm: variant.minRiderHeightCm,
+      maxRiderHeightCm: variant.maxRiderHeightCm,
+      minInseamCm: variant.minInseamCm,
+      maxInseamCm: variant.maxInseamCm,
+      stackMm: variant.stackMm,
+      reachMm: variant.reachMm,
+    };
+
+    scoredCandidates.push({
+      matchScore,
+      scoreBreakdown,
+      matchReasons,
+      bike,
+      recommendedVariant,
+      bestOffer,
+    });
+  }
+
+  scoredCandidates.sort((a, b) => {
+    if (b.matchScore !== a.matchScore) {
+      return b.matchScore - a.matchScore;
+    }
+    if (b.scoreBreakdown.budgetScore !== a.scoreBreakdown.budgetScore) {
+      return b.scoreBreakdown.budgetScore - a.scoreBreakdown.budgetScore;
+    }
+    return a.bestOffer.priceUah - b.bestOffer.priceUah;
+  });
+
+  const targetLimit = Math.min(Math.max(input.limit ?? 5, 3), 5);
+  const shortlist: RecommendedBikeOfferDto[] = scoredCandidates
+    .slice(0, targetLimit)
+    .map((candidate, index) => ({
+      rank: index + 1,
+      ...candidate,
+    }));
+
+  return {
+    ...evaluation,
+    shortlist,
+    totalCandidatesEvaluated: genderCompatibleBikes.length,
+  };
+}
+

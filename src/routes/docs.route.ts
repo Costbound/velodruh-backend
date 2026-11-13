@@ -93,6 +93,40 @@ export const openApiDocument = {
         },
       },
     },
+    '/api/v1/wizard/recommendations': {
+      post: {
+        tags: ['Wizard'],
+        summary:
+          'Підібрати персоналізований шорт-лист із Топ-3–5 найкращих пропозицій велосипедів за анкетою користувача',
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/WizardRecommendationsRequest' },
+            },
+          },
+        },
+        responses: {
+          '200': {
+            description:
+              'Аналіз параметрів, розраховані фільтри та ранжований шорт-лист Топ-3–5 найкращих пропозицій магазинів із балом сумісності (matchScore)',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/WizardRecommendationsResponse' },
+              },
+            },
+          },
+          '400': {
+            description: 'Помилка валідації вхідних даних анкети',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/ErrorResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
     '/api/v1/bikes': {
       get: {
         tags: ['Bikes'],
@@ -452,6 +486,99 @@ export const openApiDocument = {
             },
           },
           recommendedFilters: { $ref: '#/components/schemas/RecommendedBikeFilters' },
+        },
+      },
+      WizardRecommendationsRequest: {
+        allOf: [
+          { $ref: '#/components/schemas/WizardEvaluateRequest' },
+          {
+            type: 'object',
+            properties: {
+              limit: {
+                type: 'integer',
+                minimum: 3,
+                maximum: 5,
+                default: 5,
+                description: 'Кількість пропозицій у шорт-листі (Топ-3–5)',
+                example: 5,
+              },
+            },
+          },
+        ],
+      },
+      RecommendedBikeOfferDto: {
+        type: 'object',
+        required: [
+          'rank',
+          'matchScore',
+          'scoreBreakdown',
+          'matchReasons',
+          'bike',
+          'recommendedVariant',
+          'bestOffer',
+        ],
+        properties: {
+          rank: { type: 'integer', example: 1 },
+          matchScore: { type: 'integer', minimum: 0, maximum: 100, example: 96 },
+          scoreBreakdown: {
+            type: 'object',
+            properties: {
+              categoryScore: { type: 'integer', example: 30 },
+              surfaceScore: { type: 'integer', example: 20 },
+              sizeFitScore: { type: 'integer', example: 20 },
+              budgetScore: { type: 'integer', example: 15 },
+              featuresScore: { type: 'integer', example: 10 },
+            },
+          },
+          matchReasons: {
+            type: 'array',
+            items: { type: 'string' },
+          },
+          bike: { $ref: '#/components/schemas/BikeDetailDto' },
+          recommendedVariant: {
+            type: 'object',
+            properties: {
+              sizeLabel: { $ref: '#/components/schemas/FrameSizeLabel' },
+              numericSizeCm: { type: 'integer', example: 54 },
+              minRiderHeightCm: { type: 'integer', example: 170 },
+              maxRiderHeightCm: { type: 'integer', example: 182 },
+              stackMm: { type: 'integer', example: 575 },
+              reachMm: { type: 'integer', example: 385 },
+            },
+          },
+          bestOffer: {
+            type: 'object',
+            properties: {
+              shopName: { type: 'string', example: 'Velogo' },
+              shopSlug: { type: 'string', example: 'velogo' },
+              priceUah: { type: 'integer', example: 33900 },
+              oldPriceUah: { type: ['integer', 'null'], example: 36500 },
+              inStock: { type: 'boolean', example: true },
+              productUrl: { type: 'string' },
+              affiliateUrl: { type: 'string' },
+              lastCheckedAt: { type: 'string' },
+            },
+          },
+        },
+      },
+      WizardRecommendationsResponse: {
+        type: 'object',
+        required: [
+          'analysis',
+          'recommendedFilters',
+          'shortlist',
+          'totalCandidatesEvaluated',
+        ],
+        properties: {
+          analysis: { $ref: '#/components/schemas/WizardEvaluateResponse/properties/analysis' },
+          recommendedFilters: { $ref: '#/components/schemas/RecommendedBikeFilters' },
+          shortlist: {
+            type: 'array',
+            minItems: 3,
+            maxItems: 5,
+            items: { $ref: '#/components/schemas/RecommendedBikeOfferDto' },
+          },
+          totalCandidatesEvaluated: { type: 'integer', example: 8 },
         },
       },
       BikeDetailDto: {
