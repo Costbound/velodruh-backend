@@ -7,6 +7,7 @@ export interface ReefApiEnvelope<TData = unknown> {
   data?: TData;
   meta?: {
     record_count?: number;
+    charged_credits?: number;
     credits?: number;
     credits_used?: number;
     next_offset?: number;
@@ -403,7 +404,8 @@ export class ReefApiClient {
         }
 
         // Reconcile actual credit cost returned by ReefAPI metadata if present
-        const reportedCredits = payload.meta?.credits ?? payload.meta?.credits_used;
+        const reportedCredits =
+          payload.meta?.charged_credits ?? payload.meta?.credits ?? payload.meta?.credits_used;
         const actualCredits =
           typeof reportedCredits === 'number' && Number.isFinite(reportedCredits) && reportedCredits >= 0
             ? reportedCredits

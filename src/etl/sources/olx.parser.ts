@@ -42,29 +42,34 @@ function asString(value: unknown): string | null {
 
 function extractOlxPrice(offer: Record<string, unknown>): {
   price: number | string | null;
+  oldPrice: number | string | null;
   currency: string;
 } {
   const direct = offer['price'];
   if (typeof direct === 'number' || typeof direct === 'string') {
     return {
       price: direct,
+      oldPrice: null,
       currency: asString(offer['currency']) ?? 'UAH',
     };
   }
   const priceObj = asRecord(direct);
   if (priceObj) {
     const val = priceObj['value'] ?? priceObj['amount'] ?? priceObj['regular_price'];
+    const prevRaw = priceObj['previous_value'];
+    const oldPrice =
+      typeof prevRaw === 'number' || typeof prevRaw === 'string' ? prevRaw : null;
     const cur =
       asString(priceObj['currency']) ??
       asString(priceObj['currency_code']) ??
       asString(offer['currency']) ??
       'UAH';
     if (typeof val === 'number' || typeof val === 'string') {
-      return { price: val, currency: cur };
+      return { price: val, oldPrice, currency: cur };
     }
     const label = asString(priceObj['label']) ?? asString(priceObj['display']);
     if (label) {
-      return { price: label, currency: cur };
+      return { price: label, oldPrice, currency: cur };
     }
   }
 
@@ -76,9 +81,12 @@ function extractOlxPrice(offer: Record<string, unknown>): {
       if (rec && rec['key'] === 'price') {
         const valRec = asRecord(rec['value']);
         const rawVal = valRec?.['value'] ?? rec['value'];
+        const prevRaw = valRec?.['previous_value'];
         if (typeof rawVal === 'number' || typeof rawVal === 'string') {
           return {
             price: rawVal,
+            oldPrice:
+              typeof prevRaw === 'number' || typeof prevRaw === 'string' ? prevRaw : null,
             currency: asString(valRec?.['currency']) ?? 'UAH',
           };
         }
@@ -86,7 +94,7 @@ function extractOlxPrice(offer: Record<string, unknown>): {
     }
   }
 
-  return { price: null, currency: 'UAH' };
+  return { price: null, oldPrice: null, currency: 'UAH' };
 }
 
 function extractOlxParams(offer: Record<string, unknown>): Record<string, string> {
@@ -126,16 +134,23 @@ function extractOlxParams(offer: Record<string, unknown>): Record<string, string
   return attrs;
 }
 
+function formatOlxPhotoUrl(raw: string | null): string | null {
+  if (!raw) return null;
+  return raw.replace(/\{width\}x\{height\}/g, '1000x700');
+}
+
 function extractOlxPhoto(offer: Record<string, unknown>): string | null {
   const direct = asString(offer['image']) ?? asString(offer['photo']) ?? asString(offer['thumbnail']);
-  if (direct) return direct;
+  if (direct) return formatOlxPhotoUrl(direct);
 
   const photos = offer['photos'] ?? offer['images'];
   if (Array.isArray(photos) && photos.length > 0) {
     const first = photos[0];
-    if (typeof first === 'string') return first;
+    if (typeof first === 'string') return formatOlxPhotoUrl(first);
     const obj = asRecord(first);
-    return asString(obj?.['url']) ?? asString(obj?.['link']) ?? asString(obj?.['src']) ?? null;
+    return formatOlxPhotoUrl(
+      asString(obj?.['url']) ?? asString(obj?.['link']) ?? asString(obj?.['src']) ?? null,
+    );
   }
   return null;
 }
@@ -171,7 +186,7 @@ export function mapOlxOfferToRawListing(
     return null;
   }
 
-  const { price, currency } = extractOlxPrice(offer);
+  const { price, oldPrice, currency } = extractOlxPrice(offer);
   const attrs = extractOlxParams(offer);
 
   const condition =
@@ -224,7 +239,7 @@ export function mapOlxOfferToRawListing(
     brand,
     categoryRaw,
     price,
-    oldPrice: null,
+    oldPrice,
     currency,
     inStock,
     condition,

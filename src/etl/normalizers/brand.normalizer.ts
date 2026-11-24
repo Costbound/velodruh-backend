@@ -93,6 +93,22 @@ const BRAND_CATALOG: BrandEntry[] = [
   { slug: 'wheeler', name: 'Wheeler', country: 'Taiwan', aliases: ['wheeler', 'вілер'] },
   { slug: 'cyclotech', name: 'Cyclotech', country: null, aliases: ['cyclotech'] },
   { slug: 'stark', name: 'Stark', country: null, aliases: ['stark bikes'] },
+  { slug: 'corso', name: 'Corso', country: 'Ukraine', aliases: ['corso', 'корсо'] },
+  { slug: 'azimut', name: 'Azimut', country: 'Ukraine', aliases: ['azimut', 'азимут', 'азімут'] },
+  { slug: 'khvz', name: 'ХВЗ', country: 'Ukraine', aliases: ['хвз', 'khvz'] },
+  { slug: 'bulls', name: 'Bulls', country: 'Germany', aliases: ['bulls'] },
+  { slug: 'winora', name: 'Winora', country: 'Germany', aliases: ['winora'] },
+  { slug: 'hercules', name: 'Hercules', country: 'Germany', aliases: ['hercules'] },
+  { slug: 'gazelle', name: 'Gazelle', country: 'Netherlands', aliases: ['gazelle'] },
+  { slug: 'pegasus', name: 'Pegasus', country: 'Germany', aliases: ['pegasus'] },
+  { slug: 'kalkhoff', name: 'Kalkhoff', country: 'Germany', aliases: ['kalkhoff'] },
+  { slug: 'kettler', name: 'Kettler', country: 'Germany', aliases: ['kettler'] },
+  { slug: 'batavus', name: 'Batavus', country: 'Netherlands', aliases: ['batavus'] },
+  { slug: 'btwin', name: "B'Twin", country: 'France', aliases: ["b'twin", 'btwin'] },
+  { slug: 'stinger', name: 'Stinger', country: null, aliases: ['stinger'] },
+  { slug: 'cross', name: 'Cross', country: 'Bulgaria', aliases: ['cross bikes'] },
+  { slug: 'like2bike', name: 'Like2Bike', country: 'Ukraine', aliases: ['like2bike'] },
+  { slug: 'zundapp', name: 'Zundapp', country: 'Germany', aliases: ['zundapp', 'zündapp'] },
 ];
 
 const EXACT_ALIAS_MAP = new Map<string, BrandEntry>();
@@ -133,6 +149,13 @@ const GENERIC_BRAND_VALUES = new Set([
   'n/a',
   '-',
   'handmade',
+  // Drivetrain / component makers sometimes entered as bike brand by marketplace sellers
+  'shimano',
+  'sram',
+  'microshift',
+  'sunrace',
+  'tektro',
+  'campagnolo',
 ]);
 
 function stripCorporateSuffixes(raw: string): string {

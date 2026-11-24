@@ -17,6 +17,7 @@ const ACCESSORY_TITLE_PATTERNS: RegExp[] = [
   /\b(?:spare\s+part|helmet|pump|inner\s+tube|tire|tyre|brake\s+pad|chain\s+lube|bottle\s+cage|pannier|saddle|jersey|bib\s+shorts|bike\s+lock|kickstand)\b/i,
   /(?:біговел|беговел|самокат|велотренажер|електросамокат|моноколес|дитяч[іеий].{0,20}крісл)/i,
   /(?:запчастин[аи]|комплектуюч[іе]|продаж\s+рами|продам\s+раму|продам\s+вилку|продам\s+колес[ао])/i,
+  /(?<![\p{L}\p{N}])(?:веловзутт\p{L}*|велотуфл\p{L}*|кросівк\p{L}*|взуття)(?![\p{L}\p{N}])/iu,
 ];
 
 const COMPLETE_BIKE_POSITIVE_PATTERN =
