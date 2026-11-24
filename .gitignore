@@ -5,6 +5,10 @@ coverage
 # Keep environment variables out of version control
 .env
 
+# Raw scraped ReefAPI snapshots and local ETL JSON outputs
+data/snapshots
+data/output
+
 .agents
 .claude
 .cursor

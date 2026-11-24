@@ -6,10 +6,13 @@ const envSchema = z.object({
   DATABASE_URL: z
     .string()
     .min(1)
-    .default('postgresql://user:password@localhost:5432/velodruh'),
+    .default('postgresql://postgres:postgres@localhost:5432/velodruh'),
   CORS_ORIGINS: z
     .string()
     .default('http://localhost:5173,http://localhost:3000,https://velodruh.ua'),
+  CATALOG_SOURCE: z.enum(['memory', 'postgres']).default('memory'),
+  REEFAPI_BASE_URL: z.string().url().default('https://api.reefapi.com'),
+  REEFAPI_API_KEY: z.string().optional(),
 });
 
 export type AppEnv = z.infer<typeof envSchema>;

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2026-11-24 10:00">
+  <shop>
+    <name>Velogo</name>
+    <company>Velogo UA</company>
+    <url>https://velogo.com.ua</url>
+    <currencies>
+      <currency id="UAH" rate="1"/>
+      <currency id="USD" rate="41.5"/>
+    </currencies>
+    <categories>
+      <category id="1">Велосипеди</category>
+      <category id="10" parentId="1">Гравійні велосипеди</category>
+      <category id="11" parentId="1">Гірські велосипеди (MTB)</category>
+      <category id="12" parentId="1">Шосейні велосипеди</category>
+      <category id="13" parentId="1">Турингові велосипеди</category>
+      <category id="99">Велоаксесуари</category>
+    </categories>
+    <offers>
+      <offer id="vg-101" available="true">
+        <url>https://velogo.com.ua/ua/pride-rocx-8-2-m?utm_source=feed</url>
+        <price>33900</price>
+        <oldprice>36500</oldprice>
+        <currencyId>UAH</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://velogo.com.ua/img/pride-rocx-8-2.jpg</picture>
+        <vendor>PRIDE</vendor>
+        <name>Велосипед гравійний PRIDE Rocx 8.2 28" 2025 M чорний</name>
+        <description><![CDATA[<p>Універсальний <b>гравійник</b> на алюмінієвій рамі з бонками під багажник та крила.</p>]]></description>
+        <param name="Розмір рами">M (54 см)</param>
+        <param name="Рік випуску">2025</param>
+        <param name="Матеріал рами">Алюміній 6061T</param>
+        <param name="Тип гальм">Дискові механічні TRP Spyre</param>
+        <param name="Трансмісія">Shimano Sora 2x9</param>
+        <param name="Діаметр коліс">28"</param>
+        <param name="Вага" unit="кг">11.4</param>
+      </offer>
+      <offer id="vg-102" available="true">
+        <url>https://velogo.com.ua/ua/pride-rocx-8-2-l</url>
+        <price>33900</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>10</categoryId>
+        <picture>https://velogo.com.ua/img/pride-rocx-8-2.jpg</picture>
+        <vendor>Pride</vendor>
+        <name>Pride Rocx 8.2 2025 L</name>
+        <param name="Розмір рами">57 см</param>
+        <param name="Рік випуску">2025</param>
+        <param name="Матеріал рами">Алюміній</param>
+        <param name="Тип гальм">Механічні дискові</param>
+      </offer>
+      <offer id="vg-103" available="true">
+        <url>https://velogo.com.ua/ua/trek-marlin-7-gen-3-l</url>
+        <price>1000</price>
+        <currencyId>USD</currencyId>
+        <categoryId>11</categoryId>
+        <picture>https://velogo.com.ua/img/trek-marlin-7.jpg</picture>
+        <vendor>Trek</vendor>
+        <name>Велосипед гірський Trek Marlin 7 Gen 3 29" 2025 L</name>
+        <description>Гірський хардтейл з вилкою RockShox Judy &amp; трансмісією Shimano Deore 1x12.</description>
+        <param name="Розмір рами">19.5"</param>
+        <param name="Рік випуску">2025</param>
+        <param name="Тип гальм">Дискові гідравлічні Shimano MT200</param>
+        <param name="Трансмісія">Shimano Deore M6100 1x12</param>
+        <param name="Вага">13.8 кг</param>
+      </offer>
+      <offer id="vg-104" available="false">
+        <url>https://velogo.com.ua/ua/merida-scultura-endurance-300</url>
+        <price>54600</price>
+        <oldprice>57900</oldprice>
+        <currencyId>UAH</currencyId>
+        <categoryId>12</categoryId>
+        <vendor>MERIDA</vendor>
+        <name>Шосейний велосипед Merida Scultura Endurance 300 (2025)</name>
+        <param name="Розмір рами">52 см</param>
+        <param name="Тип гальм">Гідравлічні дискові</param>
+        <param name="Трансмісія">Shimano Tiagra 2x10</param>
+        <param name="Вага">9.9 кг</param>
+      </offer>
+      <offer id="vg-105" available="true">
+        <url>https://velogo.com.ua/ua/helmet-bell</url>
+        <price>2400</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>99</categoryId>
+        <vendor>Bell</vendor>
+        <name>Велошолом Bell Avenue Mips M</name>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
