@@ -62,7 +62,7 @@ REEFAPI_BASE_URL="https://api.reefapi.com"
 REEFAPI_API_KEY="your_reefapi_key_here"
 ```
 
-> Ніколи не комітьте `.env` і реальний `REEFAPI_API_KEY` у git. Директорії `data/snapshots/` і `data/output/` уже додані в `.gitignore`.
+> Ніколи не комітьте `.env` і реальний `REEFAPI_API_KEY` у git. Директорія `data/output/` ігнорується в `.gitignore`, а `data/snapshots/` можна комітити, щоб команда могла перезаливати дані без повторної витрати кредитів ReefAPI (API-ключ у снапшоти не записується).
 
 3. Підніміть локальний PostgreSQL (якщо плануєте записувати в БД):
 
