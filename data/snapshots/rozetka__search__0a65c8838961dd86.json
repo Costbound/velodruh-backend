@@ -1,0 +1,3416 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-24T12:33:13.353Z",
+  "engine": "rozetka",
+  "action": "search",
+  "requestBody": {
+    "query": "велосипед гравійний",
+    "page": 1,
+    "lang": "ua"
+  },
+  "estimatedCredits": 3,
+  "actualCredits": 3,
+  "response": {
+    "ok": true,
+    "meta": {
+      "api": "rozetka",
+      "endpoint": "search",
+      "mode": "live",
+      "latency_ms": 7323.4,
+      "record_count": 60,
+      "bytes": 207357,
+      "cache_hit": false,
+      "total": 554,
+      "pages": 10,
+      "pagination": {
+        "page": 1,
+        "has_more": true
+      },
+      "upstream_requests": 5,
+      "ua_exit_requests": 2,
+      "ua_exit_bytes": 6686,
+      "warnings": [
+        "partial: the seller-name request failed; seller_name is null (seller_id and sold_by are still set)"
+      ],
+      "charged_credits": 3,
+      "version": "0.1.1",
+      "request_id": "951408a129c14355",
+      "fetched_at": "2026-11-24T12:33:13.326Z"
+    },
+    "data": {
+      "query": {
+        "query": "велосипед гравійний",
+        "sort": "relevance",
+        "page": 1,
+        "lang": "ua"
+      },
+      "total": 554,
+      "total_is_approximate": true,
+      "total_reachable": 554,
+      "pages": 10,
+      "page": 1,
+      "page_size": 60,
+      "has_more": true,
+      "page_clamped": false,
+      "results": [
+        {
+          "product_id": 551413644,
+          "title": "Покришка для гравійного велосипеда 700x40C 60TPI Longus (390208)",
+          "url": "https://rozetka.com.ua/ua/velorezina-longus-152746050/p551413644/",
+          "brand": "Longus",
+          "brand_slug": "longus",
+          "brand_id": 183457,
+          "price": 736,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 16.36,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/603070133.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 535891459,
+          "title": "Велосипед гравійний алюмінієвий 28 дюймів Ardis Paladin 2024, рама 20.5\" (Синій)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148120802/p535891459/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 20125,
+          "old_price": 20102,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 447.22,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 60544219,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635689166.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 2,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 632061347,
+          "title": "Гравійний велосипед Pride ROCX 8.1 28″ рама L помаранчевий 2025",
+          "url": "https://rozetka.com.ua/ua/632061347/p632061347/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 30225,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 671.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 289133,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/658904420.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 522972724,
+          "title": "Велосипед Гравійний Corso Infinity FN-28590 рама алюмінієва 21``обладнання Shimano SORA 18 швидкостей, вилка карбонова",
+          "url": "https://rozetka.com.ua/ua/522972724/p522972724/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 36995,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 822.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 76868,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/565729407.jpg",
+          "smart_subscription": false,
+          "bonus_uah": 369,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 522972729,
+          "title": "Велосипед Гравійний Corso Infinity FN-28420 рама алюмінієва 19``обладнання Shimano SORA 18 швидкостей, вилка карбонова",
+          "url": "https://rozetka.com.ua/ua/522972729/p522972729/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 36995,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 822.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 76868,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/565730084.jpg",
+          "smart_subscription": false,
+          "bonus_uah": 369,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 382870581,
+          "title": "Кермо для гравійного велосипеда розміру M 7333",
+          "url": "https://rozetka.com.ua/ua/382870581/p382870581/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 947,
+          "old_price": 1042,
+          "discount_pct": 9,
+          "currency": "UAH",
+          "source_usd_price": 21.04,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 33195,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78170168,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/342474680.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 618917216,
+          "title": "Гріпси для велосипеда RockBros MTB Lock-On 130 мм з алюмінієвими замками ергономічні велосипедні ручки для гірського та гравійного байка з антиковзким покриттям діаметром 22 2 мм чорні для поглинання вібрацій та комфортного хвату",
+          "url": "https://rozetka.com.ua/ua/618917216/p618917216/",
+          "brand": "RockBros",
+          "brand_slug": "rockbros",
+          "brand_id": 284128,
+          "price": 520,
+          "old_price": 700,
+          "discount_pct": 26,
+          "currency": "UAH",
+          "source_usd_price": 11.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 282164,
+          "merchant_id": 17,
+          "category": {
+            "id": 269513,
+            "title": "Велоаксесуари",
+            "url": "https://rozetka.com.ua/ua/aksessuary-dlya-velosipedov/c269513/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            269513
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/679560152.png",
+          "smart_subscription": false,
+          "bonus_uah": 15,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655814,
+          "title": "Велосипед гравійний 28\" алюмінієва рама 52см дискові гальма 16 швидкостей Marin чорний 2024 (SKE-39-62)",
+          "url": "https://rozetka.com.ua/ua/621655814/p621655814/",
+          "brand": "Marin",
+          "brand_slug": "marin",
+          "brand_id": 2186,
+          "price": 37200,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 826.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/684718685.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 588168805,
+          "title": "Гравійний велосипед Cube Nuroad EX Cotton / Grey GRX 822 (2026)",
+          "url": "https://rozetka.com.ua/ua/588168805/p588168805/",
+          "brand": "Cube",
+          "brand_slug": "cube",
+          "brand_id": 2603,
+          "price": 73899,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1642.2,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 150355,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/660017833.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 588168808,
+          "title": "Гравійний велосипед Cube Nuroad EX C:62 Grx825 Di2",
+          "url": "https://rozetka.com.ua/ua/588168808/p588168808/",
+          "brand": "Cube",
+          "brand_slug": "cube",
+          "brand_id": 2603,
+          "price": 153120,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 3402.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 150355,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/660017839.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 543805995,
+          "title": "Велосипедна фляга Fidlock Elite CX Aero з тримачем | Аеро пляшка для шосейного, гравійного та МТБ велосипеда",
+          "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya-fidlock-150241118/p543805995/",
+          "brand": "Fidlock",
+          "brand_slug": "fidlock",
+          "brand_id": 641158,
+          "price": 1199,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 26.64,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 244679,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/594666741.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 588348439,
+          "title": "Гравійний велосипед Cube Nuroad ONЕ C:62 Aloegreen GRX 820 (L)",
+          "url": "https://rozetka.com.ua/ua/588348439/p588348439/",
+          "brand": "Cube",
+          "brand_slug": "cube",
+          "brand_id": 2603,
+          "price": 104500,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 2322.22,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 150355,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/660099710.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655574,
+          "title": "Гравійний велосипед 28 дюймів алюмінієва рама XL темно-зелений Pride 2025 (SKD-63-15)",
+          "url": "https://rozetka.com.ua/ua/621655574/p621655574/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 88350,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1963.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/684718510.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 620205326,
+          "title": "Обмотка керма барана шосейного гравійного велосипеда плетена тканева з барендами (рожево білий)",
+          "url": "https://rozetka.com.ua/ua/620205326/p620205326/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 1230,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 27.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 270370,
+          "merchant_id": 17,
+          "category": {
+            "id": 269513,
+            "title": "Велоаксесуари",
+            "url": "https://rozetka.com.ua/ua/aksessuary-dlya-velosipedov/c269513/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            269513
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/683845826.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 588342169,
+          "title": "Гравійний велосипед Cube Nuroad Pro FE C:62 GRX 820 Vulcan / Prism (2026)",
+          "url": "https://rozetka.com.ua/ua/588342169/p588342169/",
+          "brand": "Cube",
+          "brand_slug": "cube",
+          "brand_id": 2603,
+          "price": 132550,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 2945.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 150355,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/660093005.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 581113861,
+          "title": "Велосипед гравійний (гравел) Giant Revolt 2 2022 / рама 51см black diamond (2202006117)",
+          "url": "https://rozetka.com.ua/ua/581113861/p581113861/",
+          "brand": "Giant",
+          "brand_slug": "giant",
+          "brand_id": 73618,
+          "price": 45360,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1008,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 268987,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/653132466.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 588348427,
+          "title": "Гравійний велосипед Cube Nuroad EXD C:62 crisscross Force XPLR AXS (2026)",
+          "url": "https://rozetka.com.ua/ua/588348427/p588348427/",
+          "brand": "Cube",
+          "brand_slug": "cube",
+          "brand_id": 2603,
+          "price": 178450,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 3965.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 150355,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/660099703.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655667,
+          "title": "Велосипед гравійний 28 дюймів сірий рама L Pride (SKD-52-84)",
+          "url": "https://rozetka.com.ua/ua/621655667/p621655667/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 47570,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1057.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/684725096.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655676,
+          "title": "Велосипед гравійний 275 дюймів рама S сірий Pride (SKD-68-47)",
+          "url": "https://rozetka.com.ua/ua/621655676/p621655676/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 47570,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1057.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/684724715.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 435284606,
+          "title": "Велосипед спортивний гравійний зріст 180-190 см 28 дюймів Corso Infinity Чорно-червоний",
+          "url": "https://rozetka.com.ua/ua/435284606/p435284606/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 33871,
+          "old_price": 39273,
+          "discount_pct": 14,
+          "currency": "UAH",
+          "source_usd_price": 752.69,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 114601,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 55754651,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/440718687.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 623118962,
+          "title": "Гравійний велосипед Corso Infinity FN-28590 21\" Shimano Sora 2x9 карбонова вилка гревел байк",
+          "url": "https://rozetka.com.ua/ua/623118962/p623118962/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 31614,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 702.53,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 285959,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/685552687.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 623118968,
+          "title": "Гравійний велосипед Corso Infinity FN-28420 19\" Shimano Sora 2x9 карбонова вилка гревел байк",
+          "url": "https://rozetka.com.ua/ua/623118968/p623118968/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 31614,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 702.53,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 285959,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/685552074.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 473961039,
+          "title": "Велосипед гравійний (гравел) Giant Revolt 2 2022 / рама 51см black diamond (2202006117)",
+          "url": "https://rozetka.com.ua/ua/473961039/p473961039/",
+          "brand": "Giant",
+          "brand_slug": "giant",
+          "brand_id": 73618,
+          "price": 50391,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1119.8,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 29325,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/506595782.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655694,
+          "title": "Велосипед гравійний 28 дюймів Rondo рама XL білий сірий 2023 (SKE-87-66)",
+          "url": "https://rozetka.com.ua/ua/621655694/p621655694/",
+          "brand": "Rondo",
+          "brand_slug": "rondo",
+          "brand_id": 232256,
+          "price": 100435,
+          "old_price": 114042,
+          "discount_pct": 12,
+          "currency": "UAH",
+          "source_usd_price": 2231.89,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/684724696.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 626450777,
+          "title": "Велосипед гравійний 28\" Merida Silex 400 Fall Green (2025) (VLP_100001288)",
+          "url": "https://rozetka.com.ua/ua/626450777/p626450777/",
+          "brand": "Merida",
+          "brand_slug": "merida",
+          "brand_id": 217672,
+          "price": 79332,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1762.93,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 93439,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/687458134.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 485179289,
+          "title": "Гравійний велосипед 28 дюймів вік від 18 років Corso Infinity Чорно-Червоний",
+          "url": "https://rozetka.com.ua/ua/485179289/p485179289/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 33871,
+          "old_price": 39273,
+          "discount_pct": 14,
+          "currency": "UAH",
+          "source_usd_price": 752.69,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 114601,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/518917838.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655712,
+          "title": "Велосипед гравійний 28 дюймів жовтий рама S Pride (SKD-45-88)",
+          "url": "https://rozetka.com.ua/ua/621655712/p621655712/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 43943,
+          "old_price": 49896,
+          "discount_pct": 12,
+          "currency": "UAH",
+          "source_usd_price": 976.51,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/684724707.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655823,
+          "title": "Велосипед гравійний 28 дюймів карбоновий Pride ROCX 8.2 CF рама M червоний 2024 (SKD-91-46)",
+          "url": "https://rozetka.com.ua/ua/621655823/p621655823/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 43943,
+          "old_price": 49896,
+          "discount_pct": 12,
+          "currency": "UAH",
+          "source_usd_price": 976.51,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/684718504.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655751,
+          "title": "Велосипед гравійний 28 дюймів Pride ROCX 8.2 CF XL червоний 2024 SKD-91-15",
+          "url": "https://rozetka.com.ua/ua/621655751/p621655751/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 43943,
+          "old_price": 49896,
+          "discount_pct": 12,
+          "currency": "UAH",
+          "source_usd_price": 976.51,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/684718504.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 623830046,
+          "title": "Велосипед 28\" Rondo Ruut AL3, рама M, гравійний",
+          "url": "https://rozetka.com.ua/ua/623830046/p623830046/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 62227,
+          "old_price": 84007,
+          "discount_pct": 26,
+          "currency": "UAH",
+          "source_usd_price": 1382.82,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 215582,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/685859583.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 626709170,
+          "title": "Велосипед гравійний Rondo Ruut AL1 28 дюймів рама XL White Grey",
+          "url": "https://rozetka.com.ua/ua/626709170/p626709170/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 92401,
+          "old_price": 124742,
+          "discount_pct": 26,
+          "currency": "UAH",
+          "source_usd_price": 2053.36,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 215582,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/687628057.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 577244632,
+          "title": "Велосипед Гравійний 28 дюймів Corso Infinity FN-420 обладнання Shimano SORA алюмінієва рама 19 дюймів 18 швидкостей. Black and Blue (154843)",
+          "url": "https://rozetka.com.ua/ua/577244632/p577244632/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 41847,
+          "old_price": 46497,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 929.93,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 228319,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/494712152.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 464954329,
+          "title": "Велосипед Гравійний Corso \"Infinity\" FN-28420 рама алюмінієва 19``, обладнання Shimano SORA 18 швидкостей, вилка карбонова, зібраний на 75%",
+          "url": "https://rozetka.com.ua/ua/464954329/p464954329/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 32977,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 732.82,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 52620,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/494712152.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 626449850,
+          "title": "Велосипед гравійний 28\" Merida Silex 400 Black 2025 (VLP_100001039)",
+          "url": "https://rozetka.com.ua/ua/626449850/p626449850/",
+          "brand": "Merida",
+          "brand_slug": "merida",
+          "brand_id": 217672,
+          "price": 79332,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1762.93,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 93439,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/687457940.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 621655685,
+          "title": "Велосипед гравійний 28 дюймів карбонова рама S червоний Pride (SKD-97-54)",
+          "url": "https://rozetka.com.ua/ua/621655685/p621655685/",
+          "brand": "Pride",
+          "brand_slug": "pride",
+          "brand_id": 2239,
+          "price": 43943,
+          "old_price": 49896,
+          "discount_pct": 12,
+          "currency": "UAH",
+          "source_usd_price": 976.51,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/684718504.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 446755430,
+          "title": "Велосипед Гравійний Corso \"Infinity\" FN-28420 рама алюмінієва 19``, обладнання Shimano SORA 18 швидкостей, вилка карбонова",
+          "url": "https://rozetka.com.ua/ua/446755430/p446755430/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 35070,
+          "old_price": 38000,
+          "discount_pct": 8,
+          "currency": "UAH",
+          "source_usd_price": 779.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 139498,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/464452892.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 446755427,
+          "title": "Велосипед Гравійний Corso \"Infinity\" FN-28590 рама алюмінієва 21``, обладнання Shimano SORA 18 швидкостей, вилка карбонова",
+          "url": "https://rozetka.com.ua/ua/446755427/p446755427/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 35070,
+          "old_price": 38000,
+          "discount_pct": 8,
+          "currency": "UAH",
+          "source_usd_price": 779.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 139498,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/464452890.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 565852622,
+          "title": "Велосипед Гравійний 28 дюймів Corso Infinity FN-590 обладнання Shimano SORA алюмінієва рама 19 дюймів 18 швидкостей. Black and Red (154842)",
+          "url": "https://rozetka.com.ua/ua/565852622/p565852622/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 41847,
+          "old_price": 46497,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 929.93,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 28552,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/635704907.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 464954549,
+          "title": "Велосипед Гравійний Corso \"Infinity\" FN-28590 рама алюмінієва 21, обладнання Shimano SORA 18 швидкостей, вилка карбонова, зібраний на 75%",
+          "url": "https://rozetka.com.ua/ua/464954549/p464954549/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 32977,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 732.82,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 52620,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/494712242.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 548667558,
+          "title": "Покришка для гравійного велосипеда 700x36 чорна бежева ручна робота 260TPI Grinder (00532)",
+          "url": "https://rozetka.com.ua/ua/velorezina-grinder-151816304/p548667558/",
+          "brand": "Grinder",
+          "brand_slug": "grinder",
+          "brand_id": 779049,
+          "price": 3150,
+          "old_price": 3954,
+          "discount_pct": 20,
+          "currency": "UAH",
+          "source_usd_price": 70,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 218384,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/619358882.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 583237882,
+          "title": "Велосипед гравійний Corso Infinity 19\" Shimano Sora 18 швидкостей Black and blue (154843)",
+          "url": "https://rozetka.com.ua/ua/583237882/p583237882/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 42454,
+          "old_price": 47171,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 943.42,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 112501,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/436603499.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 565852718,
+          "title": "Велосипед Гравійний 28 дюймів Corso Infinity FN-420 обладнання Shimano SORA алюмінієва рама 19 дюймів 18 швидкостей. Black and Blue (154843)",
+          "url": "https://rozetka.com.ua/ua/565852718/p565852718/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 41847,
+          "old_price": 46497,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 929.93,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 28552,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/635704598.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 583207915,
+          "title": "Велосипед гравійний Corso Infinity 21\" Shimano Sora 18 швидкостей Black and red (154842)",
+          "url": "https://rozetka.com.ua/ua/583207915/p583207915/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 42454,
+          "old_price": 47171,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 943.42,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 112501,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/436604255.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 573656908,
+          "title": "Велосипедна камера CST Ultra Light TPU 700x25/32C 28\" ніпель 60 мм, надлегка камера 75 г для шосейного та гравійного велосипеда",
+          "url": "https://rozetka.com.ua/ua/573656908/p573656908/",
+          "brand": "CST",
+          "brand_slug": "cst",
+          "brand_id": 21616,
+          "price": 279,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 6.2,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 244679,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78087362,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/651090409.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450562,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Бордовий",
+          "url": "https://rozetka.com.ua/ua/625450562/p625450562/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/686884889.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450712,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Синій",
+          "url": "https://rozetka.com.ua/ua/625450712/p625450712/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/686884697.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450577,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Сірий",
+          "url": "https://rozetka.com.ua/ua/625450577/p625450577/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/686884525.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450727,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Перламутровий",
+          "url": "https://rozetka.com.ua/ua/625450727/p625450727/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/686884711.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450700,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Койот",
+          "url": "https://rozetka.com.ua/ua/625450700/p625450700/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/686884961.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450730,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Фіолетовий",
+          "url": "https://rozetka.com.ua/ua/625450730/p625450730/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/686884715.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450565,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Помаранчевий",
+          "url": "https://rozetka.com.ua/ua/625450565/p625450565/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/686884498.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450715,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Зелений",
+          "url": "https://rozetka.com.ua/ua/625450715/p625450715/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/686884976.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450721,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Бірюзовий",
+          "url": "https://rozetka.com.ua/ua/625450721/p625450721/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/686884702.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450568,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Червоний",
+          "url": "https://rozetka.com.ua/ua/625450568/p625450568/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/686884500.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450718,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Хакі",
+          "url": "https://rozetka.com.ua/ua/625450718/p625450718/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/686884700.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450583,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Графіт",
+          "url": "https://rozetka.com.ua/ua/625450583/p625450583/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/686884537.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450703,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Бежевий",
+          "url": "https://rozetka.com.ua/ua/625450703/p625450703/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/686884667.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 577244674,
+          "title": "Велосипед Гравійний 28 дюймів Corso Infinity FN-590 обладнання Shimano SORA алюмінієва рама 19 дюймів 18 швидкостей. Black and Red (154842)",
+          "url": "https://rozetka.com.ua/ua/577244674/p577244674/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 41847,
+          "old_price": 46497,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 929.93,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 228319,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/494712242.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 620205329,
+          "title": "Обмотка керма барана шосейного гравійного велосипеда плетена тканева з барендами (чорно білий)",
+          "url": "https://rozetka.com.ua/ua/620205329/p620205329/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 1230,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 27.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 270370,
+          "merchant_id": 17,
+          "category": {
+            "id": 269513,
+            "title": "Велоаксесуари",
+            "url": "https://rozetka.com.ua/ua/aksessuary-dlya-velosipedov/c269513/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            269513
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/683845829.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        },
+        {
+          "product_id": 625450574,
+          "title": "Флягоутримувач велосипедний для гравійних та шосейних велосипедів MW1617235 Блакитний",
+          "url": "https://rozetka.com.ua/ua/625450574/p625450574/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 288,
+          "old_price": 443,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 6.4,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178596,
+          "merchant_id": 17,
+          "category": {
+            "id": 268165,
+            "title": "Фляги для велосипеда і фляготримачі",
+            "url": "https://rozetka.com.ua/ua/velosipednye-flyagi-i-krepleniya/c268165/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268165
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/686884511.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": null,
+          "seller_stars": null,
+          "seller_url": null
+        }
+      ],
+      "brands": [
+        {
+          "slug": "hutchinson",
+          "name": "Hutchinson",
+          "count": 11
+        },
+        {
+          "slug": "cube",
+          "name": "Cube",
+          "count": 9
+        },
+        {
+          "slug": "author",
+          "name": "Author",
+          "count": 8
+        },
+        {
+          "slug": "marin",
+          "name": "Marin",
+          "count": 8
+        },
+        {
+          "slug": "rockbros",
+          "name": "RockBros",
+          "count": 7
+        },
+        {
+          "slug": "outleap",
+          "name": "Outleap",
+          "count": 6
+        },
+        {
+          "slug": "rondo",
+          "name": "Rondo",
+          "count": 6
+        },
+        {
+          "slug": "93a83b95",
+          "name": "GT",
+          "count": 5
+        },
+        {
+          "slug": "bottecchia",
+          "name": "Bottecchia",
+          "count": 4
+        },
+        {
+          "slug": "vittoria",
+          "name": "Vittoria",
+          "count": 4
+        },
+        {
+          "slug": "continental",
+          "name": "Continental",
+          "count": 4
+        },
+        {
+          "slug": "leon",
+          "name": "Leon",
+          "count": 3
+        },
+        {
+          "slug": "giro",
+          "name": "Giro",
+          "count": 3
+        },
+        {
+          "slug": "onza",
+          "name": "ONZA",
+          "count": 3
+        },
+        {
+          "slug": "odi",
+          "name": "ODI",
+          "count": 3
+        },
+        {
+          "slug": "kenda",
+          "name": "Kenda",
+          "count": 3
+        },
+        {
+          "slug": "formula",
+          "name": "Formula",
+          "count": 3
+        },
+        {
+          "slug": "spirit",
+          "name": "Spirit",
+          "count": 2
+        },
+        {
+          "slug": "funn",
+          "name": "Funn",
+          "count": 2
+        },
+        {
+          "slug": "octane-one",
+          "name": "Octane One",
+          "count": 2
+        },
+        {
+          "slug": "giant",
+          "name": "Giant",
+          "count": 2
+        },
+        {
+          "slug": "gelios",
+          "name": "Gelios",
+          "count": 2
+        },
+        {
+          "slug": "garmin",
+          "name": "Garmin",
+          "count": 2
+        },
+        {
+          "slug": "atlantic-fashion",
+          "name": "Atlantic",
+          "count": 2
+        },
+        {
+          "slug": "ardis",
+          "name": "Ardis",
+          "count": 2
+        },
+        {
+          "slug": "longus",
+          "name": "Longus",
+          "count": 2
+        },
+        {
+          "slug": "fidlock",
+          "name": "Fidlock",
+          "count": 1
+        },
+        {
+          "slug": "michelin",
+          "name": "Michelin",
+          "count": 1
+        },
+        {
+          "slug": "grinder",
+          "name": "Grinder",
+          "count": 1
+        },
+        {
+          "slug": "kross",
+          "name": "Kross",
+          "count": 1
+        },
+        {
+          "slug": "cst",
+          "name": "CST",
+          "count": 1
+        },
+        {
+          "slug": "x-treme",
+          "name": "X-Treme",
+          "count": 1
+        },
+        {
+          "slug": "meroca",
+          "name": "Meroca",
+          "count": 1
+        },
+        {
+          "slug": "goodyear",
+          "name": "Goodyear",
+          "count": 1
+        },
+        {
+          "slug": "chao-yang",
+          "name": "Chao Yang",
+          "count": 1
+        },
+        {
+          "slug": "prox",
+          "name": "Prox",
+          "count": 1
+        },
+        {
+          "slug": "cross",
+          "name": "Cross",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "id": 4627893,
+          "title": "Спорт і захоплення",
+          "count": 648,
+          "parent_id": null
+        },
+        {
+          "id": 4676065,
+          "title": "Велопокришки",
+          "count": 251,
+          "parent_id": 4627893
+        },
+        {
+          "id": 83884,
+          "title": "Велосипеди",
+          "count": 352,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4625505,
+          "title": "Велозапчастини",
+          "count": 11,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268165,
+          "title": "Фляги для велосипеда і фляготримачі",
+          "count": 19,
+          "parent_id": 4627893
+        },
+        {
+          "id": 269513,
+          "title": "Велоаксесуари",
+          "count": 10,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268095,
+          "title": "Велошоломи",
+          "count": 4,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4117145,
+          "title": "Веловзуття",
+          "count": 1,
+          "parent_id": 4627893
+        }
+      ]
+    }
+  }
+}

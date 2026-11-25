@@ -5,6 +5,9 @@ coverage
 # Keep environment variables out of version control
 .env
 
+# Keep local ETL JSON output dumps out of version control
+data/output
+
 .agents
 .claude
 .cursor

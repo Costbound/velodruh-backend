@@ -2,8 +2,11 @@ import { AppError } from '../middlewares/app-error.js';
 import type { BikeDetailDto, BikeListQuery } from '../schemas/bike.schema.js';
 import { CATALOG_BIKES } from './catalog.data.js';
 
-export function listBikes(query: Partial<BikeListQuery> = {}): BikeDetailDto[] {
-  const filtered = CATALOG_BIKES.filter((bike) => {
+export function listBikes(
+  query: Partial<BikeListQuery> = {},
+  catalog: BikeDetailDto[] = CATALOG_BIKES,
+): BikeDetailDto[] {
+  const filtered = catalog.filter((bike) => {
     if (query.category !== undefined && bike.category !== query.category) {
       return false;
     }
@@ -118,8 +121,11 @@ export function listBikes(query: Partial<BikeListQuery> = {}): BikeDetailDto[] {
   });
 }
 
-export function getBikeBySlug(slug: string): BikeDetailDto {
-  const bike = CATALOG_BIKES.find((item) => item.slug === slug);
+export function getBikeBySlug(
+  slug: string,
+  catalog: BikeDetailDto[] = CATALOG_BIKES,
+): BikeDetailDto {
+  const bike = catalog.find((item) => item.slug === slug);
   if (!bike) {
     throw AppError.notFound(`Bike with slug "${slug}" not found`);
   }

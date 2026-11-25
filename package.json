@@ -18,6 +18,11 @@
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
     "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
     "contract:emit": "prisma contract emit",
+    "db:init": "tsx src/etl/cli.ts --init-schema",
+    "etl:plan": "tsx src/etl/cli.ts --preset mvp",
+    "etl:demo": "tsx src/etl/cli.ts --xml-file data/fixtures/sample-feed.yml",
+    "etl:seed": "tsx src/etl/cli.ts --seed --init-schema --save-db",
+    "etl:run": "tsx src/etl/cli.ts",
     "docker:build:prod": "docker build --platform linux/amd64 --target production -t velodruh-back:latest ."
   },
   "keywords": [],

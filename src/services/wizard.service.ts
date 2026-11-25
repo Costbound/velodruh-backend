@@ -333,6 +333,7 @@ function doesBikeMatchFeature(bike: BikeDetailDto, feature: RequiredFeatureType)
 
 export function getWizardRecommendations(
   input: WizardRecommendationsRequest,
+  catalog: BikeDetailDto[] = CATALOG_BIKES,
 ): WizardRecommendationsResponse {
   const evaluation = evaluateWizard(input);
   const { recommendedCategory, calculatedFrameSize } = evaluation.analysis;
@@ -340,7 +341,7 @@ export function getWizardRecommendations(
   const { minUah, maxUah } = input.budget;
   const { heightCm, inseamCm, gender } = input.rider;
 
-  const genderCompatibleBikes = CATALOG_BIKES.filter(
+  const genderCompatibleBikes = catalog.filter(
     (bike) => bike.gender === gender || bike.gender === 'UNISEX' || gender === 'UNISEX',
   );
 

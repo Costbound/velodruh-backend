@@ -1,0 +1,5266 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-24T12:33:18.902Z",
+  "engine": "rozetka",
+  "action": "search",
+  "requestBody": {
+    "query": "велосипед гірський",
+    "page": 1,
+    "lang": "ua"
+  },
+  "estimatedCredits": 3,
+  "actualCredits": 3,
+  "response": {
+    "ok": true,
+    "meta": {
+      "api": "rozetka",
+      "endpoint": "search",
+      "mode": "live",
+      "latency_ms": 5470.4,
+      "record_count": 60,
+      "bytes": 343732,
+      "cache_hit": false,
+      "total": 14559,
+      "pages": 17,
+      "pagination": {
+        "page": 1,
+        "has_more": true
+      },
+      "upstream_requests": 4,
+      "ua_exit_requests": 1,
+      "ua_exit_bytes": 38416,
+      "charged_credits": 3,
+      "version": "0.1.1",
+      "request_id": "377ace672f7446e7",
+      "queue_ms": 1.2,
+      "fetched_at": "2026-11-24T12:33:18.868Z"
+    },
+    "data": {
+      "query": {
+        "query": "велосипед гірський",
+        "sort": "relevance",
+        "page": 1,
+        "lang": "ua"
+      },
+      "total": 14559,
+      "total_is_approximate": true,
+      "total_reachable": 1000,
+      "pages": 17,
+      "page": 1,
+      "page_size": 60,
+      "has_more": true,
+      "page_clamped": false,
+      "results": [
+        {
+          "product_id": 583439038,
+          "title": "Велосипед електричний потужний електро фетбайк велосипед для дорослих fatbike електровелосипед з рамою на акумуляторі з дисплеєм фарою широкими колесами гірський чоловічий для міста села бездоріжжя Shimano 1000W 48v 13Ah New Speed Чорний 74067",
+          "url": "https://rozetka.com.ua/ua/583439038/p583439038/",
+          "brand": "Newspeed",
+          "brand_slug": "newspeed",
+          "brand_id": 268260,
+          "price": 44999,
+          "old_price": 55999,
+          "discount_pct": 20,
+          "currency": "UAH",
+          "source_usd_price": 999.98,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 63226,
+          "merchant_id": 17,
+          "category": {
+            "id": 4627631,
+            "title": "Електровелосипеди",
+            "url": "https://rozetka.com.ua/ua/elektrovelosipedy/c4627631/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            4625901,
+            4627631
+          ],
+          "group_id": 49559907,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/669858573.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.31,
+            "rated_count": 13,
+            "review_count": 15,
+            "question_count": 29,
+            "distribution": {
+              "1": 1,
+              "2": 0,
+              "3": 0,
+              "4": 5,
+              "5": 7
+            }
+          },
+          "seller_name": "kidsDM",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kidsdm/"
+        },
+        {
+          "product_id": 503386539,
+          "title": "Велосипед гірський двопідвісний CORSO «Rend» 26 дюймів (Чорний)",
+          "url": "https://rozetka.com.ua/ua/503386539/p503386539/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 9255,
+          "old_price": 8073,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 205.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/635685139.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 503386569,
+          "title": "Велосипед гірський алюмінієвий 26 дюймів Toprider Top7, рама 16\" (Синій)",
+          "url": "https://rozetka.com.ua/ua/503386569/p503386569/",
+          "brand": "TopRider",
+          "brand_slug": "toprider",
+          "brand_id": 364596,
+          "price": 8535,
+          "old_price": 9545,
+          "discount_pct": 11,
+          "currency": "UAH",
+          "source_usd_price": 189.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/635685012.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 419200737,
+          "title": "Спідометр бездротовий на велосипед велокомп’ютер з ліхтариком і звуковим сигналом водонепроникний електронний одометр з підсвіткою датчик швидкості універсальний для гірських і дорожніх велосипедів зручний точний велоспідометр OnePro Червоний 71052",
+          "url": "https://rozetka.com.ua/ua/419200737/p419200737/",
+          "brand": "OnePro",
+          "brand_slug": "onepro",
+          "brand_id": 695442,
+          "price": 959,
+          "old_price": 1299,
+          "discount_pct": 26,
+          "currency": "UAH",
+          "source_usd_price": 21.31,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 63226,
+          "merchant_id": 17,
+          "category": {
+            "id": 268129,
+            "title": "Велокомп'ютери",
+            "url": "https://rozetka.com.ua/ua/velokompyutery/c268129/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            268129
+          ],
+          "group_id": 54136914,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/558510795.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.76,
+            "rated_count": 135,
+            "review_count": 137,
+            "question_count": 18,
+            "distribution": {
+              "1": 4,
+              "2": 2,
+              "3": 2,
+              "4": 6,
+              "5": 121
+            }
+          },
+          "seller_name": "kidsDM",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kidsdm/"
+        },
+        {
+          "product_id": 535890849,
+          "title": "Велосипед гірський двопідвісний 26 дюймів Ardis Buggy, рама 17\" (Чорно-зелений)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148121038/p535890849/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 10475,
+          "old_price": 9715,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 232.78,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/615836189.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3.5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 1,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 368083686,
+          "title": "Велосипед гірський GT Stomper Prime 20″ Midnight (G54600U10)",
+          "url": "https://rozetka.com.ua/ua/368083686/p368083686/",
+          "brand": "GT",
+          "brand_slug": "93a83b95",
+          "brand_id": 373286,
+          "price": 10836,
+          "old_price": 13524,
+          "discount_pct": 20,
+          "currency": "UAH",
+          "source_usd_price": 240.8,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 14376,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/314844898.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "ROYAL PLEASURE",
+          "seller_stars": 5,
+          "seller_url": "https://rozetka.com.ua/seller/royal-pleasure/"
+        },
+        {
+          "product_id": 535889199,
+          "title": "Велосипед гірський підлітковий Crossride Nitro 24 дюйми, рама 11\" (Чорний)",
+          "url": "https://rozetka.com.ua/ua/bicycles-crossride-148121090/p535889199/",
+          "brand": "Crossride",
+          "brand_slug": "crossride",
+          "brand_id": 262848,
+          "price": 7075,
+          "old_price": 7294,
+          "discount_pct": 3,
+          "currency": "UAH",
+          "source_usd_price": 157.22,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 54918428,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/615838461.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 2,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 369131562,
+          "title": "Велосипед гірський Outleap DRAGON 20″ Green (OBM20B20J)",
+          "url": "https://rozetka.com.ua/ua/369131562/p369131562/",
+          "brand": "Outleap",
+          "brand_slug": "outleap",
+          "brand_id": 262890,
+          "price": 6510,
+          "old_price": 8148,
+          "discount_pct": 20,
+          "currency": "UAH",
+          "source_usd_price": 144.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 14376,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 48906828,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/316751743.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 2,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 2
+            }
+          },
+          "seller_name": "ROYAL PLEASURE",
+          "seller_stars": 5,
+          "seller_url": "https://rozetka.com.ua/seller/royal-pleasure/"
+        },
+        {
+          "product_id": 492458414,
+          "title": "Педалі велосипедні на промпідшипниках алюмінієві велопедалі з шипами ROCKBROS легкі педалі для велосипеда гірського шосейного міського МТБ Фіолетові 73543",
+          "url": "https://rozetka.com.ua/ua/492458414/p492458414/",
+          "brand": "RockBros",
+          "brand_slug": "rockbros",
+          "brand_id": 284128,
+          "price": 799,
+          "old_price": 1499,
+          "discount_pct": 47,
+          "currency": "UAH",
+          "source_usd_price": 17.76,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 63226,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 53160138,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/664033558.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.81,
+            "rated_count": 77,
+            "review_count": 80,
+            "question_count": 8,
+            "distribution": {
+              "1": 1,
+              "2": 3,
+              "3": 0,
+              "4": 2,
+              "5": 71
+            }
+          },
+          "seller_name": "kidsDM",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kidsdm/"
+        },
+        {
+          "product_id": 395484693,
+          "title": "Велокамера на велосипед гірський MTB 27.5 дюймів Greys ніпель AV 35mm бутил (GR51627)",
+          "url": "https://rozetka.com.ua/ua/395484693/p395484693/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 187,
+          "old_price": 221,
+          "discount_pct": 15,
+          "currency": "UAH",
+          "source_usd_price": 4.16,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 6121,
+          "merchant_id": 17,
+          "category": {
+            "id": 3919396,
+            "title": "Велокамери",
+            "url": "https://rozetka.com.ua/ua/velorezina/c3919396/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            3919396
+          ],
+          "group_id": 52029117,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/357708125.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3.79,
+            "rated_count": 48,
+            "review_count": 53,
+            "question_count": 7,
+            "distribution": {
+              "1": 12,
+              "2": 3,
+              "3": 0,
+              "4": 1,
+              "5": 32
+            }
+          },
+          "seller_name": "RG",
+          "seller_stars": 4.6,
+          "seller_url": "https://rozetka.com.ua/seller/rg/"
+        },
+        {
+          "product_id": 570866212,
+          "title": "Покришка 24x2.125 для велосипеда, Велошина 24 дюйми, Надійна гума для підліткових і гірських велосипедів модифікація 3,",
+          "url": "https://rozetka.com.ua/ua/570866212/p570866212/",
+          "brand": "Good Tyre",
+          "brand_slug": "good-tyre",
+          "brand_id": 215096,
+          "price": 220,
+          "old_price": 244,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 4.89,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 259290,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/646594370.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 2
+            }
+          },
+          "seller_name": "UniMotion",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/unimotion/"
+        },
+        {
+          "product_id": 570868009,
+          "title": "Покришка 26x2.125 для велосипеда, Велошина 26 дюймів, Гума для гірського та міського велосипеда модифікація 2, Goodtyre",
+          "url": "https://rozetka.com.ua/ua/570868009/p570868009/",
+          "brand": "Good Tyre",
+          "brand_slug": "good-tyre",
+          "brand_id": 215096,
+          "price": 220,
+          "old_price": 244,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 4.89,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 259290,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/646595653.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "UniMotion",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/unimotion/"
+        },
+        {
+          "product_id": 602641897,
+          "title": "Колесо заднє подвійне 26 для міських і гірських велосипедів (2207)",
+          "url": "https://rozetka.com.ua/ua/602641897/p602641897/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 680,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 15.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 270076,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78102440,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/669799920.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Enermixor",
+          "seller_stars": 4.4,
+          "seller_url": "https://rozetka.com.ua/seller/enermixor/"
+        },
+        {
+          "product_id": 421786608,
+          "title": "Винос керма велосипеда (гірський, алюміній, L-80mm, D-28,6mm) (чорний) REKO (R-2177)",
+          "url": "https://rozetka.com.ua/ua/421786608/p421786608/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 292,
+          "old_price": 336,
+          "discount_pct": 13,
+          "currency": "UAH",
+          "source_usd_price": 6.49,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 207120,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78063029,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/415599545.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Ooooshopoooo",
+          "seller_stars": 3.8,
+          "seller_url": "https://rozetka.com.ua/seller/ooooshopoooo/"
+        },
+        {
+          "product_id": 611272853,
+          "title": "Ланцюг для спортивних та гірських велосипедів 116 сталь з антикорозійним покриттям",
+          "url": "https://rozetka.com.ua/ua/611272853/p611272853/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 160,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 3.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 270076,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78212210,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/279789033.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "Enermixor",
+          "seller_stars": 4.4,
+          "seller_url": "https://rozetka.com.ua/seller/enermixor/"
+        },
+        {
+          "product_id": 600164569,
+          "title": "Камера для велосипеда CS 26-1.9/2.10 для гірських і міських велосипедів (1925)",
+          "url": "https://rozetka.com.ua/ua/600164569/p600164569/",
+          "brand": "CS",
+          "brand_slug": "cs-spare-parts",
+          "brand_id": 445713,
+          "price": 120,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 2.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 270076,
+          "merchant_id": 17,
+          "category": {
+            "id": 3919396,
+            "title": "Велокамери",
+            "url": "https://rozetka.com.ua/ua/velorezina/c3919396/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            3919396
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/667847631.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Enermixor",
+          "seller_stars": 4.4,
+          "seller_url": "https://rozetka.com.ua/seller/enermixor/"
+        },
+        {
+          "product_id": 395484687,
+          "title": "Покришка на велосипед гірський MTB 29 дюймів Greys 27TPI (GR43429)",
+          "url": "https://rozetka.com.ua/ua/395484687/p395484687/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 477,
+          "old_price": 572,
+          "discount_pct": 17,
+          "currency": "UAH",
+          "source_usd_price": 10.6,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 6121,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 74846593,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/539017776.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.63,
+            "rated_count": 19,
+            "review_count": 20,
+            "question_count": 1,
+            "distribution": {
+              "1": 1,
+              "2": 1,
+              "3": 0,
+              "4": 0,
+              "5": 17
+            }
+          },
+          "seller_name": "RG",
+          "seller_stars": 4.6,
+          "seller_url": "https://rozetka.com.ua/seller/rg/"
+        },
+        {
+          "product_id": 395484579,
+          "title": "Велосипедна покришка 26\" x 2.25 Grey's 27TPI велопокришка для гірських велосипедів Чорний (GR44126)",
+          "url": "https://rozetka.com.ua/ua/395484579/p395484579/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 434,
+          "old_price": 521,
+          "discount_pct": 17,
+          "currency": "UAH",
+          "source_usd_price": 9.64,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 6121,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 74846605,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/539017762.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.77,
+            "rated_count": 13,
+            "review_count": 13,
+            "question_count": 3,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 1,
+              "5": 11
+            }
+          },
+          "seller_name": "RG",
+          "seller_stars": 4.6,
+          "seller_url": "https://rozetka.com.ua/seller/rg/"
+        },
+        {
+          "product_id": 490972094,
+          "title": "Покришка велосипедна Grey's 26x2.125 G5014 27TPI антипрокольна для гірських та кросскантрі велосипедів захист від проколів (IO-JU_22B)",
+          "url": "https://rozetka.com.ua/ua/490972094/p490972094/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 730,
+          "old_price": 1022,
+          "discount_pct": 29,
+          "currency": "UAH",
+          "source_usd_price": 16.22,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 81544,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 74846602,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/525796437.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3.97,
+            "rated_count": 33,
+            "review_count": 34,
+            "question_count": 6,
+            "distribution": {
+              "1": 6,
+              "2": 0,
+              "3": 3,
+              "4": 4,
+              "5": 20
+            }
+          },
+          "seller_name": "Just Mix",
+          "seller_stars": 5,
+          "seller_url": "https://rozetka.com.ua/seller/just-mix/"
+        },
+        {
+          "product_id": 395484684,
+          "title": "Покришка на велосипед гірський MTB 26 дюймів Greys 27TPI (GR43226)",
+          "url": "https://rozetka.com.ua/ua/395484684/p395484684/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 373,
+          "old_price": 448,
+          "discount_pct": 17,
+          "currency": "UAH",
+          "source_usd_price": 8.29,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 6121,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 74846596,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/539018736.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 8,
+            "review_count": 8,
+            "question_count": 4,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 8
+            }
+          },
+          "seller_name": "RG",
+          "seller_stars": 4.6,
+          "seller_url": "https://rozetka.com.ua/seller/rg/"
+        },
+        {
+          "product_id": 382999755,
+          "title": "Гірський велосипед ROCKRIDER ST 120 27,5\" чорний/синій XL 185-200 см",
+          "url": "https://rozetka.com.ua/ua/382999755/p382999755/",
+          "brand": "Rockrider",
+          "brand_slug": "rockrider",
+          "brand_id": 384442,
+          "price": 24200,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 537.78,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 178182,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 60217804,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/603304383.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "ONEFIT",
+          "seller_stars": 5,
+          "seller_url": "https://rozetka.com.ua/seller/onefit/"
+        },
+        {
+          "product_id": 542491065,
+          "title": "Нейлонові педалі Meroca для гірського велосипеда на 2-х промпідшипниках та широкою антиковзкою платформою (XC MTB), Чорні",
+          "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov-meroca-149787068/p542491065/",
+          "brand": "Meroca",
+          "brand_slug": "meroca",
+          "brand_id": 623278,
+          "price": 839,
+          "old_price": 1291,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 18.64,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 191841,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78132593,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/593186567.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 1
+            }
+          },
+          "seller_name": "Кошик Тех",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/koshik-teh/"
+        },
+        {
+          "product_id": 581044321,
+          "title": "Велосипед електричний потужний електро фетбайк велосипед для дорослих електровелосипед з рамою на акумуляторі з дисплеєм фарою широкими колесами fatbike гірський чоловічий для міста села бездоріжжя Shimano 1000W 48v 17Ah глянцевий New Speed Чорний 73869",
+          "url": "https://rozetka.com.ua/ua/581044321/p581044321/",
+          "brand": "Newspeed",
+          "brand_slug": "newspeed",
+          "brand_id": 268260,
+          "price": 52999,
+          "old_price": 59999,
+          "discount_pct": 12,
+          "currency": "UAH",
+          "source_usd_price": 1177.76,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 63226,
+          "merchant_id": 17,
+          "category": {
+            "id": 4627631,
+            "title": "Електровелосипеди",
+            "url": "https://rozetka.com.ua/ua/elektrovelosipedy/c4627631/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            4625901,
+            4627631
+          ],
+          "group_id": 62584869,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/674530376.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.86,
+            "rated_count": 7,
+            "review_count": 7,
+            "question_count": 24,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 6
+            }
+          },
+          "seller_name": "kidsDM",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kidsdm/"
+        },
+        {
+          "product_id": 400239339,
+          "title": "Колекційна модель гірського велосипеда 1:8 BauTech Time Trial 19.5 см фінгербайк Червоний (1013-207-01)",
+          "url": "https://rozetka.com.ua/ua/400239339/p400239339/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 561,
+          "old_price": 731,
+          "discount_pct": 23,
+          "currency": "UAH",
+          "source_usd_price": 12.47,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 12232,
+          "merchant_id": 17,
+          "category": {
+            "id": 103338,
+            "title": "Колекційні модельки",
+            "url": "https://rozetka.com.ua/ua/kollektsionnye-modelki/c103338/"
+          },
+          "category_ids": [
+            88468,
+            4265805,
+            100812,
+            103338
+          ],
+          "group_id": 74937739,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/373009197.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "Market-sell",
+          "seller_stars": 4.7,
+          "seller_url": "https://rozetka.com.ua/seller/marketsell/"
+        },
+        {
+          "product_id": 600458245,
+          "title": "Чоловічі спортивні кросівки Espezz для гірських велосипедів коричневий 42",
+          "url": "https://rozetka.com.ua/ua/600458245/p600458245/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 2999,
+          "old_price": 5400,
+          "discount_pct": 44,
+          "currency": "UAH",
+          "source_usd_price": 66.64,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 263416,
+          "merchant_id": 17,
+          "category": {
+            "id": 4634865,
+            "title": "Чоловічі кросівки",
+            "url": "https://rozetka.com.ua/ua/mugskie-krossovki/c4634865/"
+          },
+          "category_ids": [
+            1162030,
+            458425,
+            721654,
+            4634801,
+            4634865
+          ],
+          "group_id": 75478405,
+          "short_specs": "Чоловічі спортивні кросівки Espezz для гірських велосипедів коричневого кольору, розмір 42, забезпечують надійне зчеплення та комфорт під час активних поїздок.",
+          "image": "https://content.rozetka.com.ua/goods/images/original/668123603.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Lviv_Seller",
+          "seller_stars": 4.3,
+          "seller_url": "https://rozetka.com.ua/seller/lviv-seller/"
+        },
+        {
+          "product_id": 535889239,
+          "title": "Велосипед гірський алюмінієвий 27.5 дюймів Ardis Sparky, рама 17\" (Сіро-зелений)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148121109/p535889239/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 14495,
+          "old_price": 14481,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 322.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 75315001,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/635689885.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3.5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 1,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 316611010,
+          "title": "Велосипед гірський CORSO «Skywalker» 26 дюймів (Чорно-червоний)",
+          "url": "https://rozetka.com.ua/ua/316611010/p316611010/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 7395,
+          "old_price": 6449,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 164.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 55753367,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635674612.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 237100303,
+          "title": "Гірський Велосипед S200 HAMMER Колеса 27.5\"х2,25, Рама 19\" Чорно-червоний Японія Shimano",
+          "url": "https://rozetka.com.ua/ua/237100303/p237100303/",
+          "brand": "Hammer",
+          "brand_slug": "hammer",
+          "brand_id": 142851,
+          "price": 9880,
+          "old_price": 9900,
+          "discount_pct": 0,
+          "currency": "UAH",
+          "source_usd_price": 219.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 39177,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 29165287,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/75946414.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 2,
+            "question_count": 5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "S-Line",
+          "seller_stars": 4.3,
+          "seller_url": "https://rozetka.com.ua/seller/s-line/"
+        },
+        {
+          "product_id": 419409423,
+          "title": "Вилка Велосипедна 26 Дюймів MTB Гірська (Для велосипеда) Безрізьбова Білий",
+          "url": "https://rozetka.com.ua/ua/419409423/p419409423/",
+          "brand": "Kela",
+          "brand_slug": "kela",
+          "brand_id": 416149,
+          "price": 2847,
+          "old_price": 3163,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 63.27,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 37736,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78047954,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/411683588.jpg",
+          "smart_subscription": false,
+          "bonus_uah": 142,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "SunShop",
+          "seller_stars": 4.5,
+          "seller_url": "https://rozetka.com.ua/seller/sunshop/"
+        },
+        {
+          "product_id": 535889644,
+          "title": "Велосипед гірський 27.5 дюймів Crossride Everest, рама 18\" (Жовтий)",
+          "url": "https://rozetka.com.ua/ua/bicycles-crossride-148120901/p535889644/",
+          "brand": "Crossride",
+          "brand_slug": "crossride",
+          "brand_id": 262848,
+          "price": 9525,
+          "old_price": 8493,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 211.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 57416033,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/635689587.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3.67,
+            "rated_count": 3,
+            "review_count": 3,
+            "question_count": 3,
+            "distribution": {
+              "1": 1,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 2
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 570865558,
+          "title": "Покришка 26x2.125 для велосипеда, Велошина 26 дюймів, Гума для гірського та міського велосипеда модифікація 3, Goodtyre",
+          "url": "https://rozetka.com.ua/ua/570865558/p570865558/",
+          "brand": "Good Tyre",
+          "brand_slug": "good-tyre",
+          "brand_id": 215096,
+          "price": 220,
+          "old_price": 244,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 4.89,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 259290,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/646594370.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 4,
+            "review_count": 4,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 4
+            }
+          },
+          "seller_name": "UniMotion",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/unimotion/"
+        },
+        {
+          "product_id": 316608400,
+          "title": "Велосипед гірський підлітковий 24 дюйми Titan Drone алюмінієвий (Сірий)",
+          "url": "https://rozetka.com.ua/ua/316608400/p316608400/",
+          "brand": "Titan",
+          "brand_slug": "titan",
+          "brand_id": 1417,
+          "price": 8800,
+          "old_price": 8800,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 195.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 75316285,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/635673046.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.33,
+            "rated_count": 3,
+            "review_count": 3,
+            "question_count": 6,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 2
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 535891054,
+          "title": "Велосипед гірський алюмінієвий 27.5 дюймів Ardis Extreme, рама 15\" (Чорно-червоний)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148121013/p535891054/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 14615,
+          "old_price": 14603,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 324.78,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 56002256,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635689693.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 4,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 535891414,
+          "title": "Велосипед гірський алюмінієвий 29 дюймів Ardis Ultra, рама 17\" (Чорно-червоний)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148121072/p535891414/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 21965,
+          "old_price": 21935,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 488.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 73269682,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/635689831.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 535890949,
+          "title": "Велосипед гірський алюмінієвий 29 дюймів Ardis Voyager, рама 16.5\" (Синій)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148120845/p535890949/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 22575,
+          "old_price": 22546,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 501.67,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 73269685,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635689765.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 535889244,
+          "title": "Велосипед гірський алюмінієвий 27.5 дюймів Ardis Dallas, рама 17\" (Чорно-червоний)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148121102/p535889244/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 12715,
+          "old_price": 11792,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 282.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 58089634,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/660216815.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.4,
+            "rated_count": 5,
+            "review_count": 7,
+            "question_count": 5,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 1,
+              "5": 3
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 535890099,
+          "title": "Велосипед гірський підлітковий Ardis Manik 24 дюйми алюмінієвий, рама 13\" (Чорно-червоний)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148120693/p535890099/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 12455,
+          "old_price": 11548,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 276.78,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 56156123,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635689743.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 1,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 1,
+            "distribution": {
+              "1": 1,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 535889349,
+          "title": "Велосипед гірський підлітковий Crossride Skyline 2.0 24 дюйми, рама 13\" (Червоний)",
+          "url": "https://rozetka.com.ua/ua/bicycles-crossride-148120773/p535889349/",
+          "brand": "Crossride",
+          "brand_slug": "crossride",
+          "brand_id": 262848,
+          "price": 8015,
+          "old_price": 7149,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 178.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 61806749,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/635689043.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 2,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 591841300,
+          "title": "Гірський дитячий велосипед 20 дюймів 7-10 років із дисковими гальмами Corso Evolution Синій",
+          "url": "https://rozetka.com.ua/ua/591841300/p591841300/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 9166,
+          "old_price": 10756,
+          "discount_pct": 15,
+          "currency": "UAH",
+          "source_usd_price": 203.69,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 114601,
+          "merchant_id": 17,
+          "category": {
+            "id": 104132,
+            "title": "Дитячі велосипеди",
+            "url": "https://rozetka.com.ua/ua/detskie-velosipedy/c104132/"
+          },
+          "category_ids": [
+            88468,
+            3933347,
+            100826,
+            104132
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/662274050.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "For children",
+          "seller_stars": 4.5,
+          "seller_url": "https://rozetka.com.ua/seller/for-children/"
+        },
+        {
+          "product_id": 242824981,
+          "title": "Сідло велосипедне West Biking 0801102 для гірського велосипеда з отвором Black + White",
+          "url": "https://rozetka.com.ua/ua/242824981/p242824981/",
+          "brand": "West Biking",
+          "brand_slug": "west-biking",
+          "brand_id": 564535,
+          "price": 408,
+          "old_price": 490,
+          "discount_pct": 17,
+          "currency": "UAH",
+          "source_usd_price": 9.07,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 14320,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78186527,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/204368069.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 2,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Aliko",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/aliko/"
+        },
+        {
+          "product_id": 535891034,
+          "title": "Велосипед гірський 27.5 дюймів Crossride Westside, рама 15\" (Чорно-зелений)",
+          "url": "https://rozetka.com.ua/ua/bicycles-crossride-148121107/p535891034/",
+          "brand": "Crossride",
+          "brand_slug": "crossride",
+          "brand_id": 262848,
+          "price": 6857,
+          "old_price": 7069,
+          "discount_pct": 3,
+          "currency": "UAH",
+          "source_usd_price": 152.38,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 58090234,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/615838259.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 2.5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 1,
+              "3": 1,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 586266988,
+          "title": "Електровелосипед потужний фетбайк для дорослих велосипед електричний гірський чоловічий на акумуляторі з фарою дисплеєм крилами рамою fatbike дискові гальма амортизація широкі шини для міста села бездоріжжя Shimano 1000W 30Ah V8 MAX OUXI Чорний 73892",
+          "url": "https://rozetka.com.ua/ua/586266988/p586266988/",
+          "brand": "OUXI",
+          "brand_slug": "ouxi",
+          "brand_id": 646021,
+          "price": 59999,
+          "old_price": 65999,
+          "discount_pct": 9,
+          "currency": "UAH",
+          "source_usd_price": 1333.31,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 63226,
+          "merchant_id": 17,
+          "category": {
+            "id": 4627631,
+            "title": "Електровелосипеди",
+            "url": "https://rozetka.com.ua/ua/elektrovelosipedy/c4627631/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            4625901,
+            4627631
+          ],
+          "group_id": 78295871,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/669212166.png",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "kidsDM",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kidsdm/"
+        },
+        {
+          "product_id": 316607998,
+          "title": "Велосипед гірський CORSO «TORNADO» 27.5 дюймів (Чорно-червоний)",
+          "url": "https://rozetka.com.ua/ua/316607998/p316607998/",
+          "brand": "CORSO",
+          "brand_slug": "corso",
+          "brand_id": 215288,
+          "price": 8245,
+          "old_price": 7193,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 183.22,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 55753832,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635674235.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 3.5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 4,
+            "distribution": {
+              "1": 0,
+              "2": 1,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 207929899,
+          "title": "Велосипедне сідло BauTech З отвором для гірського велосипеда Червоний (1006-845-00)",
+          "url": "https://rozetka.com.ua/ua/207929899/p207929899/",
+          "brand": "Bautech",
+          "brand_slug": "bautech",
+          "brand_id": 213992,
+          "price": 1682,
+          "old_price": 2194,
+          "discount_pct": 23,
+          "currency": "UAH",
+          "source_usd_price": 37.38,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 12232,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 44085079,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/24031873.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Market-sell",
+          "seller_stars": 4.7,
+          "seller_url": "https://rozetka.com.ua/seller/marketsell/"
+        },
+        {
+          "product_id": 535889949,
+          "title": "Велосипед гірський алюмінієвий 29 дюймів Ardis Blaze, рама 21\" (Сіро-зелений)",
+          "url": "https://rozetka.com.ua/ua/bicycles-ardis-148121003/p535889949/",
+          "brand": "Ardis",
+          "brand_slug": "ardis",
+          "brand_id": 255230,
+          "price": 13005,
+          "old_price": 12403,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 289,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 75314914,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/635689085.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 417236793,
+          "title": "Електричний гірський велосипед 27.5 Kentor, Motor: 500 W, 48V, Bat.:48V/9Ah, lithium",
+          "url": "https://rozetka.com.ua/ua/417236793/p417236793/",
+          "brand": "Voltronic",
+          "brand_slug": "voltronic",
+          "brand_id": 575066,
+          "price": 60942,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 1354.27,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 29325,
+          "merchant_id": 17,
+          "category": {
+            "id": 4627631,
+            "title": "Електровелосипеди",
+            "url": "https://rozetka.com.ua/ua/elektrovelosipedy/c4627631/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            4625901,
+            4627631
+          ],
+          "group_id": 72751357,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/331340045.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 4,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "raSklad",
+          "seller_stars": 4.1,
+          "seller_url": "https://rozetka.com.ua/seller/rasklad/"
+        },
+        {
+          "product_id": 617830217,
+          "title": "Велосипед гірський алюмінієвий дитячий 16 дюймів (амортизація спереду, USB, TPC, Bluetooth, музика) рожевий для дівчинки (BDF Y1249)",
+          "url": "https://rozetka.com.ua/ua/617830217/p617830217/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 5355,
+          "old_price": 6222,
+          "discount_pct": 14,
+          "currency": "UAH",
+          "source_usd_price": 119,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 148558,
+          "merchant_id": 17,
+          "category": {
+            "id": 104132,
+            "title": "Дитячі велосипеди",
+            "url": "https://rozetka.com.ua/ua/detskie-velosipedy/c104132/"
+          },
+          "category_ids": [
+            88468,
+            3933347,
+            100826,
+            104132
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/681996457.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "DDkids",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/ddkids/"
+        },
+        {
+          "product_id": 558445578,
+          "title": "Трос гальмівний для гірських велосипедів з нержавіючої сталі ZTTO | 1800мм | 1.5мм | Сріблястий (ZTT-SS-6371)",
+          "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov-ztto-155478405/p558445578/",
+          "brand": "ZTTO",
+          "brand_slug": "ztto",
+          "brand_id": 494838,
+          "price": 97,
+          "old_price": 97,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 2.16,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 86598,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78202523,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/620507137.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "Runway24",
+          "seller_stars": 4.8,
+          "seller_url": "https://rozetka.com.ua/seller/runway24/"
+        },
+        {
+          "product_id": 618301370,
+          "title": "Грипси ODI RG01 Rogue MTB Lock-On 130 мм Чорні для гірських велосипедів з алюмінієвими замками для максимального контролю керування та комфортного хвату під час тривалих поїздок по бездоріжжю з надійним зчепленням для професійних райдерів",
+          "url": "https://rozetka.com.ua/ua/618301370/p618301370/",
+          "brand": "ODI",
+          "brand_slug": "odi",
+          "brand_id": 363678,
+          "price": 950,
+          "old_price": 1100,
+          "discount_pct": 14,
+          "currency": "UAH",
+          "source_usd_price": 21.11,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 253809,
+          "merchant_id": 17,
+          "category": {
+            "id": 269513,
+            "title": "Велоаксесуари",
+            "url": "https://rozetka.com.ua/ua/aksessuary-dlya-velosipedov/c269513/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            269513
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/528818839.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "StudioStore",
+          "seller_stars": 4.2,
+          "seller_url": "https://rozetka.com.ua/seller/studiostore/"
+        },
+        {
+          "product_id": 610057217,
+          "title": "Велосипедна камера Grey's GR51124 розмір 24x1.95 50-507 24x2.125 54-507 ніпель автомобільний AV Schrader 48мм для велосипедна шина покришка міський гірський підлітковий гібридний туристичний прогулянковий велосипед",
+          "url": "https://rozetka.com.ua/ua/610057217/p610057217/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 141,
+          "old_price": 140,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 3.13,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 280195,
+          "merchant_id": 17,
+          "category": {
+            "id": 3919396,
+            "title": "Велокамери",
+            "url": "https://rozetka.com.ua/ua/velorezina/c3919396/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            3919396
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/525711411.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "VoxAlfaHub",
+          "seller_stars": 0,
+          "seller_url": "https://rozetka.com.ua/seller/voxalfahub/"
+        },
+        {
+          "product_id": 610702574,
+          "title": "Набір самоклеючих латок для ремонту велосипедних камер (12 шт.) — Швидкорозчинні патчі без клею для гірських та міських велосипедів, діаметр 2.9 см",
+          "url": "https://rozetka.com.ua/ua/610702574/p610702574/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 100,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 2.22,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 251760,
+          "merchant_id": 17,
+          "category": {
+            "id": 4045634,
+            "title": "Велохімія для ремонту та догляду",
+            "url": "https://rozetka.com.ua/ua/velohimiya/c4045634/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4045634
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/675838607.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 1,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 0,
+            "distribution": {
+              "1": 1,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "TalakhShop",
+          "seller_stars": 4.8,
+          "seller_url": "https://rozetka.com.ua/seller/talakhshop/"
+        },
+        {
+          "product_id": 524020634,
+          "title": "Велосипед гірський алюмінієвий 29 дюймів Toprider Top7, рама 16\" Сірий",
+          "url": "https://rozetka.com.ua/ua/524020634/p524020634/",
+          "brand": "TopRider",
+          "brand_slug": "toprider",
+          "brand_id": 364596,
+          "price": 8795,
+          "old_price": 9795,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 195.44,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/635687764.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 9,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 610057205,
+          "title": "Велосипедна камера Grey's GR51326 розмір 26\"x1.75\" ніпель автомобільний AV Schrader 48мм для велосипедна шина покришка міський гірський гібридний туристичний прогулянковий велосипед",
+          "url": "https://rozetka.com.ua/ua/610057205/p610057205/",
+          "brand": "Grey's",
+          "brand_slug": "greys",
+          "brand_id": 608463,
+          "price": 137,
+          "old_price": 137,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 3.04,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 280195,
+          "merchant_id": 17,
+          "category": {
+            "id": 3919396,
+            "title": "Велокамери",
+            "url": "https://rozetka.com.ua/ua/velorezina/c3919396/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            3919396
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/652307709.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 2
+            }
+          },
+          "seller_name": "VoxAlfaHub",
+          "seller_stars": 0,
+          "seller_url": "https://rozetka.com.ua/seller/voxalfahub/"
+        },
+        {
+          "product_id": 523468354,
+          "title": "Велосипед гірський алюмінієвий 26 дюймів Toprider Top12, гідравліка, рама 14\" Карбон",
+          "url": "https://rozetka.com.ua/ua/523468354/p523468354/",
+          "brand": "TopRider",
+          "brand_slug": "toprider",
+          "brand_id": 364596,
+          "price": 10955,
+          "old_price": 12175,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 243.44,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 140929,
+          "merchant_id": 17,
+          "category": {
+            "id": 83884,
+            "title": "Велосипеди",
+            "url": "https://rozetka.com.ua/ua/bicycles/c83884/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            83884
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/635687598.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "KinderGrow",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/kindergrow/"
+        },
+        {
+          "product_id": 612313277,
+          "title": "Комплект гальмівних супортів LEBYCLE для гірського та електричного велосипеда, передній та задній дисковий гальмівний механізм, з інструментом",
+          "url": "https://rozetka.com.ua/ua/612313277/p612313277/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 931,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 20.69,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 259155,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 0,
+          "short_specs": "Задній затискач із подвійним приводом X1, прокладка регулювання зазору X1, шестиграний ключ X1",
+          "image": "https://content.rozetka.com.ua/goods/images/original/677410859.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "HK Shipment",
+          "seller_stars": 4.6,
+          "seller_url": "https://rozetka.com.ua/seller/hk-shipment/"
+        },
+        {
+          "product_id": 570868057,
+          "title": "Покришка 24x2.125 для велосипеда, Велошина 24 дюйми, Надійна гума для підліткових і гірських велосипедів модифікація 2,",
+          "url": "https://rozetka.com.ua/ua/570868057/p570868057/",
+          "brand": "Good Tyre",
+          "brand_slug": "good-tyre",
+          "brand_id": 215096,
+          "price": 220,
+          "old_price": 244,
+          "discount_pct": 10,
+          "currency": "UAH",
+          "source_usd_price": 4.89,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 259290,
+          "merchant_id": 17,
+          "category": {
+            "id": 4676065,
+            "title": "Велопокришки",
+            "url": "https://rozetka.com.ua/ua/velopokryshki/c4676065/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4676065
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content.rozetka.com.ua/goods/images/original/646595653.webp",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 5,
+            "rated_count": 1,
+            "review_count": 1,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "UniMotion",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/unimotion/"
+        },
+        {
+          "product_id": 594145657,
+          "title": "Насос для велосипеда велонасос велосипедний ручний мінінасос високого тиску на раму з кріпленням портативний компактний для підкачки вело шин коліс камери шосейного гірського міського MTB алюмінієвий дорожній спортивний туристичний Hechpro ТБ13SX",
+          "url": "https://rozetka.com.ua/ua/594145657/p594145657/",
+          "brand": "Hechpro",
+          "brand_slug": "hechpro",
+          "brand_id": 735473,
+          "price": 319,
+          "old_price": 399,
+          "discount_pct": 20,
+          "currency": "UAH",
+          "source_usd_price": 7.09,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 94183,
+          "merchant_id": 17,
+          "category": {
+            "id": 269513,
+            "title": "Велоаксесуари",
+            "url": "https://rozetka.com.ua/ua/aksessuary-dlya-velosipedov/c269513/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            269513
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/665108148.png",
+          "smart_subscription": false,
+          "bonus_uah": 4,
+          "rating": {
+            "average": 3,
+            "rated_count": 2,
+            "review_count": 2,
+            "question_count": 0,
+            "distribution": {
+              "1": 1,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 1
+            }
+          },
+          "seller_name": "TURBO SPORT",
+          "seller_stars": 4.8,
+          "seller_url": "https://rozetka.com.ua/seller/turbo-sport/"
+        },
+        {
+          "product_id": 546645735,
+          "title": "Двокорона вилка гірського велосипеда NanLio 29\" вісь 100x15 мм, хід 150 мм, для (MTB) DH/XC, Чорна",
+          "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov-151124457/p546645735/",
+          "brand": "NanLio",
+          "brand_slug": "nanlio",
+          "brand_id": 806148,
+          "price": 7890,
+          "old_price": 12138,
+          "discount_pct": 35,
+          "currency": "UAH",
+          "source_usd_price": 175.33,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 191841,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78051782,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/599328341.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": null,
+            "rated_count": 0,
+            "review_count": 0,
+            "question_count": 0,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            }
+          },
+          "seller_name": "Кошик Тех",
+          "seller_stars": 4.9,
+          "seller_url": "https://rozetka.com.ua/seller/koshik-teh/"
+        },
+        {
+          "product_id": 349502262,
+          "title": "Ланцюг для спортивних та гірських велосипедів 116 сталь з антикорозійним покриттям",
+          "url": "https://rozetka.com.ua/ua/349502262/p349502262/",
+          "brand": "Без бренду",
+          "brand_slug": "bez-brenda",
+          "brand_id": 581286,
+          "price": 160,
+          "old_price": null,
+          "discount_pct": null,
+          "currency": "UAH",
+          "source_usd_price": 3.56,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 128498,
+          "merchant_id": 17,
+          "category": {
+            "id": 4625505,
+            "title": "Велозапчастини",
+            "url": "https://rozetka.com.ua/ua/zapchasti-dlia-velosipedov/c4625505/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4625505
+          ],
+          "group_id": 78212213,
+          "short_specs": null,
+          "image": "https://content1.rozetka.com.ua/goods/images/original/279789033.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.75,
+            "rated_count": 4,
+            "review_count": 4,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 3
+            }
+          },
+          "seller_name": "Big purchase",
+          "seller_stars": 4.7,
+          "seller_url": "https://rozetka.com.ua/seller/big-purchase/"
+        },
+        {
+          "product_id": 337342672,
+          "title": "Мастило для Змащення ланцюга/передач для гірського велосипеда 60 мл 592921575",
+          "url": "https://rozetka.com.ua/ua/337342672/p337342672/",
+          "brand": null,
+          "brand_slug": null,
+          "brand_id": null,
+          "price": 99,
+          "old_price": 109,
+          "discount_pct": 9,
+          "currency": "UAH",
+          "source_usd_price": 2.2,
+          "sell_status": "available",
+          "in_stock": true,
+          "status": "active",
+          "condition": "new",
+          "sold_by": "marketplace",
+          "seller_id": 139803,
+          "merchant_id": 17,
+          "category": {
+            "id": 4045634,
+            "title": "Велохімія для ремонту та догляду",
+            "url": "https://rozetka.com.ua/ua/velohimiya/c4045634/"
+          },
+          "category_ids": [
+            4627893,
+            81203,
+            83882,
+            4045634
+          ],
+          "group_id": 0,
+          "short_specs": null,
+          "image": "https://content2.rozetka.com.ua/goods/images/original/258297764.jpg",
+          "smart_subscription": false,
+          "bonus_uah": null,
+          "rating": {
+            "average": 4.67,
+            "rated_count": 3,
+            "review_count": 3,
+            "question_count": 1,
+            "distribution": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 1,
+              "5": 2
+            }
+          },
+          "seller_name": "ShoppingWorld",
+          "seller_stars": 4.7,
+          "seller_url": "https://rozetka.com.ua/seller/shoppingworld/"
+        }
+      ],
+      "brands": [
+        {
+          "slug": "leon",
+          "name": "Leon",
+          "count": 333
+        },
+        {
+          "slug": "azimut",
+          "name": "Azimut",
+          "count": 330
+        },
+        {
+          "slug": "toprider",
+          "name": "TopRider",
+          "count": 324
+        },
+        {
+          "slug": "outleap",
+          "name": "Outleap",
+          "count": 277
+        },
+        {
+          "slug": "shimano",
+          "name": "Shimano",
+          "count": 268
+        },
+        {
+          "slug": "hammer",
+          "name": "Hammer",
+          "count": 259
+        },
+        {
+          "slug": "orbea",
+          "name": "Orbea",
+          "count": 247
+        },
+        {
+          "slug": "93a83b95",
+          "name": "GT",
+          "count": 201
+        },
+        {
+          "slug": "unicorn",
+          "name": "Unicorn",
+          "count": 161
+        },
+        {
+          "slug": "oskar",
+          "name": "Oskar",
+          "count": 159
+        },
+        {
+          "slug": "northwave",
+          "name": "Northwave",
+          "count": 147
+        },
+        {
+          "slug": "ed98b638",
+          "name": "TREK",
+          "count": 141
+        },
+        {
+          "slug": "rockrider",
+          "name": "Rockrider",
+          "count": 141
+        },
+        {
+          "slug": "author",
+          "name": "Author",
+          "count": 127
+        },
+        {
+          "slug": "skott",
+          "name": "Scott",
+          "count": 118
+        },
+        {
+          "slug": "greys",
+          "name": "Grey's",
+          "count": 116
+        },
+        {
+          "slug": "vnc",
+          "name": "VNC",
+          "count": 114
+        },
+        {
+          "slug": "ktm",
+          "name": "KTM",
+          "count": 102
+        },
+        {
+          "slug": "merida",
+          "name": "Merida",
+          "count": 97
+        },
+        {
+          "slug": "forte",
+          "name": "Forte",
+          "count": 93
+        },
+        {
+          "slug": "dogus",
+          "name": "Dogus",
+          "count": 89
+        },
+        {
+          "slug": "rockbros",
+          "name": "RockBros",
+          "count": 86
+        },
+        {
+          "slug": "cronus",
+          "name": "Cronus",
+          "count": 82
+        },
+        {
+          "slug": "mongoose",
+          "name": "Mongoose",
+          "count": 82
+        },
+        {
+          "slug": "comanche",
+          "name": "Comanche",
+          "count": 81
+        },
+        {
+          "slug": "profi-",
+          "name": "Profi",
+          "count": 80
+        },
+        {
+          "slug": "71f80bfd",
+          "name": "Kellys",
+          "count": 76
+        },
+        {
+          "slug": "bottecchia",
+          "name": "Bottecchia",
+          "count": 71
+        },
+        {
+          "slug": "jamis",
+          "name": "Jamis",
+          "count": 71
+        },
+        {
+          "slug": "prof1",
+          "name": "Prof1",
+          "count": 62
+        },
+        {
+          "slug": "bergamont",
+          "name": "Bergamont",
+          "count": 62
+        },
+        {
+          "slug": "kross",
+          "name": "Kross",
+          "count": 60
+        },
+        {
+          "slug": "corrado",
+          "name": "CORRADO",
+          "count": 59
+        },
+        {
+          "slug": "avanti",
+          "name": "Avanti",
+          "count": 58
+        },
+        {
+          "slug": "romet",
+          "name": "Romet",
+          "count": 53
+        },
+        {
+          "slug": "indiana",
+          "name": "Indiana",
+          "count": 51
+        },
+        {
+          "slug": "spiuk",
+          "name": "Spiuk",
+          "count": 50
+        },
+        {
+          "slug": "west-biking",
+          "name": "West Biking",
+          "count": 49
+        },
+        {
+          "slug": "rider",
+          "name": "Rider",
+          "count": 46
+        },
+        {
+          "slug": "marin",
+          "name": "Marin",
+          "count": 46
+        },
+        {
+          "slug": "griffin",
+          "name": "Griffin",
+          "count": 45
+        },
+        {
+          "slug": "atlantic-fashion",
+          "name": "Atlantic",
+          "count": 41
+        },
+        {
+          "slug": "norco",
+          "name": "Norco",
+          "count": 41
+        },
+        {
+          "slug": "benetti",
+          "name": "Benetti",
+          "count": 38
+        },
+        {
+          "slug": "lebycle",
+          "name": "Lebycle",
+          "count": 38
+        },
+        {
+          "slug": "forever",
+          "name": "Forever",
+          "count": 36
+        },
+        {
+          "slug": "sidi",
+          "name": "SIDI",
+          "count": 36
+        },
+        {
+          "slug": "8f022cd2",
+          "name": "Royal",
+          "count": 35
+        },
+        {
+          "slug": "viper",
+          "name": "Viper",
+          "count": 33
+        },
+        {
+          "slug": "maxxis",
+          "name": "Maxxis",
+          "count": 32
+        },
+        {
+          "slug": "gub",
+          "name": "GUB",
+          "count": 31
+        },
+        {
+          "slug": "konar",
+          "name": "Konar",
+          "count": 31
+        },
+        {
+          "slug": "cannondale",
+          "name": "Cannondale",
+          "count": 31
+        },
+        {
+          "slug": "sparto",
+          "name": "Sparto",
+          "count": 30
+        },
+        {
+          "slug": "kenli",
+          "name": "Kenli",
+          "count": 30
+        },
+        {
+          "slug": "kenda",
+          "name": "Kenda",
+          "count": 29
+        },
+        {
+          "slug": "tosuod",
+          "name": "TOSUOD",
+          "count": 29
+        },
+        {
+          "slug": "spelli",
+          "name": "Spelli",
+          "count": 29
+        },
+        {
+          "slug": "reid",
+          "name": "Reid",
+          "count": 28
+        },
+        {
+          "slug": "dhs",
+          "name": "DHS",
+          "count": 28
+        },
+        {
+          "slug": "optimabikes",
+          "name": "Optimabikes",
+          "count": 27
+        },
+        {
+          "slug": "pride",
+          "name": "Pride",
+          "count": 27
+        },
+        {
+          "slug": "foxhead",
+          "name": "Foxhead",
+          "count": 26
+        },
+        {
+          "slug": "maxxpro",
+          "name": "MaxxPro",
+          "count": 25
+        },
+        {
+          "slug": "champion",
+          "name": "Champion",
+          "count": 25
+        },
+        {
+          "slug": "atlantic",
+          "name": "Atlantic (Groupe Atlantic)",
+          "count": 24
+        },
+        {
+          "slug": "dyna",
+          "name": "Dyna",
+          "count": 24
+        },
+        {
+          "slug": "saiguan",
+          "name": "Saiguan",
+          "count": 24
+        },
+        {
+          "slug": "spirit",
+          "name": "Spirit",
+          "count": 23
+        },
+        {
+          "slug": "kona",
+          "name": "Kona",
+          "count": 22
+        },
+        {
+          "slug": "dartmoor",
+          "name": "Dartmoor",
+          "count": 22
+        },
+        {
+          "slug": "giant",
+          "name": "Giant",
+          "count": 22
+        },
+        {
+          "slug": "phoenix",
+          "name": "Phoenix",
+          "count": 22
+        },
+        {
+          "slug": "neko",
+          "name": "Neko",
+          "count": 21
+        },
+        {
+          "slug": "continental",
+          "name": "Continental",
+          "count": 21
+        },
+        {
+          "slug": "ghost",
+          "name": "Ghost",
+          "count": 21
+        },
+        {
+          "slug": "vento",
+          "name": "Vento",
+          "count": 20
+        },
+        {
+          "slug": "schwalbe",
+          "name": "SCHWALBE",
+          "count": 20
+        },
+        {
+          "slug": "specialized",
+          "name": "Specialized",
+          "count": 20
+        },
+        {
+          "slug": "e-motion",
+          "name": "E-Motion",
+          "count": 19
+        },
+        {
+          "slug": "corratec",
+          "name": "Corratec",
+          "count": 19
+        },
+        {
+          "slug": "prox",
+          "name": "Prox",
+          "count": 19
+        },
+        {
+          "slug": "make-bike",
+          "name": "Make Bike",
+          "count": 18
+        },
+        {
+          "slug": "garmin",
+          "name": "Garmin",
+          "count": 18
+        },
+        {
+          "slug": "torpado",
+          "name": "Torpado",
+          "count": 18
+        },
+        {
+          "slug": "virage",
+          "name": "VIRAGE",
+          "count": 18
+        },
+        {
+          "slug": "bikebros",
+          "name": "BIKEBROS",
+          "count": 18
+        },
+        {
+          "slug": "ku-bikes",
+          "name": "KU bikes",
+          "count": 17
+        },
+        {
+          "slug": "cavalry",
+          "name": "Cavalry",
+          "count": 17
+        },
+        {
+          "slug": "like2bike",
+          "name": "Like2Bike",
+          "count": 16
+        },
+        {
+          "slug": "woom",
+          "name": "WOOM",
+          "count": 16
+        },
+        {
+          "slug": "neco",
+          "name": "Neco",
+          "count": 16
+        },
+        {
+          "slug": "mercury",
+          "name": "Mercury",
+          "count": 15
+        },
+        {
+          "slug": "attabo",
+          "name": "Attabo",
+          "count": 15
+        },
+        {
+          "slug": "longus",
+          "name": "Longus",
+          "count": 14
+        },
+        {
+          "slug": "galant",
+          "name": "Galant",
+          "count": 13
+        },
+        {
+          "slug": "favorite",
+          "name": "Favorite",
+          "count": 13
+        },
+        {
+          "slug": "kela",
+          "name": "Kela",
+          "count": 13
+        },
+        {
+          "slug": "kands",
+          "name": "Kands",
+          "count": 13
+        },
+        {
+          "slug": "fg-flying-pigeon",
+          "name": "FG Flying Pigeon",
+          "count": 13
+        },
+        {
+          "slug": "begasso",
+          "name": "BeGasso",
+          "count": 12
+        },
+        {
+          "slug": "shunfeng",
+          "name": "Shunfeng",
+          "count": 12
+        },
+        {
+          "slug": "gt-bicycles",
+          "name": "GT Bicycles",
+          "count": 12
+        },
+        {
+          "slug": "2e042ef2",
+          "name": "Btwin",
+          "count": 12
+        },
+        {
+          "slug": "overlord",
+          "name": "Overlord",
+          "count": 12
+        },
+        {
+          "slug": "chaoyang",
+          "name": "Chaoyang",
+          "count": 12
+        },
+        {
+          "slug": "fort",
+          "name": "Fort",
+          "count": 11
+        },
+        {
+          "slug": "deuter",
+          "name": "Deuter",
+          "count": 11
+        },
+        {
+          "slug": "dorozhnik",
+          "name": "Dorozhnik",
+          "count": 11
+        },
+        {
+          "slug": "good-tyre",
+          "name": "Good Tyre",
+          "count": 11
+        },
+        {
+          "slug": "newspeed",
+          "name": "Newspeed",
+          "count": 11
+        },
+        {
+          "slug": "demon",
+          "name": "Demon",
+          "count": 11
+        },
+        {
+          "slug": "promend",
+          "name": "Promend",
+          "count": 10
+        },
+        {
+          "slug": "velotrade",
+          "name": "Velotrade",
+          "count": 10
+        },
+        {
+          "slug": "demarche",
+          "name": "Demarche",
+          "count": 10
+        },
+        {
+          "slug": "kovix",
+          "name": "Kovix",
+          "count": 10
+        },
+        {
+          "slug": "move-iron",
+          "name": "Move iron",
+          "count": 10
+        },
+        {
+          "slug": "quando",
+          "name": "Quando",
+          "count": 10
+        },
+        {
+          "slug": "olimp",
+          "name": "Olimp",
+          "count": 10
+        },
+        {
+          "slug": "kinetic",
+          "name": "Kinetic",
+          "count": 10
+        },
+        {
+          "slug": "ds",
+          "name": "DS",
+          "count": 9
+        },
+        {
+          "slug": "royal-voyage",
+          "name": "Royal Voyage",
+          "count": 9
+        },
+        {
+          "slug": "voltronic",
+          "name": "Voltronic",
+          "count": 9
+        },
+        {
+          "slug": "intenzo",
+          "name": "Intenzo",
+          "count": 9
+        },
+        {
+          "slug": "kerambit",
+          "name": "Kerambit",
+          "count": 9
+        },
+        {
+          "slug": "mitas",
+          "name": "Mitas",
+          "count": 9
+        },
+        {
+          "slug": "storm",
+          "name": "Storm",
+          "count": 9
+        },
+        {
+          "slug": "umax",
+          "name": "Umax",
+          "count": 9
+        },
+        {
+          "slug": "bone",
+          "name": "Bone",
+          "count": 9
+        },
+        {
+          "slug": "ride-concepts",
+          "name": "Ride Concepts",
+          "count": 9
+        },
+        {
+          "slug": "dexshell",
+          "name": "DexShell",
+          "count": 8
+        },
+        {
+          "slug": "onepro",
+          "name": "OnePro",
+          "count": 8
+        },
+        {
+          "slug": "royalbaby",
+          "name": "RoyalBaby",
+          "count": 8
+        },
+        {
+          "slug": "flr",
+          "name": "FLR",
+          "count": 8
+        },
+        {
+          "slug": "novatec",
+          "name": "Novatec",
+          "count": 8
+        },
+        {
+          "slug": "cannon",
+          "name": "Cannon",
+          "count": 8
+        },
+        {
+          "slug": "kl",
+          "name": "KL",
+          "count": 7
+        },
+        {
+          "slug": "velo",
+          "name": "Velo",
+          "count": 7
+        },
+        {
+          "slug": "bluegrass",
+          "name": "Bluegrass",
+          "count": 7
+        },
+        {
+          "slug": "bruder",
+          "name": "Bruder",
+          "count": 7
+        },
+        {
+          "slug": "victgoal",
+          "name": "Victgoal",
+          "count": 7
+        },
+        {
+          "slug": "microshift",
+          "name": "MicroShift",
+          "count": 7
+        },
+        {
+          "slug": "zhe-gao",
+          "name": "ZHE GAO",
+          "count": 7
+        },
+        {
+          "slug": "cyclone",
+          "name": "Cyclone",
+          "count": 7
+        },
+        {
+          "slug": "winner",
+          "name": "Winner",
+          "count": 7
+        },
+        {
+          "slug": "moon",
+          "name": "Moon",
+          "count": 7
+        },
+        {
+          "slug": "leatt",
+          "name": "Leatt",
+          "count": 7
+        },
+        {
+          "slug": "cube",
+          "name": "Cube",
+          "count": 7
+        },
+        {
+          "slug": "bast",
+          "name": "Bast",
+          "count": 6
+        },
+        {
+          "slug": "3357b9b5",
+          "name": "Pegas",
+          "count": 6
+        },
+        {
+          "slug": "giyo",
+          "name": "GIYO",
+          "count": 6
+        },
+        {
+          "slug": "crivit",
+          "name": "Crivit",
+          "count": 6
+        },
+        {
+          "slug": "samebike",
+          "name": "Samebike",
+          "count": 6
+        },
+        {
+          "slug": "xunting",
+          "name": "XUNTING",
+          "count": 6
+        },
+        {
+          "slug": "loys",
+          "name": "LOYS",
+          "count": 6
+        },
+        {
+          "slug": "deli-tire",
+          "name": "Deli Tire",
+          "count": 6
+        },
+        {
+          "slug": "li-ning",
+          "name": "Li Ning",
+          "count": 6
+        },
+        {
+          "slug": "odi",
+          "name": "ODI",
+          "count": 6
+        },
+        {
+          "slug": "vlt",
+          "name": "VLT",
+          "count": 6
+        },
+        {
+          "slug": "goodreclama",
+          "name": "goodreclama",
+          "count": 6
+        },
+        {
+          "slug": "focus",
+          "name": "Focus",
+          "count": 5
+        },
+        {
+          "slug": "haibike",
+          "name": "Haibike",
+          "count": 5
+        },
+        {
+          "slug": "tatonka",
+          "name": "Tatonka",
+          "count": 5
+        },
+        {
+          "slug": "sigma",
+          "name": "Sigma",
+          "count": 5
+        },
+        {
+          "slug": "kmc",
+          "name": "KMC",
+          "count": 5
+        },
+        {
+          "slug": "ddk",
+          "name": "DDK",
+          "count": 5
+        },
+        {
+          "slug": "generic",
+          "name": "Generic",
+          "count": 5
+        },
+        {
+          "slug": "german",
+          "name": "German",
+          "count": 5
+        },
+        {
+          "slug": "unibike",
+          "name": "Unibike",
+          "count": 5
+        },
+        {
+          "slug": "jianlips",
+          "name": "Jianlips",
+          "count": 5
+        },
+        {
+          "slug": "uno",
+          "name": "Uno",
+          "count": 5
+        },
+        {
+          "slug": "kapvoe",
+          "name": "KAPVOE",
+          "count": 5
+        },
+        {
+          "slug": "promax",
+          "name": "Promax",
+          "count": 5
+        },
+        {
+          "slug": "greys-fishing",
+          "name": "Greys",
+          "count": 5
+        },
+        {
+          "slug": "rogtyo",
+          "name": "Rogtyo",
+          "count": 5
+        },
+        {
+          "slug": "peak",
+          "name": "PEAK",
+          "count": 5
+        },
+        {
+          "slug": "solarstorm",
+          "name": "SolarStorm",
+          "count": 5
+        },
+        {
+          "slug": "ykx",
+          "name": "YKX",
+          "count": 4
+        },
+        {
+          "slug": "bautech",
+          "name": "Bautech",
+          "count": 4
+        },
+        {
+          "slug": "comp",
+          "name": "Comp",
+          "count": 4
+        },
+        {
+          "slug": "veles-wear",
+          "name": "Veles",
+          "count": 4
+        },
+        {
+          "slug": "mavic",
+          "name": "Mavic",
+          "count": 4
+        },
+        {
+          "slug": "giro",
+          "name": "Giro",
+          "count": 4
+        },
+        {
+          "slug": "ralson",
+          "name": "Ralson",
+          "count": 4
+        },
+        {
+          "slug": "omega",
+          "name": "Omega",
+          "count": 4
+        },
+        {
+          "slug": "meroca",
+          "name": "Meroca",
+          "count": 4
+        },
+        {
+          "slug": "xm",
+          "name": "XM",
+          "count": 4
+        },
+        {
+          "slug": "rubena",
+          "name": "Rubena",
+          "count": 4
+        },
+        {
+          "slug": "iwobike",
+          "name": "IWOBIKE",
+          "count": 4
+        },
+        {
+          "slug": "ridstar",
+          "name": "Ridstar",
+          "count": 4
+        },
+        {
+          "slug": "tabou",
+          "name": "Tabou",
+          "count": 4
+        },
+        {
+          "slug": "scvcn",
+          "name": "SCVCN",
+          "count": 4
+        },
+        {
+          "slug": "rapha",
+          "name": "Rapha",
+          "count": 4
+        },
+        {
+          "slug": "jianli",
+          "name": "Jianli",
+          "count": 4
+        },
+        {
+          "slug": "krbo",
+          "name": "KRBO",
+          "count": 4
+        },
+        {
+          "slug": "osagie",
+          "name": "Osagie",
+          "count": 4
+        },
+        {
+          "slug": "green-camp",
+          "name": "Green Camp",
+          "count": 3
+        },
+        {
+          "slug": "madison",
+          "name": "Madison",
+          "count": 3
+        },
+        {
+          "slug": "garneau",
+          "name": "Garneau",
+          "count": 3
+        },
+        {
+          "slug": "haro",
+          "name": "Haro",
+          "count": 3
+        },
+        {
+          "slug": "bbb",
+          "name": "BBB",
+          "count": 3
+        },
+        {
+          "slug": "roswheel",
+          "name": "Roswheel",
+          "count": 3
+        },
+        {
+          "slug": "poc",
+          "name": "POC",
+          "count": 3
+        },
+        {
+          "slug": "blade",
+          "name": "Blade",
+          "count": 3
+        },
+        {
+          "slug": "mpeda",
+          "name": "Mpeda",
+          "count": 3
+        },
+        {
+          "slug": "inbike",
+          "name": "Inbike",
+          "count": 3
+        },
+        {
+          "slug": "kil-art",
+          "name": "Kil Art",
+          "count": 3
+        },
+        {
+          "slug": "mrh",
+          "name": "MRH",
+          "count": 3
+        },
+        {
+          "slug": "polygon",
+          "name": "Polygon",
+          "count": 3
+        },
+        {
+          "slug": "huffy",
+          "name": "Huffy",
+          "count": 3
+        },
+        {
+          "slug": "pearl-izumi",
+          "name": "Pearl Izumi",
+          "count": 3
+        },
+        {
+          "slug": "ztto",
+          "name": "ZTTO",
+          "count": 3
+        },
+        {
+          "slug": "kamille",
+          "name": "Kamille",
+          "count": 3
+        },
+        {
+          "slug": "olpran",
+          "name": "Olpran",
+          "count": 3
+        },
+        {
+          "slug": "superior",
+          "name": "Superior",
+          "count": 3
+        },
+        {
+          "slug": "yg-toys",
+          "name": "YG Toys",
+          "count": 3
+        },
+        {
+          "slug": "pelikan",
+          "name": "Pelikan",
+          "count": 3
+        },
+        {
+          "slug": "sun-baby",
+          "name": "Sun Baby",
+          "count": 3
+        },
+        {
+          "slug": "ouxi",
+          "name": "OUXI",
+          "count": 3
+        },
+        {
+          "slug": "smb",
+          "name": "SMB",
+          "count": 3
+        },
+        {
+          "slug": "sunrun",
+          "name": "Sunrun",
+          "count": 3
+        },
+        {
+          "slug": "dongyue",
+          "name": "Dongyue",
+          "count": 3
+        },
+        {
+          "slug": "lameda",
+          "name": "LAMEDA",
+          "count": 3
+        },
+        {
+          "slug": "bdf-bicycle",
+          "name": "BDF Bicycle",
+          "count": 3
+        },
+        {
+          "slug": "361-degrees",
+          "name": "361 Degrees",
+          "count": 3
+        },
+        {
+          "slug": "riderace",
+          "name": "Riderace",
+          "count": 3
+        },
+        {
+          "slug": "jeep",
+          "name": "Jeep",
+          "count": 3
+        },
+        {
+          "slug": "crank-brothers",
+          "name": "Crankbrothers",
+          "count": 3
+        },
+        {
+          "slug": "risk",
+          "name": "RISK",
+          "count": 3
+        },
+        {
+          "slug": "centurion",
+          "name": "Centurion",
+          "count": 2
+        },
+        {
+          "slug": "maxland",
+          "name": "Maxland",
+          "count": 2
+        },
+        {
+          "slug": "riot",
+          "name": "Riot",
+          "count": 2
+        },
+        {
+          "slug": "feel-fit",
+          "name": "Feel Fit",
+          "count": 2
+        },
+        {
+          "slug": "rover",
+          "name": "Rover",
+          "count": 2
+        },
+        {
+          "slug": "gripgrab",
+          "name": "GripGrab",
+          "count": 2
+        },
+        {
+          "slug": "btwin",
+          "name": "B'TWIN",
+          "count": 2
+        },
+        {
+          "slug": "altura",
+          "name": "Altura",
+          "count": 2
+        },
+        {
+          "slug": "new-outlander",
+          "name": "New Outlander",
+          "count": 2
+        },
+        {
+          "slug": "grade",
+          "name": "Grade",
+          "count": 2
+        },
+        {
+          "slug": "endura",
+          "name": "Endura",
+          "count": 2
+        },
+        {
+          "slug": "drag",
+          "name": "Drag",
+          "count": 2
+        },
+        {
+          "slug": "lapierre",
+          "name": "Lapierre",
+          "count": 2
+        },
+        {
+          "slug": "galaxy",
+          "name": "Galaxy",
+          "count": 2
+        },
+        {
+          "slug": "germes",
+          "name": "Germes",
+          "count": 2
+        },
+        {
+          "slug": "cst",
+          "name": "CST",
+          "count": 2
+        },
+        {
+          "slug": "eleglide",
+          "name": "Eleglide",
+          "count": 2
+        },
+        {
+          "slug": "goodyear",
+          "name": "Goodyear",
+          "count": 2
+        },
+        {
+          "slug": "nanlio",
+          "name": "NanLio",
+          "count": 2
+        },
+        {
+          "slug": "devron",
+          "name": "Devron",
+          "count": 2
+        },
+        {
+          "slug": "shimeng",
+          "name": "Shimeng",
+          "count": 2
+        },
+        {
+          "slug": "fenix",
+          "name": "Fenix",
+          "count": 2
+        },
+        {
+          "slug": "zoom",
+          "name": "Zoom",
+          "count": 2
+        },
+        {
+          "slug": "bssok",
+          "name": "BSSOK",
+          "count": 2
+        },
+        {
+          "slug": "coicer",
+          "name": "COICER",
+          "count": 2
+        },
+        {
+          "slug": "deli",
+          "name": "Deli",
+          "count": 2
+        },
+        {
+          "slug": "digital",
+          "name": "Digital",
+          "count": 2
+        },
+        {
+          "slug": "reactor",
+          "name": "Reactor",
+          "count": 2
+        },
+        {
+          "slug": "goetze",
+          "name": "Goetze",
+          "count": 2
+        },
+        {
+          "slug": "coswheel",
+          "name": "Coswheel",
+          "count": 2
+        },
+        {
+          "slug": "cruiser",
+          "name": "Cruiser",
+          "count": 2
+        },
+        {
+          "slug": "livall",
+          "name": "Livall",
+          "count": 2
+        },
+        {
+          "slug": "acrunu",
+          "name": "ACRUNU",
+          "count": 2
+        },
+        {
+          "slug": "sram",
+          "name": "SRAM",
+          "count": 2
+        },
+        {
+          "slug": "krook",
+          "name": "Krook",
+          "count": 2
+        },
+        {
+          "slug": "honeywell",
+          "name": "Honeywell",
+          "count": 2
+        },
+        {
+          "slug": "tanke",
+          "name": "Tanke",
+          "count": 2
+        },
+        {
+          "slug": "x-tiger",
+          "name": "X-Tiger",
+          "count": 2
+        },
+        {
+          "slug": "obaolay",
+          "name": "OBAOLAY",
+          "count": 2
+        },
+        {
+          "slug": "xlc",
+          "name": "XLC",
+          "count": 2
+        },
+        {
+          "slug": "keep",
+          "name": "Keep",
+          "count": 2
+        },
+        {
+          "slug": "thinkrider",
+          "name": "ThinkRider",
+          "count": 2
+        },
+        {
+          "slug": "suntour",
+          "name": "SR Suntour",
+          "count": 2
+        },
+        {
+          "slug": "yaphtes",
+          "name": "Yaphtes",
+          "count": 2
+        },
+        {
+          "slug": "mondraker",
+          "name": "MONDRAKER",
+          "count": 2
+        },
+        {
+          "slug": "yat",
+          "name": "Yat",
+          "count": 1
+        },
+        {
+          "slug": "svt",
+          "name": "SVT",
+          "count": 1
+        },
+        {
+          "slug": "dorojnik",
+          "name": "Дорожник",
+          "count": 1
+        },
+        {
+          "slug": "greif",
+          "name": "Greif",
+          "count": 1
+        },
+        {
+          "slug": "bulls",
+          "name": "Bulls",
+          "count": 1
+        },
+        {
+          "slug": "ortlieb",
+          "name": "Ortlieb",
+          "count": 1
+        },
+        {
+          "slug": "crosswind",
+          "name": "Crosswind",
+          "count": 1
+        },
+        {
+          "slug": "spl",
+          "name": "SPL",
+          "count": 1
+        },
+        {
+          "slug": "bh-bikes",
+          "name": "BH Bikes",
+          "count": 1
+        },
+        {
+          "slug": "maxfind",
+          "name": "Maxfind",
+          "count": 1
+        },
+        {
+          "slug": "k.san",
+          "name": "K.San",
+          "count": 1
+        },
+        {
+          "slug": "golden-toys",
+          "name": "Golden Toys",
+          "count": 1
+        },
+        {
+          "slug": "m-wave",
+          "name": "M-wave",
+          "count": 1
+        },
+        {
+          "slug": "vhg",
+          "name": "VHG",
+          "count": 1
+        },
+        {
+          "slug": "leitu",
+          "name": "Leitu",
+          "count": 1
+        },
+        {
+          "slug": "agu",
+          "name": "Agu",
+          "count": 1
+        },
+        {
+          "slug": "naturehike",
+          "name": "Naturehike",
+          "count": 1
+        },
+        {
+          "slug": "tiakia",
+          "name": "Tiakia",
+          "count": 1
+        },
+        {
+          "slug": "hunter",
+          "name": "Hunter",
+          "count": 1
+        },
+        {
+          "slug": "turbo-trike",
+          "name": "Turbo Trike",
+          "count": 1
+        },
+        {
+          "slug": "dhb",
+          "name": "dhb",
+          "count": 1
+        },
+        {
+          "slug": "profi-kids",
+          "name": "Profi Kids",
+          "count": 1
+        },
+        {
+          "slug": "gaerne",
+          "name": "Gaerne",
+          "count": 1
+        },
+        {
+          "slug": "vee-rubber",
+          "name": "Vee Rubber",
+          "count": 1
+        },
+        {
+          "slug": "geax",
+          "name": "Geax",
+          "count": 1
+        },
+        {
+          "slug": "rondo",
+          "name": "Rondo",
+          "count": 1
+        },
+        {
+          "slug": "cyclon",
+          "name": "Cyclon",
+          "count": 1
+        },
+        {
+          "slug": "dmt",
+          "name": "DMT",
+          "count": 1
+        },
+        {
+          "slug": "shuailing",
+          "name": "Shuailing",
+          "count": 1
+        },
+        {
+          "slug": "bike",
+          "name": "bike",
+          "count": 1
+        },
+        {
+          "slug": "coro",
+          "name": "Coro",
+          "count": 1
+        },
+        {
+          "slug": "nevo-rhino",
+          "name": "Nevo Rhino",
+          "count": 1
+        },
+        {
+          "slug": "ridge",
+          "name": "Ridge",
+          "count": 1
+        },
+        {
+          "slug": "sealskinz",
+          "name": "SealSkinz",
+          "count": 1
+        },
+        {
+          "slug": "e2786c52",
+          "name": "Титан",
+          "count": 1
+        },
+        {
+          "slug": "ranger",
+          "name": "Ranger",
+          "count": 1
+        },
+        {
+          "slug": "qiku",
+          "name": "QIKU",
+          "count": 1
+        },
+        {
+          "slug": "flagman-bicycles",
+          "name": "Флагман",
+          "count": 1
+        },
+        {
+          "slug": "starter",
+          "name": "Starter",
+          "count": 1
+        },
+        {
+          "slug": "flagman",
+          "name": "Flagman",
+          "count": 1
+        },
+        {
+          "slug": "veloz",
+          "name": "Veloz",
+          "count": 1
+        },
+        {
+          "slug": "freetime",
+          "name": "Freetime",
+          "count": 1
+        },
+        {
+          "slug": "walk",
+          "name": "Walk",
+          "count": 1
+        },
+        {
+          "slug": "x-line",
+          "name": "X-Line",
+          "count": 1
+        },
+        {
+          "slug": "gogobest",
+          "name": "GOGOBEST",
+          "count": 1
+        },
+        {
+          "slug": "tern",
+          "name": "Tern",
+          "count": 1
+        },
+        {
+          "slug": "look",
+          "name": "Look",
+          "count": 1
+        },
+        {
+          "slug": "mriyi-zbuvayutsya",
+          "name": "Мрії збуваються",
+          "count": 1
+        },
+        {
+          "slug": "skyline",
+          "name": "SkyLine",
+          "count": 1
+        },
+        {
+          "slug": "five-ten",
+          "name": "Five Ten",
+          "count": 1
+        },
+        {
+          "slug": "fmf-xtr",
+          "name": "FMF XTR",
+          "count": 1
+        },
+        {
+          "slug": "tacx",
+          "name": "Tacx",
+          "count": 1
+        },
+        {
+          "slug": "lerway",
+          "name": "LERWAY",
+          "count": 1
+        },
+        {
+          "slug": "xtaichang",
+          "name": "XTAICHANG",
+          "count": 1
+        },
+        {
+          "slug": "shiming",
+          "name": "SHIMING",
+          "count": 1
+        },
+        {
+          "slug": "wanda",
+          "name": "Wanda",
+          "count": 1
+        },
+        {
+          "slug": "zundapp",
+          "name": "ZUNDAPP",
+          "count": 1
+        },
+        {
+          "slug": "michelin",
+          "name": "Michelin",
+          "count": 1
+        },
+        {
+          "slug": "wittkop",
+          "name": "Wittkop",
+          "count": 1
+        },
+        {
+          "slug": "maya",
+          "name": "Maya",
+          "count": 1
+        },
+        {
+          "slug": "jsir",
+          "name": "J.Sir",
+          "count": 1
+        },
+        {
+          "slug": "hutchinson",
+          "name": "Hutchinson",
+          "count": 1
+        },
+        {
+          "slug": "aairsk",
+          "name": "Aairsk",
+          "count": 1
+        },
+        {
+          "slug": "nicebike",
+          "name": "Nicebike",
+          "count": 1
+        },
+        {
+          "slug": "rock",
+          "name": "Rock",
+          "count": 1
+        },
+        {
+          "slug": "surbisa",
+          "name": "Surbisa",
+          "count": 1
+        },
+        {
+          "slug": "hechpro",
+          "name": "Hechpro",
+          "count": 1
+        },
+        {
+          "slug": "walfort",
+          "name": "Walfort",
+          "count": 1
+        },
+        {
+          "slug": "traveller",
+          "name": "Traveller",
+          "count": 1
+        },
+        {
+          "slug": "orpc",
+          "name": "ORPC",
+          "count": 1
+        },
+        {
+          "slug": "chrisson",
+          "name": "CHRISSON",
+          "count": 1
+        },
+        {
+          "slug": "pyc-chain",
+          "name": "PYC Chain",
+          "count": 1
+        },
+        {
+          "slug": "innova",
+          "name": "INNOVA",
+          "count": 1
+        },
+        {
+          "slug": "sunding",
+          "name": "Sunding",
+          "count": 1
+        },
+        {
+          "slug": "vittoria",
+          "name": "Vittoria",
+          "count": 1
+        },
+        {
+          "slug": "37c1cf31",
+          "name": "Run&Teng",
+          "count": 1
+        },
+        {
+          "slug": "tec",
+          "name": "TEC",
+          "count": 1
+        },
+        {
+          "slug": "l-twoo",
+          "name": "L-Twoo",
+          "count": 1
+        },
+        {
+          "slug": "baisike",
+          "name": "Baisike",
+          "count": 1
+        },
+        {
+          "slug": "mozo",
+          "name": "Mozo",
+          "count": 1
+        },
+        {
+          "slug": "rbrl",
+          "name": "RBRL",
+          "count": 1
+        },
+        {
+          "slug": "zrace",
+          "name": "ZRACE",
+          "count": 1
+        },
+        {
+          "slug": "gingier",
+          "name": "Gingier",
+          "count": 1
+        },
+        {
+          "slug": "repute",
+          "name": "Repute",
+          "count": 1
+        },
+        {
+          "slug": "wellgo",
+          "name": "Wellgo",
+          "count": 1
+        },
+        {
+          "slug": "basa",
+          "name": "BASA",
+          "count": 1
+        },
+        {
+          "slug": "prowheel",
+          "name": "Prowheel",
+          "count": 1
+        },
+        {
+          "slug": "c23bf3aa",
+          "name": "Kama",
+          "count": 1
+        },
+        {
+          "slug": "iztoss",
+          "name": "IZTOSS",
+          "count": 1
+        },
+        {
+          "slug": "trizand",
+          "name": "Trizand",
+          "count": 1
+        },
+        {
+          "slug": "gb",
+          "name": "GB",
+          "count": 1
+        },
+        {
+          "slug": "mighty",
+          "name": "Mighty",
+          "count": 1
+        },
+        {
+          "slug": "kinderkraft",
+          "name": "KinderKraft",
+          "count": 1
+        },
+        {
+          "slug": "twitter",
+          "name": "Twitter",
+          "count": 1
+        },
+        {
+          "slug": "fasthouse",
+          "name": "FastHouse",
+          "count": 1
+        },
+        {
+          "slug": "bicycle",
+          "name": "Bicycle",
+          "count": 1
+        },
+        {
+          "slug": "lake",
+          "name": "Lake",
+          "count": 1
+        },
+        {
+          "slug": "mred",
+          "name": "MRED",
+          "count": 1
+        },
+        {
+          "slug": "selle-royal",
+          "name": "Selle Royal",
+          "count": 1
+        },
+        {
+          "slug": "mustang",
+          "name": "Mustang",
+          "count": 1
+        },
+        {
+          "slug": "stenson",
+          "name": "Stenson",
+          "count": 1
+        },
+        {
+          "slug": "miqilong",
+          "name": "Miqilong",
+          "count": 1
+        },
+        {
+          "slug": "lankeleisi",
+          "name": "Lankeleisi",
+          "count": 1
+        },
+        {
+          "slug": "jederlo",
+          "name": "Jederlo",
+          "count": 1
+        },
+        {
+          "slug": "fomtor",
+          "name": "FOMTOR",
+          "count": 1
+        },
+        {
+          "slug": "yuk",
+          "name": "Yuk",
+          "count": 1
+        },
+        {
+          "slug": "dallas-bike",
+          "name": "Dallas Bike",
+          "count": 1
+        },
+        {
+          "slug": "cs-spare-parts",
+          "name": "CS",
+          "count": 1
+        },
+        {
+          "slug": "taya",
+          "name": "Taya",
+          "count": 1
+        },
+        {
+          "slug": "vozapow",
+          "name": "VOZAPOW",
+          "count": 1
+        },
+        {
+          "slug": "supfire",
+          "name": "SupFire",
+          "count": 1
+        },
+        {
+          "slug": "battle",
+          "name": "Battle",
+          "count": 1
+        },
+        {
+          "slug": "pmt",
+          "name": "PMT",
+          "count": 1
+        },
+        {
+          "slug": "mentech",
+          "name": "Mentech",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "id": 4627893,
+          "title": "Спорт і захоплення",
+          "count": 17434,
+          "parent_id": null
+        },
+        {
+          "id": 4627631,
+          "title": "Електровелосипеди",
+          "count": 47,
+          "parent_id": 4627893
+        },
+        {
+          "id": 83884,
+          "title": "Велосипеди",
+          "count": 15058,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268129,
+          "title": "Велокомп'ютери",
+          "count": 20,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4625505,
+          "title": "Велозапчастини",
+          "count": 870,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4117145,
+          "title": "Веловзуття",
+          "count": 566,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4676065,
+          "title": "Велопокришки",
+          "count": 293,
+          "parent_id": 4627893
+        },
+        {
+          "id": 269513,
+          "title": "Велоаксесуари",
+          "count": 107,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268095,
+          "title": "Велошоломи",
+          "count": 94,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268120,
+          "title": "Велорукавички",
+          "count": 71,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268165,
+          "title": "Фляги для велосипеда і фляготримачі",
+          "count": 54,
+          "parent_id": 4627893
+        },
+        {
+          "id": 3919396,
+          "title": "Велокамери",
+          "count": 51,
+          "parent_id": 4627893
+        },
+        {
+          "id": 268123,
+          "title": "Велосумки",
+          "count": 48,
+          "parent_id": 4627893
+        },
+        {
+          "id": 1231005,
+          "title": "Велоодяг",
+          "count": 48,
+          "parent_id": 4627893
+        },
+        {
+          "id": 97988,
+          "title": "Спортивні окуляри",
+          "count": 45,
+          "parent_id": 4627893
+        },
+        {
+          "id": 82445,
+          "title": "Туристичні рюкзаки та гермомішки",
+          "count": 40,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4624921,
+          "title": "Аксесуари для зимового спорту",
+          "count": 11,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4045634,
+          "title": "Велохімія для ремонту та догляду",
+          "count": 3,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4675926,
+          "title": "Велосвітло",
+          "count": 3,
+          "parent_id": 4627893
+        },
+        {
+          "id": 85359,
+          "title": "Мультиінструмент",
+          "count": 1,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4676140,
+          "title": "Велозахист",
+          "count": 1,
+          "parent_id": 4627893
+        },
+        {
+          "id": 4657400,
+          "title": "Аксесуари для електротранспорту",
+          "count": 1,
+          "parent_id": 4627893
+        },
+        {
+          "id": 296551,
+          "title": "Спортивні сумки та чохли",
+          "count": 1,
+          "parent_id": 4627893
+        },
+        {
+          "id": 133215,
+          "title": "Велотренажери",
+          "count": 1,
+          "parent_id": 4627893
+        }
+      ]
+    }
+  }
+}
